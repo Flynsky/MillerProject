@@ -18,4 +18,4 @@ werden. Ggf. noch Level-Shifter
 
 References
 - [colone chips gatemate](https://colognechip.com/programmable-logic/gatemate/)
-- [reference design](https://github.com/OLIMEX/GateMateA1-EVB)
+- [reference board GateMateA1-EVB](https://github.com/OLIMEX/GateMateA1-EVB)
