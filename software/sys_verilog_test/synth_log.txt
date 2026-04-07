@@ -1,0 +1,742 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+188 (git sha1 cede13a74, clang++ 18.1.8 -fPIC -O3)
+
+-- Running command `read_verilog -defer -sv andgate.sv; synth_gatemate -top andgate -luttree -nomx8; write_json andgate_netlist.json; write_verilog andgate_netlist.v' --
+
+1. Executing Verilog-2005 frontend: andgate.sv
+Parsing SystemVerilog input from `andgate.sv' to AST representation.
+Storing AST representation for module `$abstract\andgate'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH_GATEMATE pass.
+
+2.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/cells_sim.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\CC_IBUF'.
+Generating RTLIL representation for module `\CC_OBUF'.
+Generating RTLIL representation for module `\CC_TOBUF'.
+Generating RTLIL representation for module `\CC_IOBUF'.
+Generating RTLIL representation for module `\CC_LVDS_IBUF'.
+Generating RTLIL representation for module `\CC_LVDS_OBUF'.
+Generating RTLIL representation for module `\CC_LVDS_TOBUF'.
+Generating RTLIL representation for module `\CC_LVDS_IOBUF'.
+Generating RTLIL representation for module `\CC_IDDR'.
+Generating RTLIL representation for module `\CC_ODDR'.
+Generating RTLIL representation for module `\CC_DFF'.
+Generating RTLIL representation for module `\CC_DLT'.
+Generating RTLIL representation for module `\CC_LUT1'.
+Generating RTLIL representation for module `\CC_LUT2'.
+Generating RTLIL representation for module `\CC_LUT3'.
+Generating RTLIL representation for module `\CC_LUT4'.
+Generating RTLIL representation for module `\CC_MX2'.
+Generating RTLIL representation for module `\CC_MX4'.
+Generating RTLIL representation for module `\CC_MX8'.
+Generating RTLIL representation for module `\CC_ADDF'.
+Generating RTLIL representation for module `\CC_MULT'.
+Generating RTLIL representation for module `\CC_BUFG'.
+Generating RTLIL representation for module `\CC_BRAM_20K'.
+Generating RTLIL representation for module `\CC_BRAM_40K'.
+Generating RTLIL representation for module `\CC_FIFO_40K'.
+Generating RTLIL representation for module `\CC_L2T4'.
+Generating RTLIL representation for module `\CC_L2T5'.
+Successfully finished Verilog frontend.
+
+2.2. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/cells_bb.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/cells_bb.v' to AST representation.
+Generating RTLIL representation for module `\CC_PLL'.
+Generating RTLIL representation for module `\CC_PLL_ADV'.
+Generating RTLIL representation for module `\CC_SERDES'.
+Generating RTLIL representation for module `\CC_CFG_CTRL'.
+Generating RTLIL representation for module `\CC_USR_RSTN'.
+Successfully finished Verilog frontend.
+
+2.3. Executing HIERARCHY pass (managing design hierarchy).
+
+2.4. Executing AST frontend in derive mode using pre-parsed AST for module `\andgate'.
+Generating RTLIL representation for module `\andgate'.
+
+2.4.1. Analyzing design hierarchy..
+Top module:  \andgate
+
+2.4.2. Analyzing design hierarchy..
+Top module:  \andgate
+Removing unused module `$abstract\andgate'.
+Removed 1 unused modules.
+
+2.5. Executing PROC pass (convert processes to netlists).
+
+2.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.5.4. Executing PROC_INIT pass (extract init attributes).
+
+2.5.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.5.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.6. Executing FLATTEN pass (flatten design).
+
+2.7. Executing TRIBUF pass.
+
+2.8. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.11. Executing CHECK pass (checking for obvious problems).
+Checking module andgate...
+Found and reported 0 problems.
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \andgate..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \andgate.
+Performed a total of 0 changes.
+
+2.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.12.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.13. Executing FSM pass (extract and optimize FSM).
+
+2.13.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.13.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.13.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.13.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.13.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.13.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.13.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.13.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \andgate..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \andgate.
+Performed a total of 0 changes.
+
+2.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.15. Executing WREDUCE pass (reducing word size of cells).
+
+2.16. Executing PEEPOPT pass (run peephole optimizers).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.18. Executing MUXPACK pass ($mux cell cascades to $pmux).
+Converted 0 (p)mux cells into 0 pmux cells.
+
+2.19. Executing SHARE pass (SAT-based resource sharing).
+
+2.20. Executing TECHMAP pass (map to technology primitives).
+
+2.20.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+2.21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.22. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.23. Executing TECHMAP pass (map to technology primitives).
+
+2.23.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/mul_map.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/mul_map.v' to AST representation.
+Generating RTLIL representation for module `$__MULMXN'.
+Successfully finished Verilog frontend.
+
+2.23.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.24. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module andgate:
+  created 0 $alu and 0 $macc cells.
+
+2.25. Executing OPT pass (performing simple optimizations).
+
+2.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \andgate..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \andgate.
+Performed a total of 0 changes.
+
+2.25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.25.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.25.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.26. Executing MEMORY pass.
+
+2.26.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.26.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.26.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.26.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.26.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.26.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.26.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.26.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.26.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.26.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.28. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+2.29. Executing TECHMAP pass (map to technology primitives).
+
+2.29.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/brams_map.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/brams_map.v' to AST representation.
+Generating RTLIL representation for module `$__CC_BRAM_TDP_'.
+Generating RTLIL representation for module `$__CC_BRAM_SDP_'.
+Successfully finished Verilog frontend.
+
+2.29.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.30. Executing OPT pass (performing simple optimizations).
+
+2.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.30.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.30.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.30.5. Finished fast OPT passes.
+
+2.31. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.32. Executing OPT pass (performing simple optimizations).
+
+2.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.32.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \andgate..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.32.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \andgate.
+Performed a total of 0 changes.
+
+2.32.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.32.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.32.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.32.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.32.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.33. Executing TECHMAP pass (map to technology primitives).
+
+2.33.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.33.2. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/arith_map.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_gatemate_alu'.
+Successfully finished Verilog frontend.
+
+2.33.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+<suppressed ~78 debug messages>
+
+2.34. Executing OPT pass (performing simple optimizations).
+
+2.34.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.34.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 1 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.34.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.34.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.34.5. Finished fast OPT passes.
+
+2.35. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Mapping port andgate.y using CC_OBUF.
+Mapping port andgate.b using CC_IBUF.
+Mapping port andgate.a using CC_IBUF.
+
+2.36. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.37. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+2.38. Executing TECHMAP pass (map to technology primitives).
+
+2.38.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/reg_map.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/reg_map.v' to AST representation.
+Generating RTLIL representation for module `$_DFFE_xxxx_'.
+Generating RTLIL representation for module `$_DLATCH_xxx_'.
+Successfully finished Verilog frontend.
+
+2.38.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~26 debug messages>
+
+2.39. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.40. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+2.41. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.42. Executing MUXCOVER pass (mapping to wider MUXes).
+Covering MUX trees in module andgate..
+  Treeifying 0 MUXes:
+    Finished treeification: Found 0 trees.
+  Covering trees:
+  Added a total of 0 decoder MUXes.
+<suppressed ~1 debug messages>
+
+2.43. Executing OPT pass (performing simple optimizations).
+
+2.43.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.43.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 4 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.43.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \andgate..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.43.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \andgate.
+Performed a total of 0 changes.
+
+2.43.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\andgate'.
+Computing hashes of 4 cells of `\andgate'.
+Finding duplicate cells in `\andgate'.
+Removed a total of 0 cells.
+
+2.43.6. Executing OPT_SHARE pass.
+
+2.43.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.43.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+2.43.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module andgate.
+
+2.43.10. Finished fast OPT passes. (There is nothing left to do.)
+
+2.44. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+2.45. Executing TECHMAP pass (map to technology primitives).
+
+2.45.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/mux_map.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/mux_map.v' to AST representation.
+Generating RTLIL representation for module `$_MUX8_'.
+Generating RTLIL representation for module `$_MUX4_'.
+Successfully finished Verilog frontend.
+
+2.45.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.46. Executing ABC pass (technology mapping using ABC).
+
+2.46.1. Extracting gate netlist of module `\andgate' to `<abc-temp-dir>/input.blif'..
+
+2.46.1.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr  1 2026 04:06:44)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <yosys-exe-dir>/../share/yosys/gatemate/lut_tree_cells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.46.1.2. Re-integrating ABC results.
+ABC RESULTS:          $__CC2_A cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+Removing global temp directory.
+
+2.47. Executing TECHMAP pass (map to technology primitives).
+
+2.47.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/lut_tree_map.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/lut_tree_map.v' to AST representation.
+Generating RTLIL representation for module `$__ZERO'.
+Generating RTLIL representation for module `$__ONE'.
+Generating RTLIL representation for module `$__CC_BUF'.
+Generating RTLIL representation for module `$__CC_MUX'.
+Generating RTLIL representation for module `$__CC2_A'.
+Generating RTLIL representation for module `$__CC3_A_O'.
+Generating RTLIL representation for module `$__CC3_A_X'.
+Generating RTLIL representation for module `$__CC2_O'.
+Generating RTLIL representation for module `$__CC3_O_A'.
+Generating RTLIL representation for module `$__CC3_O_X'.
+Generating RTLIL representation for module `$__CC2_X'.
+Generating RTLIL representation for module `$__CC3_X_A'.
+Generating RTLIL representation for module `$__CC3_X_O'.
+Generating RTLIL representation for module `$__CC3_AA'.
+Generating RTLIL representation for module `$__CC4_AA_O'.
+Generating RTLIL representation for module `$__CC4_AA_X'.
+Generating RTLIL representation for module `$__CC3_OO'.
+Generating RTLIL representation for module `$__CC4_OO_A'.
+Generating RTLIL representation for module `$__CC4_OO_X'.
+Generating RTLIL representation for module `$__CC3_XX'.
+Generating RTLIL representation for module `$__CC4_XX_A'.
+Generating RTLIL representation for module `$__CC4_XX_O'.
+Generating RTLIL representation for module `$__CC3_AO'.
+Generating RTLIL representation for module `$__CC4_AO_A'.
+Generating RTLIL representation for module `$__CC4_AO_O'.
+Generating RTLIL representation for module `$__CC4_AO_X'.
+Generating RTLIL representation for module `$__CC3_OA'.
+Generating RTLIL representation for module `$__CC4_OA_A'.
+Generating RTLIL representation for module `$__CC4_OA_O'.
+Generating RTLIL representation for module `$__CC4_OA_X'.
+Generating RTLIL representation for module `$__CC3_AX'.
+Generating RTLIL representation for module `$__CC4_AX_A'.
+Generating RTLIL representation for module `$__CC4_AX_O'.
+Generating RTLIL representation for module `$__CC4_AX_X'.
+Generating RTLIL representation for module `$__CC3_XA'.
+Generating RTLIL representation for module `$__CC4_XA_A'.
+Generating RTLIL representation for module `$__CC4_XA_O'.
+Generating RTLIL representation for module `$__CC4_XA_X'.
+Generating RTLIL representation for module `$__CC4_AAA'.
+Generating RTLIL representation for module `$__CC5_AAA_A'.
+Generating RTLIL representation for module `$__CC5_AAA_O'.
+Generating RTLIL representation for module `$__CC5_AAA_X'.
+Generating RTLIL representation for module `$__CC4_AXA'.
+Generating RTLIL representation for module `$__CC5_AXA_A'.
+Generating RTLIL representation for module `$__CC5_AXA_O'.
+Generating RTLIL representation for module `$__CC5_AXA_X'.
+Generating RTLIL representation for module `$__CC4_XAX'.
+Generating RTLIL representation for module `$__CC5_XAX_A'.
+Generating RTLIL representation for module `$__CC5_XAX_O'.
+Generating RTLIL representation for module `$__CC5_XAX_X'.
+Generating RTLIL representation for module `$__CC4_AAX'.
+Generating RTLIL representation for module `$__CC5_AAX_A'.
+Generating RTLIL representation for module `$__CC5_AAX_O'.
+Generating RTLIL representation for module `$__CC5_AAX_X'.
+Generating RTLIL representation for module `$__CC4_AXX'.
+Generating RTLIL representation for module `$__CC5_AXX_A'.
+Generating RTLIL representation for module `$__CC5_AXX_O'.
+Generating RTLIL representation for module `$__CC5_AXX_X'.
+Generating RTLIL representation for module `$__CC4_XXX'.
+Generating RTLIL representation for module `$__CC5_XXX_A'.
+Generating RTLIL representation for module `$__CC5_XXX_O'.
+Generating RTLIL representation for module `$__CC5_XXX_X'.
+Generating RTLIL representation for module `$__CC4_AAO'.
+Generating RTLIL representation for module `$__CC5_AAO_A'.
+Generating RTLIL representation for module `$__CC5_AAO_O'.
+Generating RTLIL representation for module `$__CC5_AAO_X'.
+Generating RTLIL representation for module `$__CC4_AOA'.
+Generating RTLIL representation for module `$__CC5_AOA_A'.
+Generating RTLIL representation for module `$__CC5_AOA_O'.
+Generating RTLIL representation for module `$__CC5_AOA_X'.
+Generating RTLIL representation for module `$__CC4_AOX'.
+Generating RTLIL representation for module `$__CC5_AOX_A'.
+Generating RTLIL representation for module `$__CC5_AOX_O'.
+Generating RTLIL representation for module `$__CC5_AOX_X'.
+Successfully finished Verilog frontend.
+
+2.47.2. Continuing TECHMAP pass.
+Using template $__CC2_A for cells of type $__CC2_A.
+No more expansions possible.
+<suppressed ~77 debug messages>
+
+2.48. Executing GATEMATE_FOLDINV pass (folding LUT tree inverters).
+
+2.49. Executing TECHMAP pass (map to technology primitives).
+
+2.49.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/inv_map.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/inv_map.v' to AST representation.
+Generating RTLIL representation for module `$__CC_NOT'.
+Successfully finished Verilog frontend.
+
+2.49.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+Removed 0 unused cells and 6 unused wires.
+
+2.50. Executing TECHMAP pass (map to technology primitives).
+
+2.50.1. Executing Verilog-2005 frontend: /home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/lut_map.v
+Parsing Verilog input from `/home/furz1000/olimex-gatemate/oss-cad-suite/lib/../share/yosys/gatemate/lut_map.v' to AST representation.
+Generating RTLIL representation for module `$lut'.
+Successfully finished Verilog frontend.
+
+2.50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+2.51. Executing CLKBUFMAP pass (inserting clock buffers).
+
+2.52. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `andgate'. Setting top module to andgate.
+
+2.52.1. Analyzing design hierarchy..
+Top module:  \andgate
+
+2.52.2. Analyzing design hierarchy..
+Top module:  \andgate
+Removed 0 unused modules.
+
+2.53. Printing statistics.
+
+=== andgate ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        6 wires
+        6 wire bits
+        3 public wires
+        3 public wire bits
+        3 ports
+        3 port bits
+        4 cells
+        2   CC_IBUF
+        1   CC_LUT2
+        1   CC_OBUF
+
+2.54. Executing CHECK pass (checking for obvious problems).
+Checking module andgate...
+Found and reported 0 problems.
+
+2.55. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \andgate..
+
+3. Executing JSON backend.
+
+4. Executing Verilog backend.
+
+4.1. Executing BMUXMAP pass.
+
+4.2. Executing DEMUXMAP pass.
+Dumping module `\andgate'.
+
+End of script. Logfile hash: 14fcb55796, time: 0.24s, user: 0.11s, system: 0.08s, MEM: 28.75 MB peak
+Yosys 0.63+188 (git sha1 cede13a74, clang++ 18.1.8 -fPIC -O3)
+Time spent: 41% 15x read_verilog (0 sec), 26% 1x abc (0 sec), ...
