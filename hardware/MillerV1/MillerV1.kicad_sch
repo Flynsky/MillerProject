@@ -20331,10 +20331,10 @@
 		)
 		(uuid "fff372ed-2c82-4588-8be5-f1e2c38cd8a6")
 	)
-	(text_box "Notes:\n- Supports 3 classes: A,B,C\n- Different Supply Voltages: 5V, 3.3V, 1.8V\n- three AS - Application Specific pins\n- does not support +21V DC [Programming]\n- 5V direct pass though of the USB Voltage\n- 3.3V, 1.8V 500mA current limited"
+	(text_box "Notes:\n- Supports 3 classes: A,B,C\n- Different Supply Voltages: 5V, 3.3V, 1.8V\n- three AS - Application Specific pins\n- does not support +21V DC [Programming]\nIf used as Master:\n- Place all components\n- 5V direct pass though of the USB Voltage\n- 3.3V, 1.8V 500mA current limited"
 		(exclude_from_sim no)
 		(at 589.28 290.83 0)
-		(size 59.69 19.05)
+		(size 60.96 26.67)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -53726,7 +53726,7 @@
 		(cells
 			(table_cell "Vout"
 				(exclude_from_sim no)
-				(at 601.98 313.69 0)
+				(at 600.71 328.93 0)
 				(size 10.16 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53743,7 +53743,7 @@
 			)
 			(table_cell "EA_B7"
 				(exclude_from_sim no)
-				(at 612.14 313.69 0)
+				(at 610.87 328.93 0)
 				(size 8.89 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53760,7 +53760,7 @@
 			)
 			(table_cell "EA_A7"
 				(exclude_from_sim no)
-				(at 621.03 313.69 0)
+				(at 619.76 328.93 0)
 				(size 10.16 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53777,7 +53777,7 @@
 			)
 			(table_cell "5V"
 				(exclude_from_sim no)
-				(at 601.98 317.5 0)
+				(at 600.71 332.74 0)
 				(size 10.16 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53794,7 +53794,7 @@
 			)
 			(table_cell "LOW"
 				(exclude_from_sim no)
-				(at 612.14 317.5 0)
+				(at 610.87 332.74 0)
 				(size 8.89 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53811,7 +53811,7 @@
 			)
 			(table_cell "-"
 				(exclude_from_sim no)
-				(at 621.03 317.5 0)
+				(at 619.76 332.74 0)
 				(size 10.16 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53828,7 +53828,7 @@
 			)
 			(table_cell "3V3"
 				(exclude_from_sim no)
-				(at 601.98 321.31 0)
+				(at 600.71 336.55 0)
 				(size 10.16 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53845,7 +53845,7 @@
 			)
 			(table_cell "HIGH"
 				(exclude_from_sim no)
-				(at 612.14 321.31 0)
+				(at 610.87 336.55 0)
 				(size 8.89 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53862,7 +53862,7 @@
 			)
 			(table_cell "Z"
 				(exclude_from_sim no)
-				(at 621.03 321.31 0)
+				(at 619.76 336.55 0)
 				(size 10.16 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53879,7 +53879,7 @@
 			)
 			(table_cell "1V8"
 				(exclude_from_sim no)
-				(at 601.98 325.12 0)
+				(at 600.71 340.36 0)
 				(size 10.16 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53896,7 +53896,7 @@
 			)
 			(table_cell "HIGH"
 				(exclude_from_sim no)
-				(at 612.14 325.12 0)
+				(at 610.87 340.36 0)
 				(size 8.89 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -53913,7 +53913,7 @@
 			)
 			(table_cell "LOW"
 				(exclude_from_sim no)
-				(at 621.03 325.12 0)
+				(at 619.76 340.36 0)
 				(size 10.16 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -61472,7 +61472,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "0f0e8bca-327d-47fc-a6b4-004d7ff8a903")
 		(property "Reference" "R24"
 			(at 661.416 334.264 0)
@@ -63673,7 +63673,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "1c419aea-d397-436c-a696-1a55d6af31c8")
 		(property "Reference" "U18"
 			(at 679.196 316.992 0)
@@ -67704,7 +67704,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "391b3913-3d78-4591-969e-a98f06e48db3")
 		(property "Reference" "R23"
 			(at 661.416 341.884 0)
@@ -79286,7 +79286,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "7537d131-5511-4fff-9b78-02558ec8a14c")
 		(property "Reference" "C127"
 			(at 652.78 330.708 0)
@@ -84273,7 +84273,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "8ea6e876-b222-41da-896e-b69951125610")
 		(property "Reference" "C128"
 			(at 690.88 333.248 0)
@@ -88385,7 +88385,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "aa86e970-ec9e-4a1f-98f3-d413716b737c")
 		(property "Reference" "U16"
 			(at 680.212 338.328 0)
@@ -100587,7 +100587,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "e10d60cf-9e61-41ee-b2ac-ab0d4f7d1a9a")
 		(property "Reference" "R29"
 			(at 668.274 341.884 0)
