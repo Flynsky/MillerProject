@@ -3,6 +3,8 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
+        "apply_defaults_to_fp_barcodes": false,
+        "apply_defaults_to_fp_dimensions": false,
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
@@ -78,6 +80,7 @@
         "extra_footprint": "ignore",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
+        "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
@@ -96,6 +99,7 @@
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
+        "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -115,9 +119,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
+        "track_not_centered_on_via": "ignore",
+        "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
+        "tuning_profile_track_geometries": "ignore",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
@@ -251,17 +258,28 @@
       "zones_use_no_outline": true
     },
     "ipc2581": {
+      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "",
-      "mpn": ""
+      "mpn": "",
+      "sch_revision": "C"
     },
     "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
   "boards": [],
+  "component_class_settings": {
+    "assignments": [],
+    "meta": {
+      "version": 0
+    },
+    "sheet_component_classes": {
+      "enabled": false
+    }
+  },
   "cvpcb": {
     "equivalence_files": []
   },
@@ -452,11 +470,14 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "field_name_whitespace": "warning",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
+      "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
+      "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
@@ -479,6 +500,7 @@
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
       "single_global_label": "ignore",
+      "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -515,6 +537,7 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.127,
+        "tuning_profile": "",
         "via_diameter": 0.45,
         "via_drill": 0.3,
         "wire_width": 6
@@ -533,6 +556,7 @@
         "priority": 0,
         "schematic_color": "rgb(204, 102, 0)",
         "track_width": 0.508,
+        "tuning_profile": "",
         "via_diameter": 0.45,
         "via_drill": 0.3,
         "wire_width": 12
@@ -551,6 +575,7 @@
         "priority": 1,
         "schematic_color": "rgb(132, 0, 132)",
         "track_width": 0.127,
+        "tuning_profile": "",
         "via_diameter": 0.45,
         "via_drill": 0.3,
         "wire_width": 6
@@ -569,13 +594,14 @@
         "priority": 2,
         "schematic_color": "rgb(194, 0, 0)",
         "track_width": 0.1651,
+        "tuning_profile": "",
         "via_diameter": 0.45,
         "via_drill": 0.3,
         "wire_width": 6
       }
     ],
     "meta": {
-      "version": 4
+      "version": 5
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -1190,6 +1216,10 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "annotation": {
+      "method": 0,
+      "sort_order": 0
+    },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -1261,6 +1291,55 @@
       "sort_asc": true,
       "sort_field": "Reference"
     },
+    "bus_aliases": {
+      "Ext-BUS": [
+        "NA_A[0..8]",
+        "NA_B[0..8]",
+        "NB_A[0..8]",
+        "NB_B[0..8]",
+        "EA_A[0..7]",
+        "EA_B[0..7]",
+        "EB_A[0..8]",
+        "EB_B[0..8]"
+      ],
+      "Main-BUS": [
+        "GPIO[0..11]",
+        "GPIO12\\DBG-UART_TX",
+        "GPIO13\\DBG-UART_RX",
+        "GPIO[14..15]",
+        "GPIO16\\JTAG_TDI",
+        "GPIO17\\JTAG_TDO",
+        "GPIO18\\JTAG_TCK",
+        "GPIO19\\JTAG_TMS",
+        "GPIO22\\GPIN1",
+        "GPIO23\\CLK1",
+        "GPIO24\\CLK2",
+        "GPIO25\\JTAG_LED",
+        "GPIO[26..29]",
+        "RP2040_SWCLK",
+        "RP2040_SWDIO",
+        "CLK0",
+        "CLK3",
+        "FPGA_BUT",
+        "FPGA_LED"
+      ],
+      "Peri-BUS": [
+        "PS2_DATA",
+        "PS2_CLK",
+        "VGA_HSync",
+        "VGA_VSync",
+        "VGA_Red_[0..3]",
+        "VGA_Green_[0..3]",
+        "VGA_Blue_[0..3]",
+        "PSRAM_CS#",
+        "PSRAM_SCLK",
+        "PSRAM_DATA[0..7]"
+      ],
+      "USB-BUS": [
+        "USB_D-",
+        "USB_D+"
+      ]
+    },
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -1274,6 +1353,7 @@
           "visible": false
         }
       ],
+      "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": true,
@@ -1306,6 +1386,7 @@
     },
     "page_layout_descr_file": "/home/penko/SVN_Checkout/important_DOCs/KiCad-New_Page_Layouts/A4-Landscape-2.kicad_wks",
     "plot_directory": "",
+    "reuse_designators": true,
     "space_save_all_events": true,
     "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
@@ -1315,13 +1396,28 @@
     "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
-    "subpart_id_separator": 0
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "MillerV1.kicad_sch",
+        "name": "MillerV1",
+        "uuid": "284a97db-b878-4d19-9282-298636eac808"
+      }
+    ],
+    "used_designators": "",
+    "variants": []
   },
   "sheets": [
     [
       "284a97db-b878-4d19-9282-298636eac808",
-      "Root"
+      "MillerV1"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {},
+  "tuning_profiles": {
+    "meta": {
+      "version": 0
+    },
+    "tuning_profiles_impedance_geometric": []
+  }
 }

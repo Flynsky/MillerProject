@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TUSB1106PWR
+D Texas Instruments TUSB1106PWR, USB Transceiver, USB 2.0 at 12Mbit/s, 3.3 V, 5 V, 16-Pin TSSOP
+K
+F http://www.ti.com/lit/gpn/tusb1106
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,206 @@
+(footprint "C_0402_5MIL_DWS"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(tags "C0402")
+	(property "Reference" "C1"
+		(at -1.9 0.2 0)
+		(layer "F.SilkS")
+		(uuid "96ebe3a8-b6f0-468c-a4ff-480ad5e66c10")
+		(effects
+			(font
+				(size 1.016 1.016)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "2.2uF/6.3V/20%/X5R/C0402"
+		(at 0 1.905 0)
+		(layer "F.Fab")
+		(uuid "9eb38d07-a8a5-4670-87b4-5f009503dbeb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "c666d451-5096-4981-bd1e-aaa6b989a300")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "105b7201-ee74-4b1c-9bcf-30a21f9e7943")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+			(justify mirror)
+		)
+	)
+	(property ki_fp_filters "C? C_????_* C_???? SMD*_c Capacitor*")
+	(sheetname "/")
+	(sheetfile "MillerV1.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.254 -0.4445)
+		(end 0.254 -0.4445)
+		(stroke
+			(width 0.2286)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a023e5c7-12a4-498f-9dde-be2d74b33dac")
+	)
+	(fp_line
+		(start -0.254 0.4445)
+		(end 0.254 0.4445)
+		(stroke
+			(width 0.2286)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e62b8675-6d44-4386-94ea-4afc4a21ad49")
+	)
+	(fp_line
+		(start -0.889 -0.4445)
+		(end -0.889 0.4445)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "6d7a106e-764e-4560-9073-13b39779de22")
+	)
+	(fp_line
+		(start -0.889 0.4445)
+		(end -0.254 0.4445)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "30e0aaf9-1853-4b50-85ba-dfbc2c2a8373")
+	)
+	(fp_line
+		(start -0.254 -0.4445)
+		(end -0.889 -0.4445)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "2e35034e-d0ff-40b5-aa1d-40d4e981d166")
+	)
+	(fp_line
+		(start 0.254 -0.4445)
+		(end 0.889 -0.4445)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "8462e43f-80b8-4c61-a4fd-e7cb784a3af5")
+	)
+	(fp_line
+		(start 0.889 -0.4445)
+		(end 0.889 0.4445)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "4092d49f-709a-4797-ac3c-b3a145fd3db9")
+	)
+	(fp_line
+		(start 0.889 0.4445)
+		(end 0.254 0.4445)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "796c21e7-494d-4b7f-b934-773cccf9ffc1")
+	)
+	(fp_line
+		(start -0.49784 -0.24892)
+		(end 0.49784 -0.24892)
+		(stroke
+			(width 0.06604)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "98c92529-2cfe-4057-be97-243c06638b01")
+	)
+	(fp_line
+		(start -0.49784 0.24892)
+		(end -0.49784 -0.24892)
+		(stroke
+			(width 0.06604)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "52d6650a-9a82-4cdd-ab32-2882e879e7b5")
+	)
+	(fp_line
+		(start -0.49784 0.24892)
+		(end 0.49784 0.24892)
+		(stroke
+			(width 0.06604)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e69956f8-027c-4955-97f6-f911c888eb93")
+	)
+	(fp_line
+		(start 0.49784 0.24892)
+		(end 0.49784 -0.24892)
+		(stroke
+			(width 0.06604)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "85dfe91e-8a66-4b52-a4b9-adb91d2b7db5")
+	)
+	(pad "1" smd rect
+		(at -0.508 0 180)
+		(size 0.5 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(uuid "784999fe-64ac-4c73-9da6-4cc3be3e2ab8")
+	)
+	(pad "2" smd rect
+		(at 0.508 0)
+		(size 0.5 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(uuid "ce2100ce-ef88-423d-b304-31f33d40e31e")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/packages3D/C_0402_1005Metric.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

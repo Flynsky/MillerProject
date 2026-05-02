@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TUSB1106PWR'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TUSB1106PWR" (!) = "", "SOP65P640X120-16N", "Small Outline Packages", "595-TUSB1106PWR", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TUSB1106PWR?qs=7kv20MEVUlg2%2FxFfZrfm%2FA%3D%3D", "Texas Instruments TUSB1106PWR, USB Transceiver, USB 2.0 at 12Mbit/s, 3.3 V, 5 V, 16-Pin TSSOP", "http://www.ti.com/lit/gpn/tusb1106", "1.2 mm"
+END_PART
+
+END.

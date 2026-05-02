@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TUSB1106PWR
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=16
+Version=2.1
+Released=2017-01-12 12:59:53
+Downloaded=2026-04-21 15:42:14
+3D=Y
