@@ -37210,16 +37210,6 @@
 	)
 	(wire
 		(pts
-			(xy 717.55 24.13) (xy 744.22 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81a88857-d328-4244-b466-e3635c93bb32")
-	)
-	(wire
-		(pts
 			(xy 193.04 40.64) (xy 193.04 43.18)
 		)
 		(stroke
@@ -44110,16 +44100,6 @@
 			(type default)
 		)
 		(uuid "d97d6c36-1189-426f-bc17-5592654126a5")
-	)
-	(wire
-		(pts
-			(xy 744.22 24.13) (xy 744.22 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9a015d8-e2f2-4d18-9680-714f821ce755")
 	)
 	(wire
 		(pts
@@ -58273,6 +58253,18 @@
 			(justify left bottom)
 		)
 		(uuid "65e7c63e-2b08-46cd-9545-b07763759d7b")
+	)
+	(label "VGA_Blue_0"
+		(at 717.55 24.13 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "668e6599-0b5e-4846-a160-e63ba7022a52")
 	)
 	(label "SB_A0"
 		(at 344.17 381 0)
