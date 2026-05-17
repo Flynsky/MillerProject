@@ -51,7 +51,23 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.2032
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.2032,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -101,6 +117,8 @@
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
         "missing_tuning_profile": "warning",
+        "net_chain_return_path": "error",
+        "net_chain_stub_length": "error",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -606,6 +624,7 @@
     "meta": {
       "version": 5
     },
+    "net_chain_classes": {},
     "net_colors": null,
     "netclass_assignments": null,
     "netclass_patterns": [
@@ -1410,7 +1429,7 @@
         "uuid": "284a97db-b878-4d19-9282-298636eac808"
       }
     ],
-    "used_designators": "",
+    "used_designators": "USB\\-C2-3,IC1,C129-132,R30,R32-35,R37-39,R80-83,JP1,+5V_USB2-3,GND2-3,#PWR163,#PWR165,#PWR170-173,#PWR176-178,#PWR235-241,#FLG14-15",
     "variants": []
   },
   "sheets": [
@@ -1422,7 +1441,7 @@
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
-      "version": 0
+      "version": 1
     },
     "tuning_profiles_impedance_geometric": []
   }
