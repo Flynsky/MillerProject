@@ -5,3 +5,5 @@ oss-cad-suite
 *obj_dir*
 
 hardware/MillerV1/.history
+*.kicad_pro.lck
+
