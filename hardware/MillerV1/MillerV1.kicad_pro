@@ -52,7 +52,7 @@
         "zones": {
           "45_degree_only": false,
           "border_display_style": 2,
-          "border_hatch_pitch": 0.5,
+          "border_hatch_pitch": 0.508,
           "corner_radius": 0.0,
           "corner_smoothing": 0,
           "fill_mode": 0,
@@ -63,11 +63,11 @@
           "hatch_thickness": 1.0,
           "min_clearance": 0.2032,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
+          "min_thickness": 0.127,
           "pad_connection": 1,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.508,
+          "thermal_relief_spoke_width": 1.016
         }
       },
       "diff_pair_dimensions": [
@@ -567,7 +567,6 @@
         "bus_width": 12,
         "clearance": 0.11176,
         "diff_pair_gap": 0.254,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.508,
         "line_style": 0,
         "microvia_diameter": 0.45,
@@ -586,7 +585,6 @@
         "bus_width": 12,
         "clearance": 0.127,
         "diff_pair_gap": 0.127,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.127,
         "line_style": 0,
         "microvia_diameter": 0.45,
@@ -605,7 +603,6 @@
         "bus_width": 12,
         "clearance": 0.127,
         "diff_pair_gap": 0.127,
-        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.1651,
         "line_style": 0,
         "microvia_diameter": 0.45,
@@ -1219,6 +1216,10 @@
       {
         "netclass": "Zdiff=100R",
         "pattern": "/SER_RX_P"
+      },
+      {
+        "netclass": "Zdiff=90R",
+        "pattern": "/USB_D(+ 2|- 2)"
       }
     ]
   },
@@ -1406,7 +1407,7 @@
       "meta": {
         "version": 0
       },
-      "model_mode": 0,
+      "model_mode": 4,
       "workbook_filename": ""
     },
     "page_layout_descr_file": "/home/penko/SVN_Checkout/important_DOCs/KiCad-New_Page_Layouts/A4-Landscape-2.kicad_wks",
@@ -1429,7 +1430,7 @@
         "uuid": "284a97db-b878-4d19-9282-298636eac808"
       }
     ],
-    "used_designators": "USB\\-C2-3,IC1,C129-132,R30,R32-35,R37-39,R80-83,JP1,+5V_USB2-3,GND2-3,#PWR163,#PWR165,#PWR170-173,#PWR176-178,#PWR235-241,#FLG14-15",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [

@@ -21877,6 +21877,26 @@
 		)
 		(uuid "fff372ed-2c82-4588-8be5-f1e2c38cd8a6")
 	)
+	(text_box "ToDo Tobi:\n- Jumper sollte zwischen +2V5 oder +1V8 switchen, kein OE\nJumper Footprint ein SolderJumper oder zwei smd Widerstände,\nPin Header ist unnötig groß und gefährlich (falsche VSS könnte Chip/FPGA beschädigen)\n-> OE über FPGA steuern oder LOW ziehen\n- Warum Pullup bei Speed pin?\n- Diode zwischen den zwei USB 5V Spannungen. \nbitte von USB PHY zu Debugger. \nUnd eine SMD Shotkey diode mit niedriger Vorwärtsspannung!\n"
+		(exclude_from_sim no)
+		(at 701.04 72.3618 0)
+		(size 83.82 26.4389)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left top)
+		)
+		(uuid "175d63a5-fee1-4f99-a2e4-2760d1d5e226")
+	)
 	(text_box "Notes:\n- Supports 3 classes: A,B,C\n- Different Supply Voltages: 5V, 3.3V, 1.8V\n- three AS - Application Specific pins\n- does not support +21V DC [Programming]\nIf used as Master:\n- Place all components\n- 5V direct pass though of the USB Voltage\n- 3.3V, 1.8V 500mA current limited"
 		(exclude_from_sim no)
 		(at 589.28 222.25 0)
@@ -22016,12 +22036,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10a3dfa6-c4e2-4598-98c7-26a03d1b3840")
-	)
-	(junction
-		(at 610.87 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "11262fd0-fa56-4670-8b0d-b3ae05785ecc")
 	)
 	(junction
 		(at 378.46 106.68)
@@ -24152,12 +24166,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f967a74d-c13f-4e67-9b6f-9e9f164a1268")
-	)
-	(junction
-		(at 610.87 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f9a3896a-4d24-4d51-9084-d8df9377ff77")
 	)
 	(junction
 		(at 422.91 210.82)
@@ -29977,16 +29985,6 @@
 			(type default)
 		)
 		(uuid "279ea4f5-61d1-452b-881c-0b406c223954")
-	)
-	(wire
-		(pts
-			(xy 610.87 41.91) (xy 618.49 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27b40be1-7352-42eb-8f79-87e9f0972533")
 	)
 	(wire
 		(pts
@@ -36820,16 +36818,6 @@
 	)
 	(wire
 		(pts
-			(xy 621.03 92.71) (xy 610.87 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7cf1fd82-b2f4-4102-8584-435b542eab1d")
-	)
-	(wire
-		(pts
 			(xy 312.42 86.36) (xy 304.8 86.36)
 		)
 		(stroke
@@ -41963,7 +41951,7 @@
 	)
 	(wire
 		(pts
-			(xy 610.87 90.17) (xy 610.87 87.63)
+			(xy 610.87 87.63) (xy 610.87 92.71)
 		)
 		(stroke
 			(width 0)
@@ -43723,16 +43711,6 @@
 	)
 	(wire
 		(pts
-			(xy 610.87 90.17) (xy 621.03 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5a41922-a23b-4ad2-ac99-7dd1141696bf")
-	)
-	(wire
-		(pts
 			(xy 309.88 55.88) (xy 307.34 55.88)
 		)
 		(stroke
@@ -44430,16 +44408,6 @@
 			(type default)
 		)
 		(uuid "de424006-a0b3-4606-8610-75edcdc232dc")
-	)
-	(wire
-		(pts
-			(xy 610.87 92.71) (xy 610.87 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "de9b67d2-a317-4537-b0e4-bb16d0dfcb8d")
 	)
 	(wire
 		(pts
@@ -72795,80 +72763,6 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_Power:PWR_FLAG")
-		(at 621.03 92.71 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3c801d24-0aca-415d-bcdb-0731fff49ec1")
-		(property "Reference" "#FLG014"
-			(at 623.443 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 629.92 92.71 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 621.03 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 621.03 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 621.03 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0e1a3e4c-52a6-4ab2-8ac0-d43f7014c771")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "#FLG014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_Power:PWR_FLAG")
 		(at 132.08 40.64 270)
 		(unit 1)
 		(body_style 1)
@@ -80538,7 +80432,7 @@
 				)
 			)
 		)
-		(property "Value" "5.1k/1%/R0402"
+		(property "Value" "5.1k"
 			(at 656.59 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -80548,7 +80442,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 654.05 75.438 90)
 			(hide yes)
 			(show_name no)
@@ -80576,6 +80470,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 654.05 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -82775,83 +82680,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_OTHER:TESTPAD")
-		(at 621.03 41.91 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "64d3466b-b551-4d30-b69c-0464cff1bc56")
-		(property "Reference" "+5V_USB2"
-			(at 623.57 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TESTPAD"
-			(at 618.49 44.831 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:TEST_PAD_40x70_Round"
-			(at 614.934 43.815 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 621.03 41.91 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 621.03 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c31d5224-900f-44d6-ae66-b8987d9cd2ff")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "+5V_USB2")
 					(unit 1)
 				)
 			)
@@ -97959,7 +97787,7 @@
 				)
 			)
 		)
-		(property "Value" "5.1k/1%/R0402"
+		(property "Value" "5.1k"
 			(at 633.73 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -97969,7 +97797,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 631.19 75.438 90)
 			(hide yes)
 			(show_name no)
@@ -97997,6 +97825,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 631.19 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -112585,83 +112424,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:TESTPAD")
-		(at 623.57 90.17 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ea429e44-4772-4cec-bf29-be9e7f93fe7d")
-		(property "Reference" "GND2"
-			(at 626.11 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TESTPAD"
-			(at 621.03 93.091 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:TEST_PAD_40x70_Round"
-			(at 617.474 92.075 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 623.57 90.17 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 623.57 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "81e0422f-5fa6-4542-ada3-47d172c64d26")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "GND2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Power:GND")
 		(at 379.73 388.62 90)
 		(unit 1)
@@ -113598,7 +113360,7 @@
 				)
 			)
 		)
-		(property "Value" "+5V_USB"
+		(property "Value" "+5V_USB_2"
 			(at 651.51 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
