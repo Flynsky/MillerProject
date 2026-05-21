@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 0.4,
-          "width": 0.4
+          "height": 0.5,
+          "width": 1.0
         },
         "silk_line_width": 0.254,
         "silk_text_italic": false,
@@ -1430,7 +1430,7 @@
         "uuid": "284a97db-b878-4d19-9282-298636eac808"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R35,R82,PWR_LED2,C132,D2-3,#PWR176-177,#PWR237-238",
     "variants": []
   },
   "sheets": [
