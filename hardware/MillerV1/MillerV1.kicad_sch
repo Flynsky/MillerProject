@@ -22331,7 +22331,7 @@
 	)
 	(text "USB Diff. Pair\nZdiff=90 Ohms!"
 		(exclude_from_sim no)
-		(at 631.19 52.07 0)
+		(at 628.65 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -31680,16 +31680,6 @@
 			(type default)
 		)
 		(uuid "3883edf6-2034-4616-9bb2-9effead9445e")
-	)
-	(wire
-		(pts
-			(xy 655.32 53.34) (xy 647.7 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "388e1de0-3193-4338-86f4-8e420c0a642c")
 	)
 	(wire
 		(pts
@@ -56905,6 +56895,18 @@
 		)
 		(uuid "0833301a-a94f-467f-b1dc-0a234f04fd49")
 	)
+	(label "VGA_Red_2"
+		(at 739.14 44.45 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "08a55ee9-0dcb-4b68-808b-6fc6b1d57245")
+	)
 	(label "SER_TX_P"
 		(at 369.57 375.92 0)
 		(effects
@@ -57945,6 +57947,18 @@
 		)
 		(uuid "3dc3e944-bfc5-4404-8174-6e74fe53a8ed")
 	)
+	(label "VPO"
+		(at 739.14 46.99 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "3eb2af15-9c5f-4756-abc8-d93e4dbe1d7b")
+	)
 	(label "{slash}CFG_FAILED"
 		(at 165.1 180.34 0)
 		(effects
@@ -58040,6 +58054,18 @@
 			(justify left bottom)
 		)
 		(uuid "46d8d887-1ee4-4596-af7a-1f1da54d12fd")
+	)
+	(label "VGA_Red_3"
+		(at 739.14 59.69 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "47a4913b-85ed-4678-9702-33a034803356")
 	)
 	(label "EA_B2"
 		(at 88.9 73.66 0)

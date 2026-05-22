@@ -1430,7 +1430,7 @@
         "uuid": "284a97db-b878-4d19-9282-298636eac808"
       }
     ],
-    "used_designators": "R35,R82,PWR_LED2,C132,D2-3,#PWR176-177,#PWR237-238",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
