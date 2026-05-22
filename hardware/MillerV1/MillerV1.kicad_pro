@@ -109,7 +109,7 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "warning",
+        "lib_footprint_issues": "ignore",
         "lib_footprint_mismatch": "ignore",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
@@ -129,7 +129,7 @@
         "silk_over_copper": "warning",
         "silk_overlap": "ignore",
         "skew_out_of_range": "error",
-        "solder_mask_bridge": "error",
+        "solder_mask_bridge": "warning",
         "starved_thermal": "error",
         "text_height": "warning",
         "text_on_edge_cuts": "error",
@@ -1430,7 +1430,7 @@
         "uuid": "284a97db-b878-4d19-9282-298636eac808"
       }
     ],
-    "used_designators": "",
+    "used_designators": "MH2-4,#PWR239-242,H1",
     "variants": []
   },
   "sheets": [

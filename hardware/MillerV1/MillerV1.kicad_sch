@@ -1385,6 +1385,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "OLIMEX_Buttons:DSHP04TS-S"
 			(pin_names
 				(offset 1.016)
@@ -16400,397 +16523,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OLIMEX_OTHER:Fiducial"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "FID"
-				(at -1.905 3.175 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "Fiducial"
-				(at -3.81 -4.445 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3"
-				(at 0.254 -5.715 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 0.508 0.508)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at -1.27 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Enable" "0"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*TEST_PAD40/70/SQUARE* *TESTPAD50/80* *TESPAD28/40* *TESTPAD32/56* *TESTPAD34/60* *TESTPAD311_1* *TESTPAD40/66/SQUARE* *TESTPAD40/66* *TESTPAD* *TESTPAD2* *TESTPAD43/80* *SMD50/40* *TESTPAD50/80* *TESTPAD50/80_SQUARE* *TESTPAD60/110* *TESTPAD311* *SMD80/30* *SMD80/40* *SMD80/50* *TESTPAD80/130* *TESTPAD90/69* *SMD100/40* *TESTPAD100/150* *SMD250/80* *TESTPAD40/OBLONG* *TESTPAD_RPM* *TESTPAD60/90_WITHOUT_MASK*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Fiducial_0_1"
-				(polyline
-					(pts
-						(xy -1.778 -1.778) (xy 1.778 1.778)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.635)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 2.54)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.778 -1.778) (xy -1.778 1.778)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Fiducial_1_1"
-				(pin no_connect line
-					(at 0 0 90)
-					(length 0)
-					(name "FID*"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "Fid1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "OLIMEX_OTHER:Mounting_Hole_NPTH"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "MH"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Mounting_Hole_NPTH"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.27 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at -1.27 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Enable" "0"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Mounting_Hole_NPTH_0_1"
-				(polyline
-					(pts
-						(xy -1.905 1.27) (xy 1.778 -1.524)
-					)
-					(stroke
-						(width 0.508)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 1.27) (xy 1.905 -1.397)
-					)
-					(stroke
-						(width 0.508)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 1.524) (xy 1.905 -1.27)
-					)
-					(stroke
-						(width 0.508)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.524 -1.778) (xy 1.27 1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.905) (xy 1.397 1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.905) (xy 1.524 1.778)
-					)
-					(stroke
-						(width 0.508)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 2.54)
-					(stroke
-						(width 0.508)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 3.175)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.1938 2.1844) (xy -1.778 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.778 1.778) (xy -1.2192 -2.2098)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.778 -1.778) (xy -2.2098 1.2192)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.1844 -1.1938) (xy -1.778 1.778)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Mounting_Hole_NPTH_1_1"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "OLIMEX_OTHER:TESTPAD"
 			(pin_numbers
 				(hide yes)
@@ -20986,21 +20718,8 @@
 		(uuid "f2dab0f6-15e7-4e16-82b3-1351a071654b")
 	)
 	(rectangle
-		(start 753.11 104.14)
-		(end 802.64 130.81)
-		(stroke
-			(width 0.254)
-			(type solid)
-			(color 0 0 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "fcf49d51-06ab-42a6-8132-ab5b4bb87f50")
-	)
-	(rectangle
-		(start 752.856 132.08)
-		(end 802.64 158.75)
+		(start 714.756 102.87)
+		(end 748.03 129.54)
 		(stroke
 			(width 0.254)
 			(type solid)
@@ -21992,21 +21711,6 @@
 		)
 		(uuid "bbb9820c-c7c1-4c00-80c6-a7369e9dca82")
 	)
-	(text "Fiducials"
-		(exclude_from_sim no)
-		(at 753.11 107.95 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 0 0 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "bf16d5a5-26a2-4409-a061-21cfaddcddc1")
-	)
 	(text "UEXT & PMOD Connectors"
 		(exclude_from_sim no)
 		(at 408.432 236.982 0)
@@ -22370,7 +22074,7 @@
 	)
 	(text "Mounting Holes"
 		(exclude_from_sim no)
-		(at 754.888 137.16 0)
+		(at 716.788 107.95 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -22492,6 +22196,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0c6938af-f28b-445d-a5f8-a8b7c842c34f")
+	)
+	(junction
+		(at 725.17 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ddfef2e-065f-496f-ad96-45edb82edf6d")
 	)
 	(junction
 		(at 496.57 152.4)
@@ -23172,6 +22882,12 @@
 		(uuid "5de19147-bc35-4d4d-b5c1-9f01bb8cf29b")
 	)
 	(junction
+		(at 730.25 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5e56bc8a-fad2-4415-bb96-650ec0f03059")
+	)
+	(junction
 		(at 259.08 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -23302,6 +23018,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6ef125c1-0286-4686-953b-72467bc9308a")
+	)
+	(junction
+		(at 727.71 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6f6184a1-da9d-48d9-b661-3ef90d1f0cda")
 	)
 	(junction
 		(at 378.46 71.12)
@@ -24166,6 +23888,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c4990f38-bfcd-4303-95e2-bd8fe366895b")
+	)
+	(junction
+		(at 52.07 247.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c553227f-16b1-425c-a8a5-808e549d28bc")
 	)
 	(junction
 		(at 215.9 147.32)
@@ -27239,6 +26967,16 @@
 			(type default)
 		)
 		(uuid "0049d46c-9de2-4699-9401-f2c4d8e7ac50")
+	)
+	(wire
+		(pts
+			(xy 52.07 247.65) (xy 52.07 250.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0049fc80-4bc3-4d68-8b78-ad19e1aba635")
 	)
 	(wire
 		(pts
@@ -30613,6 +30351,16 @@
 	)
 	(wire
 		(pts
+			(xy 730.25 118.11) (xy 730.25 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ac9b9cd-54ca-45ed-a361-05c05a721e32")
+	)
+	(wire
+		(pts
 			(xy 279.4 152.4) (xy 279.4 170.18)
 		)
 		(stroke
@@ -30853,6 +30601,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 237.49) (xy 111.76 237.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e7330d7-8e81-4c9a-a858-a77ddeb71c42")
+	)
+	(wire
+		(pts
 			(xy 425.45 200.66) (xy 433.07 200.66)
 		)
 		(stroke
@@ -30883,7 +30641,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 247.65) (xy 58.42 247.65)
+			(xy 43.18 247.65) (xy 52.07 247.65)
 		)
 		(stroke
 			(width 0)
@@ -31150,6 +30908,16 @@
 			(type default)
 		)
 		(uuid "320b5652-68b4-4e9b-8cb4-4a0cec5e9930")
+	)
+	(wire
+		(pts
+			(xy 727.71 119.38) (xy 727.71 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3214e253-b82a-4db4-8984-d86900e9c551")
 	)
 	(wire
 		(pts
@@ -32370,6 +32138,16 @@
 			(type default)
 		)
 		(uuid "415885c4-983c-4d6d-bca2-be6cde6bb4d8")
+	)
+	(wire
+		(pts
+			(xy 52.07 250.19) (xy 100.33 250.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "415a4580-5538-4b32-bade-92a7bcf2ac3a")
 	)
 	(wire
 		(pts
@@ -33673,7 +33451,7 @@
 	)
 	(wire
 		(pts
-			(xy 419.1 82.55) (xy 419.1 87.63)
+			(xy 111.76 237.49) (xy 111.76 242.57)
 		)
 		(stroke
 			(width 0)
@@ -34020,6 +33798,16 @@
 			(type default)
 		)
 		(uuid "53707a0e-f2dc-4894-9bb8-10972002df44")
+	)
+	(wire
+		(pts
+			(xy 730.25 119.38) (xy 735.33 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5382e382-0e51-43bf-9515-b2bc91f643ca")
 	)
 	(wire
 		(pts
@@ -35923,6 +35711,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 247.65) (xy 58.42 247.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b40bffe-9cc0-48c7-b04c-58cc07b99455")
+	)
+	(wire
+		(pts
 			(xy 157.48 152.4) (xy 162.56 152.4)
 		)
 		(stroke
@@ -36543,6 +36341,16 @@
 	)
 	(wire
 		(pts
+			(xy 725.17 118.11) (xy 725.17 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73111b6e-e4f4-48dd-b08f-fe85f4d8e8ab")
+	)
+	(wire
+		(pts
 			(xy 708.66 27.94) (xy 715.01 27.94)
 		)
 		(stroke
@@ -36830,6 +36638,16 @@
 			(type default)
 		)
 		(uuid "77397a40-4bc4-4d6b-83a3-1a449067c8e2")
+	)
+	(wire
+		(pts
+			(xy 720.09 119.38) (xy 725.17 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7743026a-307a-4eba-8cde-033c95fa6cbb")
 	)
 	(wire
 		(pts
@@ -37193,6 +37011,16 @@
 	)
 	(wire
 		(pts
+			(xy 727.71 119.38) (xy 730.25 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7be90048-90dd-4de5-a54d-9e0bd3cf4776")
+	)
+	(wire
+		(pts
 			(xy 154.94 66.04) (xy 167.64 66.04)
 		)
 		(stroke
@@ -37210,6 +37038,16 @@
 			(type default)
 		)
 		(uuid "7c50e094-c2a2-4ee9-aa03-d15c8fa694ca")
+	)
+	(wire
+		(pts
+			(xy 100.33 250.19) (xy 100.33 237.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c688fc4-cc02-46a3-864d-5dd9070fb7f8")
 	)
 	(wire
 		(pts
@@ -40342,6 +40180,16 @@
 		)
 		(uuid "a558a45e-5739-4d71-957f-ca610313ad31")
 	)
+	(wire
+		(pts
+			(xy 725.17 119.38) (xy 727.71 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a56ad14f-c29b-4e27-b4ad-1bd6ed8e436c")
+	)
 	(bus
 		(pts
 			(xy 152.4 101.6) (xy 152.4 104.14)
@@ -42466,7 +42314,7 @@
 	)
 	(wire
 		(pts
-			(xy 419.1 97.79) (xy 419.1 105.41)
+			(xy 111.76 252.73) (xy 111.76 260.35)
 		)
 		(stroke
 			(width 0)
@@ -43113,6 +42961,16 @@
 			(type default)
 		)
 		(uuid "c8c31439-03dd-4dd7-8f3d-c56a726c49fe")
+	)
+	(wire
+		(pts
+			(xy 735.33 119.38) (xy 735.33 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8db6448-2cc2-4057-a88e-e32dffa4a6ce")
 	)
 	(wire
 		(pts
@@ -43896,7 +43754,7 @@
 	)
 	(wire
 		(pts
-			(xy 419.1 120.65) (xy 419.1 113.03)
+			(xy 111.76 275.59) (xy 111.76 267.97)
 		)
 		(stroke
 			(width 0)
@@ -45733,6 +45591,16 @@
 			(type default)
 		)
 		(uuid "ea9f3d0b-66e8-487b-acfe-d23f7eae3094")
+	)
+	(wire
+		(pts
+			(xy 720.09 118.11) (xy 720.09 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eac20373-66bc-44fb-8623-25dd953b0a02")
 	)
 	(wire
 		(pts
@@ -66545,88 +66413,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 795.02 114.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1772db22-89ad-418e-9614-5225bdcf09b3")
-		(property "Reference" "FID6"
-			(at 792.48 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 792.48 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3_Paste"
-			(at 787.654 116.205 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 793.75 114.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 795.02 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "8428adb4-1add-4a47-91ba-52f939674dd5")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID6")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Power:GND")
 		(at 487.68 120.65 0)
 		(unit 1)
@@ -69591,97 +69377,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Mounting_Hole_NPTH")
-		(at 772.16 144.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2747692a-45ef-4b23-b5b4-24b59c6466f3")
-		(property "Reference" "MH2"
-			(at 770.255 139.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Mounting_Hole_NPTH"
-			(at 768.35 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
-			(at 770.89 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 770.89 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 772.16 144.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value 2M" ""
-			(at 772.16 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "MH2")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "MH2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_RCL:C")
 		(at 58.42 30.48 90)
 		(unit 1)
@@ -72326,88 +72021,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 787.4 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "386a24cb-6ec8-4a4c-bc2a-ad69156b167b")
-		(property "Reference" "FID11"
-			(at 784.86 120.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 784.86 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3_Paste"
-			(at 780.034 126.365 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 786.13 124.46 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 787.4 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "ef5da6c3-675a-4f6b-94c8-1b42b6d00cfa")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID11")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_RCL:C")
 		(at 314.96 86.36 90)
 		(unit 1)
@@ -72764,88 +72377,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "#PWR097")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 764.54 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "39901fde-a382-4f03-a3bd-d40a40e16e7f")
-		(property "Reference" "FID8"
-			(at 762 120.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 762 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3"
-			(at 757.174 126.365 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 763.27 124.46 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 764.54 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "7e0c1c67-3941-48a7-a88c-418f158d1006")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID8")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID3")
 					(unit 1)
 				)
 			)
@@ -79080,88 +78611,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 772.16 114.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5025d176-3a49-4d22-a642-23678c2635cc")
-		(property "Reference" "FID3"
-			(at 769.62 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 769.62 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3"
-			(at 764.794 116.205 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 770.89 114.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 772.16 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "fc0162f9-c801-4df0-a14b-5b36bd3b7424")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID3")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Power:GND")
 		(at 431.8 120.65 0)
 		(unit 1)
@@ -81821,6 +81270,80 @@
 		)
 	)
 	(symbol
+		(lib_id "OLIMEX_Power:GND")
+		(at 727.71 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5a5a4f01-93e0-448b-a808-0765233480c3")
+		(property "Reference" "#PWR0239"
+			(at 727.71 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 727.71 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 727.71 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 727.71 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 727.71 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ac846d9a-b640-4973-8f3b-72963220491b")
+		)
+		(instances
+			(project "MillerV1"
+				(path "/284a97db-b878-4d19-9282-298636eac808"
+					(reference "#PWR0239")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "OLIMEX_RCL:C")
 		(at 554.99 210.82 0)
 		(unit 1)
@@ -82727,6 +82250,96 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 730.25 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5efc85e9-532e-4285-bf39-e6e3c1536a65")
+		(property "Reference" "MH3"
+			(at 728.472 110.998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 732.79 115.5699 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
+			(at 730.25 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 730.25 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 730.25 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 730.25 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cc5da5ac-49cc-4498-a73e-07ceeb984c19")
+		)
+		(instances
+			(project "MillerV1"
+				(path "/284a97db-b878-4d19-9282-298636eac808"
+					(reference "MH3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "OLIMEX_Power:GND")
 		(at 104.14 167.64 90)
 		(unit 1)
@@ -83543,90 +83156,8 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 772.16 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "661be40e-c104-45f5-acf7-5a6f040f5d6c")
-		(property "Reference" "FID9"
-			(at 769.62 120.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 769.62 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3"
-			(at 764.794 126.365 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 770.89 124.46 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 772.16 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "1846b2d1-5629-4afa-bdbc-696cf1b299d8")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID9")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Diodes:LED")
-		(at 419.1 92.71 90)
+		(at 111.76 247.65 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -83636,7 +83167,7 @@
 		(dnp no)
 		(uuid "6658bae9-2074-4347-865f-249db7ca1b80")
 		(property "Reference" "PWR_LED1"
-			(at 415.29 88.265 0)
+			(at 107.95 243.205 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -83647,7 +83178,7 @@
 			)
 		)
 		(property "Value" "LED/RED/0603"
-			(at 421.64 85.09 0)
+			(at 114.3 240.03 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -83658,7 +83189,7 @@
 			)
 		)
 		(property "Footprint" "OLIMEX_LEDs-FP:LED_0603_KA"
-			(at 419.1 92.71 0)
+			(at 111.76 247.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -83669,7 +83200,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 419.1 92.71 0)
+			(at 111.76 247.65 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -83679,7 +83210,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 419.1 92.71 0)
+			(at 111.76 247.65 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -83689,7 +83220,7 @@
 			)
 		)
 		(property "Fieldname 1" "Value 1"
-			(at 419.1 92.71 0)
+			(at 111.76 247.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -83700,7 +83231,7 @@
 			)
 		)
 		(property "Fieldname2" "Value2"
-			(at 419.1 92.71 0)
+			(at 111.76 247.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -83711,7 +83242,7 @@
 			)
 		)
 		(property "Fieldname3" "Value3"
-			(at 419.1 92.71 0)
+			(at 111.76 247.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -84249,88 +83780,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 787.4 114.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "693a2ac7-3265-4550-bf9f-0a07f3858df9")
-		(property "Reference" "FID5"
-			(at 784.86 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 784.86 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3_Paste"
-			(at 780.034 116.205 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 786.13 114.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 787.4 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "97fa8106-46da-474c-9b61-d7ae72549c05")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID5")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID4")
 					(unit 1)
 				)
 			)
@@ -86559,7 +86008,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_Power:GND")
-		(at 419.1 120.65 0)
+		(at 111.76 275.59 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -86569,7 +86018,7 @@
 		(dnp no)
 		(uuid "76c081ff-c919-43fa-af5d-53caedf15c49")
 		(property "Reference" "#PWR0228"
-			(at 419.1 127 0)
+			(at 111.76 281.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -86580,7 +86029,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 419.1 124.46 0)
+			(at 111.76 279.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -86590,7 +86039,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 419.1 120.65 0)
+			(at 111.76 275.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -86600,7 +86049,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 419.1 120.65 0)
+			(at 111.76 275.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -86610,7 +86059,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 419.1 120.65 0)
+			(at 111.76 275.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -88841,88 +88290,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 779.78 114.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "82f65697-694f-4f7c-a7ce-ffd661279e02")
-		(property "Reference" "FID4"
-			(at 777.24 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 777.24 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3_Paste"
-			(at 772.414 116.205 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 778.51 114.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 779.78 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "bef78383-d045-4af1-842d-8dc1440806dc")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID4")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_RCL:C")
 		(at 193.04 27.94 90)
 		(unit 1)
@@ -89000,88 +88367,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 764.54 114.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "83f1ea33-3e37-4426-b528-2f8cb68a273d")
-		(property "Reference" "FID2"
-			(at 762 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 762 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3"
-			(at 757.174 116.205 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 763.27 114.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 764.54 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "b491fda6-1136-4b5d-b7a8-610af3709a57")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID2")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Power:+2V5")
 		(at 165.1 25.4 90)
 		(unit 1)
@@ -89150,97 +88435,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_OTHER:Mounting_Hole_NPTH")
-		(at 784.86 144.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "854c285f-30d1-4131-a794-39a2df3a1bb3")
-		(property "Reference" "MH3"
-			(at 782.955 139.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Mounting_Hole_NPTH"
-			(at 781.05 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
-			(at 783.59 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 783.59 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 784.86 144.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value 2M" ""
-			(at 784.86 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "MH3")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "MH3")
 					(unit 1)
 				)
 			)
@@ -89743,88 +88937,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "C64")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 779.78 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "869672a4-18e3-4323-a517-681c4d6f52a4")
-		(property "Reference" "FID10"
-			(at 777.24 120.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 777.24 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3_Paste"
-			(at 772.414 126.365 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 778.51 124.46 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 779.78 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "7ae05c9e-b892-4f6c-ae2c-eb170a0585f8")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID10")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID2")
 					(unit 1)
 				)
 			)
@@ -93181,7 +92293,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_RCL:R")
-		(at 419.1 109.22 270)
+		(at 111.76 264.16 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim yes)
@@ -93191,7 +92303,7 @@
 		(dnp no)
 		(uuid "927ca224-bd6e-447f-a6d4-dd5d4affdbb9")
 		(property "Reference" "R76"
-			(at 416.56 107.315 0)
+			(at 109.22 262.255 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -93202,7 +92314,7 @@
 			)
 		)
 		(property "Value" "2.2k/R0402"
-			(at 421.64 103.505 0)
+			(at 114.3 258.445 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -93213,7 +92325,7 @@
 			)
 		)
 		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
-			(at 417.322 109.22 0)
+			(at 109.982 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -93224,7 +92336,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 419.1 109.22 90)
+			(at 111.76 264.16 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -93234,7 +92346,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 419.1 109.22 0)
+			(at 111.76 264.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -93244,7 +92356,7 @@
 			)
 		)
 		(property "Fieldname 1" "Value 1"
-			(at 419.1 109.22 0)
+			(at 111.76 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -93255,7 +92367,7 @@
 			)
 		)
 		(property "Fieldname2" "Value2"
-			(at 419.1 109.22 0)
+			(at 111.76 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -93266,7 +92378,7 @@
 			)
 		)
 		(property "Fieldname3" "Value3"
-			(at 419.1 109.22 0)
+			(at 111.76 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -97354,6 +96466,96 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 725.17 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "aa48814d-bfa5-460d-8a0b-592f1a1efdf8")
+		(property "Reference" "MH2"
+			(at 723.392 110.998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 727.71 115.5699 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
+			(at 725.17 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 725.17 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 725.17 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 725.17 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "14e37ccd-ba1d-4027-87c2-89d9934f2070")
+		)
+		(instances
+			(project "MillerV1"
+				(path "/284a97db-b878-4d19-9282-298636eac808"
+					(reference "MH2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "OLIMEX_RCL:C")
 		(at 35.56 35.56 270)
 		(mirror x)
@@ -98887,97 +98089,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "#PWR070")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_OTHER:Mounting_Hole_NPTH")
-		(at 759.46 144.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "acf719dd-74ff-4a46-bca4-875b8a63915f")
-		(property "Reference" "MH1"
-			(at 757.555 139.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Mounting_Hole_NPTH"
-			(at 755.65 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
-			(at 758.19 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 758.19 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 759.46 144.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value 2M" ""
-			(at 759.46 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "MH1")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "MH1")
 					(unit 1)
 				)
 			)
@@ -103169,6 +102280,96 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 720.09 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b9b96005-6b27-47c3-a925-7fe31e143720")
+		(property "Reference" "MH1"
+			(at 718.312 110.998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 722.63 115.5699 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
+			(at 720.09 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 720.09 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 720.09 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 720.09 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b84bcbbf-bc75-4222-9b6a-65a567a2381b")
+		)
+		(instances
+			(project "MillerV1"
+				(path "/284a97db-b878-4d19-9282-298636eac808"
+					(reference "MH1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "OLIMEX_RCL:R")
 		(at 36.83 187.96 0)
 		(unit 1)
@@ -104692,88 +103893,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 795.02 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c3b8f14b-ea02-4dd0-ba2e-68357da82689")
-		(property "Reference" "FID12"
-			(at 792.48 120.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 792.48 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3_Paste"
-			(at 787.654 126.365 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 793.75 124.46 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 795.02 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "e1ec0719-2db3-4481-8b5c-822a03aec19f")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID12")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Power:GND")
 		(at 414.02 52.07 0)
 		(unit 1)
@@ -105414,97 +104533,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "#PWR072")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_OTHER:Mounting_Hole_NPTH")
-		(at 797.56 144.78 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c87d0e03-5ace-4a2f-a133-c6d7db5550c3")
-		(property "Reference" "MH4"
-			(at 795.655 139.7 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Mounting_Hole_NPTH"
-			(at 793.75 148.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
-			(at 796.29 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 796.29 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 797.56 144.78 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value 2M" ""
-			(at 797.56 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "MH4")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "MH4")
 					(unit 1)
 				)
 			)
@@ -108830,88 +107858,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 756.92 114.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d4a386c6-5a38-4400-8ed5-6ab9f1198251")
-		(property "Reference" "FID1"
-			(at 754.634 110.236 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 754.38 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3"
-			(at 749.554 116.205 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 755.65 114.3 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 756.92 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "1e3e7f7d-80bb-419a-99aa-d667edfaad84")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID1")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Power:PWR_FLAG")
 		(at 66.04 40.64 270)
 		(unit 1)
@@ -109180,88 +108126,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "C35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_OTHER:Fiducial")
-		(at 756.92 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim yes)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d55e6d23-c0db-4e19-b0a3-089166a99c0d")
-		(property "Reference" "FID7"
-			(at 754.38 120.65 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Fiducial"
-			(at 754.38 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_Other-FP:Fiducial1x3"
-			(at 749.554 126.365 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 755.65 124.46 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 756.92 124.46 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "Fid1"
-			(uuid "47df04b8-2052-4892-81f8-f1d705d9ca76")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "FID7")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "FID1")
 					(unit 1)
 				)
 			)
@@ -109676,6 +108540,96 @@
 				(path "/676283d4-89a8-443a-99b4-b46a70190765"
 					(reference "RM1")
 					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 735.33 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d675e148-d0d1-4d06-9ffc-0ffa9d9fe961")
+		(property "Reference" "MH4"
+			(at 733.552 110.998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 737.87 115.5699 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
+			(at 735.33 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 735.33 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 735.33 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 735.33 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "80f17e1d-8972-4f07-ba90-f6be7cfe253e")
+		)
+		(instances
+			(project "MillerV1"
+				(path "/284a97db-b878-4d19-9282-298636eac808"
+					(reference "MH4")
+					(unit 1)
 				)
 			)
 		)
@@ -113471,88 +112425,6 @@
 			(project "MillerV1"
 				(path "/284a97db-b878-4d19-9282-298636eac808"
 					(reference "#PWR0185")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_Power:+5V_USB")
-		(at 419.1 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ebcf4add-c127-405e-85fd-2d85d9ff413a")
-		(property "Reference" "#PWR0215"
-			(at 419.1 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V_USB"
-			(at 419.1 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 419.1 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 419.1 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 419.1 82.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7f022531-9268-4b75-b1a1-948ccb5af1bd")
-		)
-		(instances
-			(project "MillerV1"
-				(path "/284a97db-b878-4d19-9282-298636eac808"
-					(reference "#PWR0215")
-					(unit 1)
-				)
-			)
-			(project "Neo65265_Rev_A"
-				(path "/afa95bdf-8445-495e-b6b7-d4880b2dbc14"
-					(reference "#PWR023")
 					(unit 1)
 				)
 			)
