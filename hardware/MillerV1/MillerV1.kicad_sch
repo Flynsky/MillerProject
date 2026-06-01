@@ -58854,7 +58854,7 @@
 		)
 		(uuid "75acfddd-bdda-4863-b1b3-4b4fd32f609c")
 	)
-	(label "ISO_AS1"
+	(label "ISO_AS2"
 		(at 627.38 201.93 0)
 		(effects
 			(font
@@ -61053,7 +61053,7 @@
 		)
 		(uuid "ddf2f695-d33c-4a34-b95b-6d28dd6fc41c")
 	)
-	(label "ISO_AS1"
+	(label "ISO_AS2"
 		(at 654.05 213.36 180)
 		(effects
 			(font
