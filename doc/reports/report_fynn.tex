@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=0cm, left=2cm, right=2cm}
+\usepackage{XCharter}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}    
+\usepackage{color}
+\usepackage[document]{ragged2e}
+\pagestyle{empty}                   
+\usepackage{enumitem}               
+\usepackage{float}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} 
+\graphicspath{{../../lebenslauf/pictures/}}
+ 
+\definecolor{sections}{rgb}{0, 0.5, 0.2}
+\definecolor{links}{rgb}{0, 0.5, 0.5}
+\hypersetup{
+    colorlinks=true,    
+    urlcolor=links,      
+    pdfborder={0 0 0}     
+}
+% gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -dCompatibilityLevel=1.4  -dPDFSETTINGS=/printer -sOutputFile=Resume.pdf lebenslauf.pdf
+
+\begin{document}
+
+\begin{flushright}
+	\setlength{\fboxsep}{8pt}
+	\begin{minipage}{0.2\textwidth}
+		\raggedright
+		Fynn Gewiese\\ f.gewiese@gmx.de \\ \today
+	\end{minipage}
+\end{flushright}
+
+% \vspace{\baselineskip}
+%firm adress
+% \FirmName \newline
+\vspace{5\baselineskip}
+\textcolor{sections}{\large Report} | Projekt GateMate SS26 HM\\
+\vspace{\baselineskip}
+Folgende Tätigkeiten wurden von mir durchgeführt:
+\begin{itemize}
+	\item Group Leader / Organisator
+	\item Aufsetzen von Github
+	\item Aufstellen von Requirements
+	\item Aufstellen und Zuweisung von Teilaufgaben
+	\item Restruktierung der Schematic von Chaos zu thematischen Blöcken
+	\item Aufhübschung der Platine (HM logo, beschriftungen, etc)
+	\item Debloating der Platine
+	\item Supervision und Anleitung von dem USB Transceiver
+	\item Design eines ISO/IEC 7816 Interfaces, das sowohl als Master als auch Slave funktionieren kann.
+	\item DRC und dafür nötige Änderungen
+	\item Recherche von Herstellern / Bestellung der Platine
+
+\end{itemize}
+
+
+\vspace{\baselineskip}
+Mit freundlichen Grüßen,\\
+\vspace{\baselineskip}
+Fynn Gewiese
+
+
+\end{document}
