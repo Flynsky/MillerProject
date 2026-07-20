@@ -65,7 +65,7 @@
 \end{titlepage}
 \newpage
 \pagenumbering{arabic}
-\setcounter{page}{2}  
+\setcounter{page}{2}
 
 \paragraph{Ziel des Projektes | Fynn}
 Der GateMate-FPGA von Cologne Chip ist als europäischer FPGA von besonderem Interesse, da er eine Alternative zu den marktdominierenden Anbietern aus den USA und Asien darstellt\footnote{\url{https://colognechip.com/programmable-logic/gatemate/}}. Gerade im Hinblick auf technologische Souveränität und Unabhängigkeit von außereuropäischen Lieferketten gewinnt die Verfügbarkeit einer solchen, vollständig in Europa entwickelten FPGA-Plattform zunehmend an Bedeutung. Hinzu kommt, dass für den GateMate im Gegensatz zu vielen etablierten FPGA-Familien eine offene Toolchain existiert, wodurch sich die Architektur besonders gut für Lehre, Forschung und Open-Source-Projekte eignet. Olimex bietet mit dem GateMate-A1-EVB ein Evaluationsboard an, das vollständig als Open-Source-Hardware verfügbar ist\footnote{\url{https://www.olimex.com/Products/FPGA/GateMate/GateMateA1-EVB/open-source-hardware}}, sodass sämtliche Schaltpläne, Layouts und Bauteilinformationen frei zugänglich sind und als verlässliche Ausgangsbasis für eigene Entwicklungen dienen können. Dieses Board haben wir als Grundlage genommen, um darauf eine Smart Card zu realisieren, die sich sowohl als Master als auch als Slave betreiben lässt und damit flexibel in unterschiedlichen Anwendungsszenarien eingesetzt werden kann. Ziel war es dabei, ein System zu schaffen, das sich für Weiterentwicklungen und Anpassungen eignet, ohne von proprietärer Hardware oder geschlossenen Toolchains abhängig zu sein. Dafür werden im Wesentlichen drei Komponenten benötigt: ein ISO-Interface zur Kommunikation nach dem ISO/IEC-7816-Standard, eine USB-Schnittstelle zur Anbindung an einen Host-Rechner sowie ein IBEX-RISC-V-Prozessor\footnote{\url{https://github.com/lowrisc/ibex}}, der als frei verfügbarer, open-source Prozessorkern die zentrale Steuerungs- und Verarbeitungslogik der Smart Card übernimmt.
@@ -101,7 +101,7 @@ Um die Komplexität zu reduzieren, habe ich zudem ein Debloating der Platine dur
 	\label{fig:render_no_comp}
 \end{figure}
 
-Ein weiterer wichtiger Aspekt der Überarbeitung war die Sicherstellung einer kontrollierten Impedanz für die USB- und SRAM-Leitungen, 
+Ein weiterer wichtiger Aspekt der Überarbeitung war die Sicherstellung einer kontrollierten Impedanz für die USB- und SRAM-Leitungen,
 um Signalintegrität  zu gewährleisten und Reflexionen sowie Übersprechen zu minimieren.
 Im Anschluss habe ich den Design Rule Check (DRC) durchgeführt und die daraus resultierenden notwendigen Änderungen umgesetzt.
 Abschließend habe ich die Recherche geeigneter Hersteller übernommen und mich dabei bewusst für AISLER als lokalen Anbieter entschieden,
@@ -109,9 +109,9 @@ und die Bestellung der Platine veranlasst.
 
 
 \begin{figure}[H]
-  \includegraphics[width=0.8\textwidth]{assets/stackup.png}
-  \caption{Verwendeter 4 Lagen PCB Stackup von AISLER}
-  \label{fig:stackup}
+	\includegraphics[width=0.8\textwidth]{assets/stackup.png}
+	\caption{Verwendeter 4 Lagen PCB Stackup von AISLER}
+	\label{fig:stackup}
 \end{figure}
 \newpage
 
@@ -119,8 +119,7 @@ und die Bestellung der Platine veranlasst.
 Für die Kommunikation nach dem ISO/IEC-7816-Standard habe ich ein Interface entworfen,
 das flexibel sowohl im Master- als auch im Slave-Betrieb eingesetzt werden kann.
 Dieser duale Ansatz ermöglicht eine breitere Einsatzfähigkeit der Platine,
-da je nach Anwendungsfall zwischen beiden Betriebsmodi gewechselt werden kann,
-ohne dass zusätzliche Hardwareanpassungen notwendig sind.
+da je nach Anwendungsfall zwischen beiden Betriebsmodi gewechselt werden kann.
 
 \begin{figure}[H]
 	\includegraphics[width=0.8\textwidth]{assets/interface.png}
@@ -131,16 +130,17 @@ Ein zentrales Element ist der TXB0108-Levelshifter,
 der den GPIO-Logikpegel des FPGA in den passenden Ausgangs-Logikpegel konvertiert.
 Die Ausgangsspannung wird dabei entweder vom angeschlossenen Master bereitgestellt,
 oder – falls der FPGA selbst als Master fungiert – wahlweise über einen Schalter (für 5V) oder einen LDO erzeugt.
-Der LDO ist einstellbar (adjustable) und besitzt ein Feedback-Netzwerk aus Widerständen,
-welche der FPGA gezielt nach Ground ziehen kann, um die Ausgangsspannung zwischen 3.3V und 1.8V umzuschalten.
+Der LDO ist einstellbar (adjustable) und besitzt ein Feedback-Netzwerk aus Widerständen.
+Der FPGA kann einen dieser Widerstände erden,
+um die Ausgangsspannung zwischen 3.3V und 1.8V umzuschalten.
 
 \begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{assets/renderISO.png}
-  \caption{ISO/IEC 7816 Interface Sektion auf der Platine}
-  \label{fig:millerv1}
+	\includegraphics[width=0.5\textwidth]{assets/renderISO.png}
+	\caption{ISO/IEC 7816 Interface Sektion auf der Platine}
+	\label{fig:millerv1}
 \end{figure}
 
-Das ISO/IEC-7816-Interface ist auf der Platine als Arduino-Duo-Header umgesetzt 
+Das ISO/IEC-7816-Interface ist auf der Platine als Arduino-Header umgesetzt
 und befindet sich als doppelte Stiftleiste unten rechts (siehe Abbildung~\ref{fig:millerv1}).
 Direkt darüber ist der Levelshifter platziert.
 Oben rechts, neben dem HM-Logo, befinden sich der LDO sowie der Switch zur Spannungsversorgung.
