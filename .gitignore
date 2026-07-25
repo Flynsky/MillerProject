@@ -3,6 +3,8 @@ oss-cad-suite
 *.dot
 *obj_dir*
 
+!doc/reports/assets/*.png
+
 hardware/MillerV1/.history
 *.kicad_pro.lck
 
