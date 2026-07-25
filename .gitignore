@@ -1,6 +1,5 @@
 oss-cad-suite
 *.wcd
-*.png
 *.dot
 *obj_dir*
 
