@@ -4,3 +4,13 @@ Pin_out "locked" Loc = "IO_EB_A0";  #CCEVB J2 pin 33, Oli BANK_EB1 pin 19
 
 Pin_out "CCEVB_LED" Loc = "IO_EB_B1";  #Oli BANK_EB1 pin 18
 Pin_out "OLIMEX_LED" Loc = "IO_SB_B6";  #CCEVB J10 pin 18
+
+# USB-PHY connections for 2nd USB-C port to FPGA pins
+Pin_in "usb_rcv" Loc = "IO_WA_A0"; # Routed via VGA_Red_0
+Pin_out "usb_vpo" Loc = "IO_WA_A1"; # Routed via VGA_Red_1
+Pin_out "usb_vmo" Loc = "IO_WA_A2"; # Routed via VGA_Red_2
+Pin_in "usb_vp" Loc = "IO_WA_B0"; # Routed via VGA_Blue_0
+Pin_in "usb_vm" Loc = "IO_WA_B1"; # Routed via VGA_Blue_1
+Pin_out "usb_oe" Loc = "IO_WA_B2"; # Routed via VGA_Blue_2
+Pin_in "usb_susp" Loc = "IO_WA_A3"; # Routed via VGA_Red_3
+Pin_out "usb_speed" Loc = "IO_WA_B3"; # Routed via VGA_Blue_3

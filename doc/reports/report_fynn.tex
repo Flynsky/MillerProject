@@ -230,7 +230,72 @@ Für das ISO/IEC-7816-3-konforme Interface wurden die Signale VCC, GND, CLK, RST
 	\item Gemeinsame Design-Reviews zu Footprints, Bauteilgrößen und Routing.
 	\item Das finale PCB-Layout, den DRC und den Arduino-Header hat Fynn übernommen.
 \end{itemize}
-\paragraph{Bestellung und  BOM | Timo}
+\paragraph{Bestellung und BOM-Management | Timo}
+
+\textbf{Bill of Materials (BOM) und Sourcing-Strategie}
+\begin{itemize}
+	\item \textbf{Generische zu spezifische BOM:} Ausgangspunkt meiner Arbeit war die generische Bill of Materials des Olimex-Evaluationsboards. Da unser PCB-Design jedoch stark von der Referenz abwich (z.B. durch den TUSB1106 PHY, das ISO-Interface und debloatete Peripherie), musste diese Stückliste systematisch bereinigt und auf unser spezifisches Design zugeschnitten werden. Die finale BOM umfasst 79 einzigartige Positionen mit insgesamt knapp 800 Einzelbauteilen für drei Boards.
+	\item \textbf{Distributor-Konsolidierung:} Da der GateMate-FPGA ein recht exklusiver Baustein ist, war DigiKey die einzige große Beschaffungsplattform, die diesen Chip (sowie den IBEX-Softcore-kompatiblen Flash) im Sortiment anbot. Um zusätzliche Versandkosten und logistischen Aufwand durch mehrere Lieferanten zu vermeiden, wurde die komplette BOM mithilfe von Octopart so umgearbeitet, dass alle Komponenten zentral über DigiKey bestellt werden konnten.
+	\item \textbf{Kostenoptimierung durch Packaging:} Bei der Recherche fiel auf, dass für bestimmte Widerstände (z.B. den 1,05\,k$\Omega$ Widerstand \texttt{RC0402FR-071K05L}) sogenannte \textit{Digi-Reel} Artikelnummern (Suffix \texttt{-DKR-ND}) hinterlegt waren, für die der Distributor eine Abrollgebühr von ca. 7\,\$ pro Rolle verlangt. Durch gezieltes Umschlüsseln auf \textit{Cut-Tape} Varianten (Suffix \texttt{-CT-ND}) konnten diese versteckten Kosten eliminiert werden.
+\end{itemize}
+
+\paragraph{Component Substitution | Timo}
+Viele ursprünglich vorgesehene Bauteile waren abgekündigt oder kurzfristig nicht lieferbar (Preis = 0\,€ im System). Daher mussten anhand technischer Datenblätter passende Ersatzkomponenten ermittelt werden. Wichtige Kriterien waren hierbei exakte Funktionalität, Pin-Kompatibilität, identische Gehäuseformen (Footprints) sowie die strikte Einhaltung der Toleranzen. 
+
+Ein zentrales Beispiel für diese Substitution war der 47\,$\mu$F Kondensator für die Spannungsstabilisierung:
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Ursprünglich (Nicht lieferbar)} & \textbf{Gewählte Alternative} \\ \hline
+		Hersteller & Samsung Electro-Mechanics & Murata Electronics \\ \hline
+		Part Number (MPN) & \texttt{CL21A476MQYNNNE} & \texttt{GRM21BR61A476ME15} \\ \hline
+		DigiKey SKU & \texttt{1276-1852-1-ND} & \texttt{490-9961-1-ND} \\ \hline
+		Kapazität \& Footprint & 47\,$\mu$F, 0805 (2012 Metric) & 47\,$\mu$F, 0805 (2012 Metric) \\ \hline
+		Dielektrikum \& Toleranz & X5R, $\pm$20\% & X5R, $\pm$20\% \\ \hline
+		Spannungsfestigkeit & 6.3\,V & \textbf{10.0\,V} \\ \hline
+	\end{tabular}
+	\caption{Vergleich der Kondensator-Substitution}
+	\label{tab:cap_subst}
+\end{table}
+Wie aus Tabelle~\ref{tab:cap_subst} ersichtlich, erfüllt die Alternative nicht nur alle Footprint-Vorgaben, sondern bietet mit 10\,V eine höhere Spannungsfestigkeit, was das Derating verbessert und die Zuverlässigkeit der Schaltung erhöht. Ähnliche Substitutionen wurden unter anderem für 2,2\,k$\Omega$ Widerstände (Wechsel auf Vishay \texttt{CRCW04022K20FKED}) durchgeführt.
+
+\vspace{1em}
+\textbf{Mengenplanung und Reservestrategie}
+
+Die finale BOM wurde für die Bestückung von drei Prototypen-Platinen kalkuliert. Da bei der Handbestückung und dem Reflow-Löten im Labor mit Schwund oder Fehlern gerechnet werden muss, wurde eine systematische Reservestrategie angewandt:
+\begin{itemize}
+	\item \textbf{Passive SMD-Bauteile (0402/0603):} Für diese sehr kleinen und günstigen Komponenten wurde eine großzügige Reserve von +15\,\% der benötigten Menge, mindestens jedoch +5 Stück als absoluter Puffer, eingeplant.
+	\item \textbf{Aktive Bauteile \& ICs:} Bei kostenintensiveren Bauteilen wie dem USB-PHY (TUSB1106), den LDOs oder dem GateMate-FPGA wurde knapper kalkuliert. Hier galt die strikte Regel: Exakte Menge für 3 Boards \textbf{plus genau 1 Ersatz-IC} pro Bauteiltyp, um im Fehlerfall sofort einen Chip austauschen zu können, ohne das Budget unnötig zu belasten.
+\end{itemize}
+
+\paragraph{Festlegung der Pinbelegung und Constraints | Timo}
+
+Um den externen USB-2.0-PHY (TUSB1106) an den GateMate-FPGA anzubinden, musste eine geeignete Pinbelegung (Pin Assignment) definiert werden. Da das Routing auf der Platine durch den Formfaktor stark eingeschränkt war, wurden die digitalen Signale (VM, VP, VPO, VMO, RCV, OE) auf die Pins des Peri-BUS geroutet, die ursprünglich für die \texttt{VGA\_Red} und \texttt{VGA\_Blue} Signale des Olimex-Boards vorgesehen waren. 
+
+Dies ermöglichte ein signalintegres, kreuzungsfreies Routing. Für die Synthese und das anschließende Place-\&-Route (P\&R) mit der Cologne Chip Toolchain habe ich die entsprechenden Constraints in der \texttt{.ccf}-Datei (Cologne Chip Constraint File) wie folgt definiert:
+
+\begin{verbatim}
+# USB PHY TUSB1106 Pin Constraints (via Olimex VGA/Peri-BUS)
+Pin_in  "usb_rcv"   Loc = "IO_WA_A0";  # Routed via VGA_Red_0
+Pin_out "usb_vpo"   Loc = "IO_WA_A1";  # Routed via VGA_Red_1
+Pin_out "usb_vmo"   Loc = "IO_WA_A2";  # Routed via VGA_Red_2
+Pin_in  "usb_vp"    Loc = "IO_WA_B0";  # Routed via VGA_Blue_0
+Pin_in  "usb_vm"    Loc = "IO_WA_B1";  # Routed via VGA_Blue_1
+Pin_out "usb_oe"    Loc = "IO_WA_B2";  # Routed via VGA_Blue_2
+Pin_in  "usb_susp"  Loc = "IO_WA_A3";  # Routed via VGA_Red_3
+Pin_out "usb_speed" Loc = "IO_WA_B3";  # Routed via VGA_Blue_3
+\end{verbatim}
+
+\paragraph{Bringup- und geplante Testinfrastruktur | Timo}
+
+Da das Löten der Hardware-Platinen noch aussteht, lag der Fokus auf der theoretischen Ausarbeitung eines umfassenden Bringup- und Testplans, der nach Eintreffen der Hardware strikt sequenziell abgearbeitet wird:
+\begin{enumerate}
+	\item \textbf{Stufe 1 – Power-Bringup (Smoke Test):} Vor der initialen Programmierung des FPGAs werden alle Spannungsregler (LDOs, 3,3\,V, 1,8\,V Core-Voltage) ohne angeschlossene Peripherie mit einem Multimeter auf korrekte Pegel und Kurzschlüsse (Short-to-Ground) geprüft, um teure Hardware-Schäden zu vermeiden.
+	\item \textbf{Stufe 2 – Basis-Infrastruktur \& JTAG:} Messung des \texttt{10\,MHz} Oszillators mittels Oszilloskop auf ein sauberes Taktsignal. Anschließend wird der Verbindungsaufbau via JTAG getestet und ein simples "Blinky"-Design geladen, um die grundlegende I/O-Funktionalität des FPGAs zu verifizieren.
+	\item \textbf{Stufe 3 – USB-PHY Test:} Aktivierung des TUSB1106. Es wird überprüft, ob der Host-PC die 1,5\,k$\Omega$ Full-Speed-Terminierung am D+-Pin korrekt erkennt. Mittels Oszilloskop werden die Signalpegel an den differentiellen Datenleitungen gemessen.
+	\item \textbf{Stufe 4 – ISO/IEC-7816 Interface Test:} Validierung des TXB0108-Levelshifters. Über Test-Pattern im FPGA wird geprüft, ob die Umschaltung der Power-Domains für die Smart Card (5\,V, 3\,V, 1,8\,V) lastfrei und sauber funktioniert, bevor echte Karten gesteckt werden.
+\end{enumerate}
 \paragraph{Software | Xaver}
 
 \paragraph{Nutzung von KI}
