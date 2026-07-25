@@ -54,12 +54,12 @@
 		\vspace{0.3\baselineskip}
 		{\large HM bei Prof.\ Dr.\ Felix Miller}
 		\vspace{2\baselineskip}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.9\textwidth]{assets/MillerV1.png}
-			\caption{PCB Render}
-			\label{fig:millerv1}
-		\end{figure}
+		% \begin{figure}[H]
+		% 	\centering
+		% 	\includegraphics[width=0.9\textwidth]{assets/MillerV1.png}
+		% 	\caption{PCB Render}
+		% 	\label{fig:millerv1}
+		% \end{figure}
 	\end{center}
 	\vfill
 \end{titlepage}
@@ -95,11 +95,11 @@ Die ursprünglich unstrukturierte Schematic habe ich in thematisch klar abgegren
 Darüber hinaus habe ich die Platine optisch aufgewertet, unter anderem durch das Einfügen des HM-Logos und einheitlicher Beschriftungen.
 Um die Komplexität zu reduzieren, habe ich zudem ein Debloating der Platine durchgeführt und nicht benötigte Elemente entfernt.
 
-\begin{figure}[H]
-	\includegraphics[width=0.8\textwidth]{assets/render_no_comp.png}
-	\caption{3D render ohne Komponenten}
-	\label{fig:render_no_comp}
-\end{figure}
+% \begin{figure}[H]
+% 	\includegraphics[width=0.8\textwidth]{assets/render_no_comp.png}
+% 	\caption{3D render ohne Komponenten}
+% 	\label{fig:render_no_comp}
+% \end{figure}
 
 Ein weiterer wichtiger Aspekt der Überarbeitung war die Sicherstellung einer kontrollierten Impedanz für die USB- und SRAM-Leitungen,
 um Signalintegrität  zu gewährleisten und Reflexionen sowie Übersprechen zu minimieren.
@@ -108,11 +108,11 @@ Abschließend habe ich die Recherche geeigneter Hersteller übernommen und mich 
 und die Bestellung der Platine veranlasst.
 
 
-\begin{figure}[H]
-	\includegraphics[width=0.8\textwidth]{assets/stackup.png}
-	\caption{Verwendeter 4 Lagen PCB Stackup von AISLER}
-	\label{fig:stackup}
-\end{figure}
+% \begin{figure}[H]
+% 	\includegraphics[width=0.8\textwidth]{assets/stackup.png}
+% 	\caption{Verwendeter 4 Lagen PCB Stackup von AISLER}
+% 	\label{fig:stackup}
+% \end{figure}
 \newpage
 
 \paragraph{ISO/IEC 7816 Interface | Fynn}
@@ -121,10 +121,10 @@ das flexibel sowohl im Master- als auch im Slave-Betrieb eingesetzt werden kann.
 Dieser duale Ansatz ermöglicht eine breitere Einsatzfähigkeit der Platine,
 da je nach Anwendungsfall zwischen beiden Betriebsmodi gewechselt werden kann.
 
-\begin{figure}[H]
-	\includegraphics[width=0.8\textwidth]{assets/interface.png}
-	\caption{ISO/IEC 7816 Interface Schematic}
-\end{figure}
+% \begin{figure}[H]
+% 	\includegraphics[width=0.8\textwidth]{assets/interface.png}
+% 	\caption{ISO/IEC 7816 Interface Schematic}
+% \end{figure}
 
 Ein zentrales Element ist der TXB0108-Levelshifter,
 der den GPIO-Logikpegel des FPGA in den passenden Ausgangs-Logikpegel konvertiert.
@@ -134,18 +134,102 @@ Der LDO ist einstellbar (adjustable) und besitzt ein Feedback-Netzwerk aus Wider
 Der FPGA kann einen dieser Widerstände erden,
 um die Ausgangsspannung zwischen 3.3V und 1.8V umzuschalten.
 
-\begin{figure}[H]
-	\includegraphics[width=0.5\textwidth]{assets/renderISO.png}
-	\caption{ISO/IEC 7816 Interface Sektion auf der Platine}
-	\label{fig:millerv1}
-\end{figure}
+% \begin{figure}[H]
+% 	\includegraphics[width=0.5\textwidth]{assets/renderISO.png}
+% 	\caption{ISO/IEC 7816 Interface Sektion auf der Platine}
+% 	\label{fig:millerv1}
+% \end{figure}
 
 Das ISO/IEC-7816-Interface ist auf der Platine als Arduino-Header umgesetzt
-und befindet sich als doppelte Stiftleiste unten rechts (siehe Abbildung~\ref{fig:millerv1}).
+und befindet sich als doppelte Stiftleiste unten rechts.
 Direkt darüber ist der Levelshifter platziert.
 Oben rechts, neben dem HM-Logo, befinden sich der LDO sowie der Switch zur Spannungsversorgung.
 
 \paragraph{Serial to USB transceiver | Tobias}
+
+\textbf{Recherche und Konzept}
+\begin{itemize}
+	\item Einarbeitung in den USB-2.0-PHY TUSB1106 von Texas Instruments.
+	\item Einarbeitung in den ISO/IEC-7816-Standard für Smart-Card-Schnittstellen.
+	\item Definition separater Power-Domains für den USB-PHY und das ISO/IEC-7816-Interface.
+\end{itemize}
+
+\textbf{USB-C-Power-Topologie}
+
+Eine direkte Verbindung der VBUS-Pins beider USB-C-Ports hätte die jeweiligen 5-V-Schienen kurzgeschlossen beziehungsweise ungewollte Rückströme ermöglicht. Deshalb wurde Port~1 über Vias direkt mit \texttt{+5V\_USB} verbunden, während Port~2 durch eine Schottky-Diode vom Typ B340 (3~A, 40~V) entkoppelt ist. Dadurch werden die Power-Domains voneinander getrennt und Port~2 zusätzlich gegen Verpolung geschützt. Die berechnete VBUS-Spannung am TUSB1106 liegt trotz des Spannungsabfalls an der Diode komfortabel innerhalb der USB-2.0-Spezifikation. Eine Power-LED D2 mit einem 2,2-k$\Omega$-Vorwiderstand R35 an \texttt{+5V\_USB} dient als visuelle Betriebsanzeige.
+
+% Abbildung: USB-C-Power-Topologie (Schottky-Diode B340) -- Datei fehlt aktuell
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{assets/usb_c_power.png}
+% 	\caption{USB-C-Power-Topologie mit Schottky-Diode B340}
+% 	\label{fig:usb_c_power}
+% \end{figure}
+
+\textbf{Schematic des USB-PHY}
+\begin{itemize}
+	\item USB-C-Port~2 verwendet alle vier VBUS-Pins zur Erhöhung der Stromtragfähigkeit. CC1 und CC2 sind jeweils mit einem 5,1-k$\Omega$-Pull-down für die Device-Rolle beschaltet.
+	\item Das USB-2.0-Differential-Pair ist für eine differentielle Impedanz von 90~$\Omega$ ausgelegt. Ergänzt wurden 33-$\Omega$-Serienterminierungen und ein 1,5-k$\Omega$-Pull-up zur Full-Speed-Erkennung.
+	\item Der integrierte 5-V-zu-3,3-V-Regler des TUSB1106 wird über \texttt{VREG(3.3)} genutzt.
+	\item Über den Jumper JP1 kann die VPU-Spannung zwischen 1,8~V für den GateMate und alternativ 2,5~V gewählt werden. Das VBUS-Sensing erfolgt über VP und VM.
+	\item Alle acht digitalen Signale des TUSB1106 (VM, VP, VPO, VMO, RCV, SUSPND, SPEED und OE) wurden gezielt über den Peri-BUS auf GateMate-FPGA-Pins wie \texttt{VGA\_Blue\_2} und \texttt{VGA\_Red\_2} geroutet.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{assets/USB_PHY_Schaltplan.png}
+	\caption{Schematic des USB-2.0-PHY (TUSB1106)}
+	\label{fig:usb_phy_schematic}
+\end{figure}
+
+\textbf{Schematic des ISO/IEC-7816-Interfaces}
+
+Für das ISO/IEC-7816-3-konforme Interface wurden die Signale VCC, GND, CLK, RST und I/O vorgesehen. Die Versorgungsspannung ist zwischen Class~A mit 5~V, Class~B mit 3~V und Class~C mit 1,8~V umschaltbar.
+
+% Abbildung: ISO/IEC-7816-3-Interface Schematic -- Datei fehlt aktuell
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{assets/iso7816_schematic.png}
+% 	\caption{Schematic des ISO/IEC-7816-3-Interfaces}
+% 	\label{fig:iso7816_schematic}
+% \end{figure}
+
+\textbf{Layout}
+\begin{itemize}
+	\item Umsetzung des USB-PHY einschließlich differentiell geroutetem D+/D--Pair.
+	\item Umsetzung des ISO/IEC-7816-Interfaces mit VCC-Umschaltpfad.
+	\item Umsetzung der USB-C-Power-Topologie mit der Schottky-Diode B340.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{assets/USB_PHY_platine_layerview.png}
+	\caption{Layout USB-PHY mit differentiellem D+/D--Pair}
+	\label{fig:layout_usb_phy}
+\end{figure}
+
+% Abbildung: ISO/IEC-7816-Interface Layout -- Datei fehlt aktuell
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{assets/layout_iso7816.png}
+% 	\caption{Layout ISO/IEC-7816-Interface mit VCC-Switching-Pfad}
+% 	\label{fig:layout_iso7816}
+% \end{figure}
+
+% Abbildung: USB-C-Power-Topologie Layout -- Datei fehlt aktuell
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.8\textwidth]{assets/layout_usb_power.png}
+% 	\caption{Layout USB-C-Power-Topologie mit Schottky-Diode B340}
+% 	\label{fig:layout_usb_power}
+% \end{figure}
+
+\textbf{Zusammenarbeit mit Fynn}
+\begin{itemize}
+	\item Iterative Abstimmung der Schematic-Blöcke für die Integration in KiCad.
+	\item Gemeinsame Design-Reviews zu Footprints, Bauteilgrößen und Routing.
+	\item Das finale PCB-Layout, den DRC und den Arduino-Header hat Fynn übernommen.
+\end{itemize}
 \paragraph{Bestellung und  BOM | Timo}
 \paragraph{Software | Xaver}
 
