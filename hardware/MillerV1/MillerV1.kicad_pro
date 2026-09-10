@@ -488,6 +488,7 @@
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
+      "empty_label_name": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
       "field_name_whitespace": "warning",
@@ -510,6 +511,10 @@
       "net_not_bus_member": "warning",
       "no_connect_connected": "warning",
       "no_connect_dangling": "warning",
+      "pin_map_bad_pad": "error",
+      "pin_map_duplicate_pad": "error",
+      "pin_map_stale_pin": "warning",
+      "pin_map_unmapped_pin": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
       "pin_to_pin": "warning",
@@ -527,6 +532,8 @@
       "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
+      "variant_symbol_incompatible": "warning",
+      "variant_symbol_invalid": "error",
       "wire_dangling": "error"
     }
   },
@@ -622,7 +629,10 @@
       "version": 5
     },
     "net_chain_classes": {},
-    "net_colors": null,
+    "net_colors": {
+      "+2V5": "rgb(203, 11, 255)",
+      "GND": "rgb(0, 255, 16)"
+    },
     "netclass_assignments": null,
     "netclass_patterns": [
       {

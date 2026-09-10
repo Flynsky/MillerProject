@@ -17,6 +17,9 @@
 % \pagestyle{empty}                   
 \usepackage{enumitem}               
 \usepackage{float}
+\usepackage{titlesec}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
 \setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} 
 \graphicspath{{../../lebenslauf/pictures/}}
  \setlength{\skip\footins}{1.5cm}
@@ -28,6 +31,27 @@
     pdfborder={0 0 0}     
 }
 % gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -dCompatibilityLevel=1.4  -dPDFSETTINGS=/printer -sOutputFile=Resume.pdf lebenslauf.pdf
+\titleformat{\section}
+  [runin]
+  {\normalfont\bfseries}
+  {\thesection}                    % <-- Nummer wieder aktiviert
+  {0.5em}                          % kleiner Abstand zwischen Nummer und Text (statt 0pt)
+  {}
+  [.]
+
+\titlespacing*{\section}
+  {0pt}{3.25ex plus 1ex minus .2ex}{1em}   % same spacing values \section uses by default
+ 
+\usepackage{titletoc}
+\titlecontents{section}
+  [0pt]                              % Einzug links
+  {}                                 % oberhalb
+  {\contentslabel{2em}}              % <-- mit Nummer: Label + Breite reservieren
+  {}                                 % ohne Nummer (falls \section* o.ä.)
+  {\titlerule*[1pc]{.}\contentspage} % Punkte + Seitenzahl
+
+% Überschrift unterdrücken:
+\renewcommand{\contentsname}{}
 
 \begin{document}
 
@@ -47,7 +71,7 @@
 	\vspace{2\baselineskip}
 	% --- Main title block, centered ---
 	\begin{center}
-		\vspace*{2\baselineskip}
+		\vspace*{5\baselineskip}
 		{\textcolor{sections}{\Huge\bfseries Report\\}}
 		\vspace{0.5\baselineskip}
 		{\Large Projekt GateMate SS26\\}
@@ -67,10 +91,22 @@
 \pagenumbering{arabic}
 \setcounter{page}{2}
 
-\paragraph{Ziel des Projektes | Fynn}
-Der GateMate-FPGA von Cologne Chip ist als europäischer FPGA von besonderem Interesse, da er eine Alternative zu den marktdominierenden Anbietern aus den USA und Asien darstellt\footnote{\url{https://colognechip.com/programmable-logic/gatemate/}}. Gerade im Hinblick auf technologische Souveränität und Unabhängigkeit von außereuropäischen Lieferketten gewinnt die Verfügbarkeit einer solchen, vollständig in Europa entwickelten FPGA-Plattform zunehmend an Bedeutung. Hinzu kommt, dass für den GateMate im Gegensatz zu vielen etablierten FPGA-Familien eine offene Toolchain existiert, wodurch sich die Architektur besonders gut für Lehre, Forschung und Open-Source-Projekte eignet. Olimex bietet mit dem GateMate-A1-EVB ein Evaluationsboard an, das vollständig als Open-Source-Hardware verfügbar ist\footnote{\url{https://www.olimex.com/Products/FPGA/GateMate/GateMateA1-EVB/open-source-hardware}}, sodass sämtliche Schaltpläne, Layouts und Bauteilinformationen frei zugänglich sind und als verlässliche Ausgangsbasis für eigene Entwicklungen dienen können. Dieses Board haben wir als Grundlage genommen, um darauf eine Smart Card zu realisieren, die sich sowohl als Master als auch als Slave betreiben lässt und damit flexibel in unterschiedlichen Anwendungsszenarien eingesetzt werden kann. Ziel war es dabei, ein System zu schaffen, das sich für Weiterentwicklungen und Anpassungen eignet, ohne von proprietärer Hardware oder geschlossenen Toolchains abhängig zu sein. Dafür werden im Wesentlichen drei Komponenten benötigt: ein ISO-Interface zur Kommunikation nach dem ISO/IEC-7816-Standard, eine USB-Schnittstelle zur Anbindung an einen Host-Rechner sowie ein IBEX-RISC-V-Prozessor\footnote{\url{https://github.com/lowrisc/ibex}}, der als frei verfügbarer, open-source Prozessorkern die zentrale Steuerungs- und Verarbeitungslogik der Smart Card übernimmt.
+\section{Abstract / Ziel des Projektes | Fynn}
+Der GateMate-FPGA von Cologne Chip ist als europäischer FPGA von besonderem Interesse, da er eine Alternative zu den marktdominierenden Anbietern aus den USA und Asien darstellt\footnote{\url{https://colognechip.com/programmable-logic/gatemate/}}. Gerade im Hinblick auf technologische Souveränität und Unabhängigkeit von außereuropäischen Lieferketten gewinnt die Verfügbarkeit einer solchen, vollständig in Europa entwickelten FPGA-Plattform zunehmend an Bedeutung. Hinzu kommt, dass für den GateMate im Gegensatz zu vielen etablierten FPGA-Familien eine offene Toolchain existiert, wodurch sich die Architektur besonders gut für Lehre, Forschung und Open-Source-Projekte eignet. Olimex bietet mit dem GateMate-A1-EVB ein Evaluationsboard an, das vollständig als Open-Source-Hardware verfügbar ist\footnote{\url{https://www.olimex.com/Products/FPGA/GateMate/GateMateA1-EVB/open-source-hardware}}, sodass sämtliche Schaltpläne, Layouts und Bauteilinformationen frei zugänglich sind und als verlässliche Ausgangsbasis für eigene Entwicklungen dienen können. Dieses Board kann als Grundlage genommen werden werden, um darauf eine Smart Card zu realisieren, die sich sowohl als Master als auch als Slave betreiben lässt und damit flexibel in unterschiedlichen Anwendungsszenarien eingesetzt werden kann. Ziel war es dabei, ein System zu schaffen, das sich für Weiterentwicklungen und Anpassungen eignet, ohne von proprietärer Hardware oder geschlossenen Toolchains abhängig zu sein. Dafür werden im Wesentlichen drei Komponenten benötigt: ein ISO-Interface zur Kommunikation nach dem ISO/IEC-7816-Standard, eine USB-Schnittstelle zur Anbindung an einen Host-Rechner sowie ein IBEX-RISC-V-Prozessor\footnote{\url{https://github.com/lowrisc/ibex}}, der als frei verfügbarer, open-source Prozessorkern die zentrale Steuerungs- und Verarbeitungslogik der Smart Card übernimmt.
 
-\paragraph{Arbeitsaufteilung | Fynn}
+\begin{figure}[H]
+	\includegraphics[width=0.99\textwidth]{assets/pcb_pretty.png}
+	\caption{PCB nach dem Löten}
+	\label{fig:pcb_pretty}
+\end{figure}
+
+\newpage
+{\normalfont\bfseries    Inhaltsverzeichnis}\\
+\tableofcontents
+
+\newpage
+
+\section{Arbeitsaufteilung | Fynn}
 Im Rahmen des Projekts habe ich die Rolle des Group Leaders und Organisators übernommen.
 Dazu gehörte das Aufsetzen der GitHub-Struktur als zentrale Plattform für die Zusammenarbeit,
 sowie die Erarbeitung der Requirements,
@@ -78,6 +114,8 @@ auf deren Basis das Projekt weiterentwickelt wurde.
 Darauf aufbauend habe ich die anfallenden Teilaufgaben aufgestellt und den einzelnen Teammitgliedern zugewiesen.
 Zusätzlich habe ich die Entwicklung des USB-Transceivers supervisiert und die zuständigen Teammitglieder fachlich angeleitet.
 Neben Anpassungen des OLIMEX Evaluationboards wurde von mir auch das ISO/IEC 7816 Interface designed.
+Zuletzt habe ich am Löten des Projektes teilgenommen, die Platine in fast funktionsfähingen Zustand gebracht
+und mit Xaver and der fehlenden Clockgeneration gearbeitet.
 \vspace{\baselineskip}
 
 Xaver
@@ -88,8 +126,9 @@ Timo
 
 Tobi
 
+
 \newpage
-\paragraph{PCB Aufarbeitung | Fynn}
+\section{PCB Aufarbeitung | Fynn}
 Ein wesentlicher Teil meiner Arbeit bestand in der Überarbeitung der Platine.
 Die ursprünglich unstrukturierte Schematic habe ich in thematisch klar abgegrenzte Blöcke restrukturiert, wodurch die Übersichtlichkeit und Wartbarkeit deutlich verbessert wurde.
 Darüber hinaus habe ich die Platine optisch aufgewertet, unter anderem durch das Einfügen des HM-Logos und einheitlicher Beschriftungen.
@@ -107,24 +146,22 @@ Im Anschluss habe ich den Design Rule Check (DRC) durchgeführt und die daraus r
 Abschließend habe ich die Recherche geeigneter Hersteller übernommen und mich dabei bewusst für AISLER als lokalen Anbieter entschieden,
 und die Bestellung der Platine veranlasst.
 
-
 % \begin{figure}[H]
 % 	\includegraphics[width=0.8\textwidth]{assets/stackup.png}
 % 	\caption{Verwendeter 4 Lagen PCB Stackup von AISLER}
 % 	\label{fig:stackup}
 % \end{figure}
-\newpage
 
-\paragraph{ISO/IEC 7816 Interface | Fynn}
+\section{ISO/IEC 7816 Interface | Fynn}
 Für die Kommunikation nach dem ISO/IEC-7816-Standard habe ich ein Interface entworfen,
 das flexibel sowohl im Master- als auch im Slave-Betrieb eingesetzt werden kann.
 Dieser duale Ansatz ermöglicht eine breitere Einsatzfähigkeit der Platine,
 da je nach Anwendungsfall zwischen beiden Betriebsmodi gewechselt werden kann.
 
-% \begin{figure}[H]
-% 	\includegraphics[width=0.8\textwidth]{assets/interface.png}
-% 	\caption{ISO/IEC 7816 Interface Schematic}
-% \end{figure}
+\begin{figure}[H]
+	\includegraphics[width=0.8\textwidth]{assets/interface.png}
+	\caption{ISO/IEC 7816 Interface Schematic}
+\end{figure}
 
 Ein zentrales Element ist der TXB0108-Levelshifter,
 der den GPIO-Logikpegel des FPGA in den passenden Ausgangs-Logikpegel konvertiert.
@@ -144,8 +181,61 @@ Das ISO/IEC-7816-Interface ist auf der Platine als Arduino-Header umgesetzt
 und befindet sich als doppelte Stiftleiste unten rechts.
 Direkt darüber ist der Levelshifter platziert.
 Oben rechts, neben dem HM-Logo, befinden sich der LDO sowie der Switch zur Spannungsversorgung.
+\newpage
 
-\paragraph{Serial to USB transceiver | Tobias}
+\section{Problem der fehlenden Clock | Fynn \& Xaver}
+Bei der Inbetriebnahme des FPGA-Boards zeigte sich, dass der SX5M10.000B10F20TNN 10 MHz XO Crystal Oscillator in der Stückliste fehlte und dem FPGA somit keine Taktquelle zur Verfügung stand.
+Um die Ursache einzugrenzen, wurde das Problem parallel von zwei Seiten angegangen:
+Fynn kümmerte sich um die Hardware, während Xaver die Funktionsfähigkeit auf Softwareebene überprüfte.
+Xaver erstellte dazu Bitfiles für eine blinkende LED sowie sich ändernde Pins.
+Mit unterschiedlichen Clock Quellen und Frequenzen.
+Zusätzlich wurde ein Binary getestet, das die LED lediglich statisch auf High oder Low setzt und dementsprechend auch ohne funktionierenden Takt hätte laufen müssen –
+da dieser Test ebenfalls fehlschlug, liegt die Vermutung nahe, dass neben der fehlenden Clock noch ein weiteres, bisher nicht identifiziertes Problem vorliegt.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\includegraphics[width=0.5\textwidth]{assets/floating_crystal.png}
+	\caption{FPGA mit eingestecktem Quarz}
+	\label{fig:floating_crystal}
+\end{wrapfigure}
+Auf Hardwareseite wurden mehrere Ansätze verfolgt, um dem FPGA dennoch einen Takt zur Verfügung zu stellen.
+Da die Serial-Clock-Pins nach außen geroutet sind, wurde zunächst versucht, einen gewöhnlichen Quarz direkt einzustecken (siehe Abbildung \ref{fig:floating_crystal}).
+Dieser Versuch verlief ohne Erfolg.
+
+
+% \begin{figure}[H]
+% 	\includegraphics[width=0.5\textwidth]{assets/floating_crystal.png}
+% 	\caption{FPGA mit eingestecktem Quarz}
+% 	\label{fig:floating_crystal}
+% \end{figure}
+
+Im nächsten Schritt wurde ausgenutzt, dass Clock 1 und Clock 2 über den Debugger zugänglich sind.
+Der Debugger wurde entsprechend umprogrammiert, um darüber ein Taktsignal anzulegen – auch dieser Ansatz führte nicht zum gewünschten Ergebnis.
+Da Clock 0 und Clock 3 extern eingespeist werden können, wurde schließlich versucht, ein Signal im Bereich von 100 kHz bis 100 MHz von außen anzulegen.
+Auch hierbei konnte an keiner Stelle ein funktionierender Takt erzeugt werden, sodass das Problem der fehlenden Clock zum jetzigen Zeitpunkt weiterhin ungelöst bleibt.
+
+
+\section{Verbesserungsvorschläge für spätere Iterationen | Fynn}
+Aus den gesammelten Erfahrungen dieser Revision ergeben sich mehrere Punkte, die in einer nächsten Iteration der Platine berücksichtigt werden sollten.
+So sollten die beiden USB-C-5V-LEDs, die aktuell separat ausgeführt sind, zu einer einzigen LED zusammengefasst werden, um unnötige Redundanz zu vermeiden.
+Ebenso sollte die Stückliste insgesamt verkleinert werden, wobei insbesondere die Anzahl der verwendeten Kondensatoren reduziert werden kann.
+10nF Condensatoren im gleichen Package wie 2.2uF Kondensatoren sind fast ein direktes Downgrade,
+v.a. da weder Inrush-Current noch der minimal höhere Preis hier eine Rolle spielen.
+Für die Spannungsversorgung bietet sich der Einsatz eines Power-ICs mit mehreren integrierten Buck-Convertern an,
+anstatt die einzelnen Spannungsebenen wie bisher getrennt zu realisieren.
+
+Darüber hinaus stellte sich während der Inbetriebnahme heraus, dass der verbaute RP2040-Flash-Speicher nicht funktionierte;
+ein Ersatz durch einen entsprechenden Baustein von Winbond hingegen funktionierte einwandfrei und sollte für zukünftige Revisionen als Referenz dienen.
+Aus noch unerforschten Gründen ging auch der Winbond Ersatz nach einer Weile kaputt und musste getauscht werden.
+Symptopme hierfür ist, das der RP2040 auch nach dem Flashen den Bootmodus nicht verlässt.
+
+Zuletzt wäre eine LED hilfreich,
+die die funktionstüchtigkeit der letzten Stromversorgung anzeigt.
+Das ist nämlich ein starkes Symptom dafür,
+das die anderen Stromversorgungen auch funktionieren,
+da diese kaskadieren.
+\newpage
+
+\section{Serial to USB transceiver | Tobias}
 
 \textbf{Recherche und Konzept}
 \begin{itemize}
@@ -230,7 +320,16 @@ Für das ISO/IEC-7816-3-konforme Interface wurden die Signale VCC, GND, CLK, RST
 	\item Gemeinsame Design-Reviews zu Footprints, Bauteilgrößen und Routing.
 	\item Das finale PCB-Layout, den DRC und den Arduino-Header hat Fynn übernommen.
 \end{itemize}
-\paragraph{Bestellung und BOM-Management | Timo}
+
+\section{Bestückung und Lötung der Platine | Timo}
+
+\begin{figure}[H]
+	\includegraphics[width=0.8\textwidth]{assets/Bestückung.png}
+	\caption{Bestückung}
+	\label{fig:bestückung}
+\end{figure}
+
+\section{Bestellung und BOM-Management | Timo}
 
 \textbf{Bill of Materials (BOM) und Sourcing-Strategie}
 \begin{itemize}
@@ -239,21 +338,21 @@ Für das ISO/IEC-7816-3-konforme Interface wurden die Signale VCC, GND, CLK, RST
 	\item \textbf{Kostenoptimierung durch Packaging:} Bei der Recherche fiel auf, dass für bestimmte Widerstände (z.B. den 1,05\,k$\Omega$ Widerstand \texttt{RC0402FR-071K05L}) sogenannte \textit{Digi-Reel} Artikelnummern (Suffix \texttt{-DKR-ND}) hinterlegt waren, für die der Distributor eine Abrollgebühr von ca. 7\,\$ pro Rolle verlangt. Durch gezieltes Umschlüsseln auf \textit{Cut-Tape} Varianten (Suffix \texttt{-CT-ND}) konnten diese versteckten Kosten eliminiert werden.
 \end{itemize}
 
-\paragraph{Component Substitution | Timo}
-Viele ursprünglich vorgesehene Bauteile waren abgekündigt oder kurzfristig nicht lieferbar (Preis = 0\,€ im System). Daher mussten anhand technischer Datenblätter passende Ersatzkomponenten ermittelt werden. Wichtige Kriterien waren hierbei exakte Funktionalität, Pin-Kompatibilität, identische Gehäuseformen (Footprints) sowie die strikte Einhaltung der Toleranzen. 
+\section{Component Substitution | Timo}
+Viele ursprünglich vorgesehene Bauteile waren abgekündigt oder kurzfristig nicht lieferbar (Preis = 0\,€ im System). Daher mussten anhand technischer Datenblätter passende Ersatzkomponenten ermittelt werden. Wichtige Kriterien waren hierbei exakte Funktionalität, Pin-Kompatibilität, identische Gehäuseformen (Footprints) sowie die strikte Einhaltung der Toleranzen.
 
 Ein zentrales Beispiel für diese Substitution war der 47\,$\mu$F Kondensator für die Spannungsstabilisierung:
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|}
 		\hline
-		\textbf{Parameter} & \textbf{Ursprünglich (Nicht lieferbar)} & \textbf{Gewählte Alternative} \\ \hline
-		Hersteller & Samsung Electro-Mechanics & Murata Electronics \\ \hline
-		Part Number (MPN) & \texttt{CL21A476MQYNNNE} & \texttt{GRM21BR61A476ME15} \\ \hline
-		DigiKey SKU & \texttt{1276-1852-1-ND} & \texttt{490-9961-1-ND} \\ \hline
-		Kapazität \& Footprint & 47\,$\mu$F, 0805 (2012 Metric) & 47\,$\mu$F, 0805 (2012 Metric) \\ \hline
-		Dielektrikum \& Toleranz & X5R, $\pm$20\% & X5R, $\pm$20\% \\ \hline
-		Spannungsfestigkeit & 6.3\,V & \textbf{10.0\,V} \\ \hline
+		\textbf{Parameter}       & \textbf{Ursprünglich (Nicht lieferbar)} & \textbf{Gewählte Alternative}  \\ \hline
+		Hersteller               & Samsung Electro-Mechanics               & Murata Electronics             \\ \hline
+		Part Number (MPN)        & \texttt{CL21A476MQYNNNE}                & \texttt{GRM21BR61A476ME15}     \\ \hline
+		DigiKey SKU              & \texttt{1276-1852-1-ND}                 & \texttt{490-9961-1-ND}         \\ \hline
+		Kapazität \& Footprint   & 47\,$\mu$F, 0805 (2012 Metric)          & 47\,$\mu$F, 0805 (2012 Metric) \\ \hline
+		Dielektrikum \& Toleranz & X5R, $\pm$20\%                          & X5R, $\pm$20\%                 \\ \hline
+		Spannungsfestigkeit      & 6.3\,V                                  & \textbf{10.0\,V}               \\ \hline
 	\end{tabular}
 	\caption{Vergleich der Kondensator-Substitution}
 	\label{tab:cap_subst}
@@ -269,9 +368,9 @@ Die finale BOM wurde für die Bestückung von drei Prototypen-Platinen kalkulier
 	\item \textbf{Aktive Bauteile \& ICs:} Bei kostenintensiveren Bauteilen wie dem USB-PHY (TUSB1106), den LDOs oder dem GateMate-FPGA wurde knapper kalkuliert. Hier galt die strikte Regel: Exakte Menge für 3 Boards \textbf{plus genau 1 Ersatz-IC} pro Bauteiltyp, um im Fehlerfall sofort einen Chip austauschen zu können, ohne das Budget unnötig zu belasten.
 \end{itemize}
 
-\paragraph{Festlegung der Pinbelegung und Constraints | Timo}
+\section{Festlegung der Pinbelegung und Constraints | Timo}
 
-Um den externen USB-2.0-PHY (TUSB1106) an den GateMate-FPGA anzubinden, musste eine geeignete Pinbelegung (Pin Assignment) definiert werden. Da das Routing auf der Platine durch den Formfaktor stark eingeschränkt war, wurden die digitalen Signale (VM, VP, VPO, VMO, RCV, OE) auf die Pins des Peri-BUS geroutet, die ursprünglich für die \texttt{VGA\_Red} und \texttt{VGA\_Blue} Signale des Olimex-Boards vorgesehen waren. 
+Um den externen USB-2.0-PHY (TUSB1106) an den GateMate-FPGA anzubinden, musste eine geeignete Pinbelegung (Pin Assignment) definiert werden. Da das Routing auf der Platine durch den Formfaktor stark eingeschränkt war, wurden die digitalen Signale (VM, VP, VPO, VMO, RCV, OE) auf die Pins des Peri-BUS geroutet, die ursprünglich für die \texttt{VGA\_Red} und \texttt{VGA\_Blue} Signale des Olimex-Boards vorgesehen waren.
 
 Dies ermöglichte ein signalintegres, kreuzungsfreies Routing. Für die Synthese und das anschließende Place-\&-Route (P\&R) mit der Cologne Chip Toolchain habe ich die entsprechenden Constraints in der \texttt{.ccf}-Datei (Cologne Chip Constraint File) wie folgt definiert:
 
@@ -287,7 +386,7 @@ Pin_in  "usb_susp"  Loc = "IO_WA_A3";  # Routed via VGA_Red_3
 Pin_out "usb_speed" Loc = "IO_WA_B3";  # Routed via VGA_Blue_3
 \end{verbatim}
 
-\paragraph{Bringup- und geplante Testinfrastruktur | Timo}
+\section{Bringup- und geplante Testinfrastruktur | Timo}
 
 Da das Löten der Hardware-Platinen noch aussteht, lag der Fokus auf der theoretischen Ausarbeitung eines umfassenden Bringup- und Testplans, der nach Eintreffen der Hardware strikt sequenziell abgearbeitet wird:
 \begin{enumerate}
@@ -296,9 +395,15 @@ Da das Löten der Hardware-Platinen noch aussteht, lag der Fokus auf der theoret
 	\item \textbf{Stufe 3 – USB-PHY Test:} Aktivierung des TUSB1106. Es wird überprüft, ob der Host-PC die 1,5\,k$\Omega$ Full-Speed-Terminierung am D+-Pin korrekt erkennt. Mittels Oszilloskop werden die Signalpegel an den differentiellen Datenleitungen gemessen.
 	\item \textbf{Stufe 4 – ISO/IEC-7816 Interface Test:} Validierung des TXB0108-Levelshifters. Über Test-Pattern im FPGA wird geprüft, ob die Umschaltung der Power-Domains für die Smart Card (5\,V, 3\,V, 1,8\,V) lastfrei und sauber funktioniert, bevor echte Karten gesteckt werden.
 \end{enumerate}
-\paragraph{Software | Xaver}
+\section{Software | Xaver}
 
-\paragraph{Nutzung von KI}
+\section{Nutzung von KI}
 Im Rahmen des Projekts wurden KI-Tools unterstützend eingesetzt, insbesondere zur Recherche, zur Fehlersuche (Debugging) sowie zur sprachlichen Überarbeitung und Formatierung der Dokumentation. Die grundlegenden Design-Entscheidungen, die Architektur der Schaltung sowie die technische Umsetzung wurden eigenständig vom Team erarbeitet; KI-Tools dienten dabei lediglich als Hilfsmittel zur Effizienzsteigerung und Qualitätssicherung, nicht als Quelle der eigentlichen Projektinhalte.
+
+\section{Verwendete Bilder}
+Jedliche in dieser Arbeit verwendete Grafik wurde von den Autoren erstellt und ist unter keinem Copyright.
+
+\section{Schematic}
+\includepdf[pages=-, angle=90]{../../hardware/MillerV1/MillerV1.pdf}
 
 \end{document}
