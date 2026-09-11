@@ -1,0 +1,16 @@
+# USB PHY TUSB1106 Pin Constraints (via Olimex VGA/Peri-BUS)
+# Achtung: usb_susp ist ein Ausgang des FPGA (SUSPND ist ein Eingang des
+# TUSB1106), im Report der Gruppe stand dort noch fälschlich Pin_in.
+Pin_in  "usb_rcv"   Loc = "IO_WA_A0";  # RCV    <- VGA_Red_0
+Pin_out "usb_vpo"   Loc = "IO_WA_A1";  # VPO    -> VGA_Red_1
+Pin_out "usb_vmo"   Loc = "IO_WA_A2";  # VMO    -> VGA_Red_2
+Pin_in  "usb_vp"    Loc = "IO_WA_B0";  # VP     <- VGA_Blue_0
+Pin_in  "usb_vm"    Loc = "IO_WA_B1";  # VM     <- VGA_Blue_1
+Pin_out "usb_oe"    Loc = "IO_WA_B2";  # OE     -> VGA_Blue_2
+Pin_out "usb_susp"  Loc = "IO_WA_A3";  # SUSPND -> VGA_Red_3
+Pin_out "usb_speed" Loc = "IO_WA_B3";  # SPEED  -> VGA_Blue_3
+# Hinweis: SD_FTCO_N (SOFTCON, Pin 2) ist im Schaltbild zusaetzlich
+# geroutet und muss als weiterer Pin_out ergaenzt oder fest auf High
+# gelegt werden, sonst zieht der 1,5-k-Pull-up D+ nicht nach 3,3 V.
+# clk48, rst und btn benoetigen noch Pins je nach Board-Variante;
+# solange das Clock-Problem ungelöst ist, wird der Takt extern angelegt.

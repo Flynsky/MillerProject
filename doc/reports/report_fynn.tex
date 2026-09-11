@@ -261,7 +261,7 @@ Eine direkte Verbindung der VBUS-Pins beider USB-C-Ports hätte die jeweiligen 5
 	\item USB-C-Port~2 verwendet alle vier VBUS-Pins zur Erhöhung der Stromtragfähigkeit. CC1 und CC2 sind jeweils mit einem 5,1-k$\Omega$-Pull-down für die Device-Rolle beschaltet.
 	\item Das USB-2.0-Differential-Pair ist für eine differentielle Impedanz von 90~$\Omega$ ausgelegt. Ergänzt wurden 33-$\Omega$-Serienterminierungen und ein 1,5-k$\Omega$-Pull-up zur Full-Speed-Erkennung.
 	\item Der integrierte 5-V-zu-3,3-V-Regler des TUSB1106 wird über \texttt{VREG(3.3)} genutzt.
-	\item Über den Jumper JP1 kann die VPU-Spannung zwischen 1,8~V für den GateMate und alternativ 2,5~V gewählt werden. Das VBUS-Sensing erfolgt über VP und VM.
+	\item Über den Jumper JP1 kann die I/O-Versorgung (VCC(I/O)) des TUSB1106 zwischen 1,8~V für den GateMate und alternativ 2,5~V gewählt werden. Das VBUS-Sensing erfolgt über VP und VM.
 	\item Alle acht digitalen Signale des TUSB1106 (VM, VP, VPO, VMO, RCV, SUSPND, SPEED und OE) wurden gezielt über den Peri-BUS auf GateMate-FPGA-Pins wie \texttt{VGA\_Blue\_2} und \texttt{VGA\_Red\_2} geroutet.
 \end{itemize}
 
@@ -313,6 +313,461 @@ Für das ISO/IEC-7816-3-konforme Interface wurden die Signale VCC, GND, CLK, RST
 % 	\caption{Layout USB-C-Power-Topologie mit Schottky-Diode B340}
 % 	\label{fig:layout_usb_power}
 % \end{figure}
+
+\textbf{Funktionsweise des TUSB1106}
+
+Der TUSB1106\footnote{Texas Instruments, \textit{Advanced Universal Serial Bus Transceivers}, Datenblatt SCAS818E: \url{https://www.ti.com/lit/gpn/TUSB1106}} ist ein USB-2.0-konformer Transceiver (PHY), der die analoge Signalebene des USB-Busses von der digitalen Protokolllogik trennt: Die Serial Interface Engine (SIE) mit NRZI-Codierung, Bitstuffing, PID-Verarbeitung und CRC-Berechnung läuft im GateMate-FPGA, der Baustein selbst übernimmt ausschließlich Pegelwandlung, Bustreiber und Empfänger. Die digitale Schnittstelle wird über eine eigene I/O-Versorgung (VCC(I/O), 1,65 bis 3,6\,V) versorgt und ist damit direkt mit den 1,8-V-I/O-Bänken des GateMate kompatibel; dabei darf VCC(I/O) laut Datenblatt nie die Spannung von Vreg(3.3) überschreiten. Die analoge Seite wird entweder über den integrierten, abschaltbaren 5-V-zu-3,3-V-Regler direkt aus VBUS gespeist (VCC(5.0): 4 bis 5,5\,V) oder im Regler-Bypass-Modus aus einer vorhandenen 3,3-V-Versorgung. Über SUSPND = 1 lässt sich ein Low-Power-Zustand anfordern, in dem RCV auf Low gezogen wird; das Aufwecken erfolgt durch ein K-Signal mit einer Dauer von 1 bis 15\,ms (Remote-Wakeup).
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|p{8.2cm}|}
+		\hline
+		\textbf{Signal} & \textbf{Richtung} & \textbf{Funktion (laut Datenblatt)}  \\ \hline
+		OE      & FPGA $\rightarrow$ PHY & Treiber-Freigabe, aktiv low: 0 = Senden auf D+/D--, 1 = Empfang (Bus freigegeben) \\ \hline
+		SPEED   & FPGA $\rightarrow$ PHY & Slew-Rate-Wahl gemäß Geschwindigkeit: 1 = Full-Speed (12\,Mbit/s), 0 = Low-Speed (1,5\,Mbit/s) \\ \hline
+		VPO/VMO & FPGA $\rightarrow$ PHY & Differenzielle Treiberdaten für D+ und D--; beide Low erzeugt SE0 \\ \hline
+		RCV     & PHY $\rightarrow$ FPGA & Empfangener NRZI-Bitstrom; Pegel bleibt stabil während SE0, Low bei Suspend \\ \hline
+		VP/VM   & PHY $\rightarrow$ FPGA & Single-Ended-Empfänger an D+ und D--: SE0-Erkennung, Fehler- und VBUS-Sensing \\ \hline
+		SUSPND  & FPGA $\rightarrow$ PHY & 1 = Low-Power-Zustand (RCV = Low), 0 = Normalbetrieb \\ \hline
+	\end{tabular}
+	\caption{Digitale Schnittstelle des TUSB1106 an das FPGA}
+	\label{tab:tusb_signals}
+\end{table}
+
+Während Senden (OE = 0) schaltet der PHY die an VPO und VMO anliegenden Pegel direkt auf D+ und D-- durch (Tabelle~\ref{tab:tusb_drive}); der Zustand VPO = VMO = 0 erzeugt einen Single-Ended-Zero (SE0). Mit OE = 1 gibt der PHY den Bus frei: Die differentielle Empfangsrichtung liefert den NRZI-Bitstrom an RCV, während die beiden Single-Ended-Empfänger mit Hysterese die Einzelleiter-Pegel an VP und VM ausgeben. Dabei entspricht RCV = H dem J-Zustand und RCV = L dem K-Zustand; VP = VM = L kennzeichnet SE0, VP = VM = H signalisiert fehlende Versorgung und damit eine VBUS-Unterbrechung. Da RCV während eines SE0 stabil auf dem letzten Pegel bleibt, lassen sich Bus-Reset und Paketende auch ohne Takt-Rückgewinnung erkennen.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{VPO} & \textbf{VMO} & \textbf{Buszustand (Full-Speed)}  \\ \hline
+		0 & 0 & SE0 (Paketende)                  \\ \hline
+		0 & 1 & K (differenzielle 0)             \\ \hline
+		1 & 0 & J (differenzielle 1 / Idle)      \\ \hline
+		1 & 1 & unzulässiger Zustand             \\ \hline
+	\end{tabular}
+	\caption{Sendefunktion des TUSB1106 (Datenblatt, Tab.~4)}
+	\label{tab:tusb_drive}
+\end{table}
+
+Die Soft-Connect-Funktion wird über SOFTCON und den Pin Vpu(3.3) gesteuert: Bei SOFTCON = 1 legt der Baustein die Pull-up-Versorgung an Vpu an, wodurch der externe 1,5-k$\Omega$-Widerstand D+ gegen 3,3\,V zieht und der Host den Device-Anschluss am Übergang von SE0 nach J erkennt. Bei SOFTCON = 0 bleibt Vpu hochohmig (null Pull-up-Strom) und das Gerät erscheint vom Bus abgekoppelt. In unserem Design wird der externe 1,5-k$\Omega$-Pull-up an D+ über SOFTCON und die Vpu-Versorgung freigegeben; ist der Pull-up aktiv, erkennt der Host das Modul als Full-Speed-Device.
+
+Die physikalische Schicht des USB-2.0-Standards\footnote{USB Implementers Forum, \textit{Universal Serial Bus Specification Rev.~2.0}: \url{https://www.usb.org/document-library/usb-20-specification}} überträgt Daten LSB-zuerst im NRZI-Code: Eine logische 0 erzeugt einen Pegelwechsel auf dem Bus, eine logische 1 lässt den Pegel unverändert. Daraus ergeben sich für die FPGA-Seite die folgenden Randbedingungen:
+\begin{itemize}
+	\item Jedes Paket beginnt mit dem SYNC-Feld 00000001 (LSB zuerst), das auf dem Bus als Wechselfolge KJKJKJKK erscheint und dem Empfänger Takt und Bitphase liefert.
+	\item Das Paketende (EOP) wird durch 2 Bitzeiten SE0 gefolgt von 1 Bitzeit J signalisiert.
+	\item Nach sechs aufeinanderfolgenden Einsen fügt der Sender ein Stuff-Bit 0 ein, damit der Empfänger aus den Pegelwechseln den Takt zurückgewinnen kann; die Eins, die das SYNC-Muster beendet, zählt dabei als erste Eins.
+	\item Datenpakete sind mit CRC16 (Polynom $x^{16}+x^{15}+x^{2}+1$, Initialwert FFFF), Tokenpakete mit CRC5 ($x^{5}+x^{2}+1$) geschützt; die Prüfbits werden jeweils invertiert übertragen.
+	\item Auf einen Token antwortet das Device innerhalb der Turnaround-Zeit von maximal 7,5 Bitzeiten.
+	\item Der 1,5-k$\Omega$-Pull-up an D+ kennzeichnet ein Full-Speed-Device; der Host erkennt Bus-Resets beziehungsweise das Gerät über die SE0- und J-Zustände.
+\end{itemize}
+Elektrisch spezifiziert das Datenblatt eine Treiberimpedanz von 34 bis 44\,$\Omega$ inklusive der externen 33-$\Omega$-Serienwiderstände, Anstiegs- und Abfallzeiten von 4 bis 20\,ns (Full-Speed), eine Laufzeit von D+/D-- zu RCV von maximal 15\,ns sowie eine ESD-Festigkeit von ±15\,kV (HBM) an den Bus-Pins.
+
+\textbf{USB-Testmodul in VHDL}
+
+Um den TUSB1106 direkt beim Bring-up ansteuern und prüfen zu können, wurde ein Testmodul in VHDL entworfen, das die Funktion der SIE in minimierter Form nachbildet. Es greift damit die Stufe 3 des Bringup-Plans auf und erweitert sie um die Protokollebene, und es erlaubt drei Verifikationsstufen: (1) ein reiner Sendetest mit periodischen Testpaketen, verifizierbar über Oszilloskop und Logic-Analyzer an D+/D--, (2) ein Token-Responder, der auf adressierte IN-Polls mit NAK beziehungsweise mit einem HID-Report antwortet und sich über einen USB-Analyzer beobachten lässt, und (3) nach Ergänzung der Enumerations-Logik die vollwertige Erkennung als USB-Device (siehe Ausblick). Das Modul ist als synthetisierbares VHDL-93 gehalten, lässt sich mit GHDL simulieren und über die GHDL-Yosys-Anbindung auch in die Cologne-Chip-Toolchain überführen.
+
+\begin{itemize}
+	\item \textbf{Bittakt:} Aus dem 48-MHz-Systemtakt erzeugt ein Teiler alle vier Zyklen ein Bittakt-Enable (48\,MHz / 4 = 12\,Mbit/s); die Bitphase wird beim Empfang am SYNC-Muster eingenommen.
+	\item \texttt{usb\_tx}: Serialisiert SYNC, PID, Nutzdaten und CRC16, wendet on-the-fly das Bitstuffing an und codiert NRZI; das Paketende wird durch SE0 signalisiert.
+	\item \texttt{usb\_rx}: Sucht das SYNC-Muster, decodiert NRZI mit Unstuffing, prüft die PID-Komplementbits und decodiert IN-Token (Adresse, Endpoint).
+	\item \texttt{usb\_dev}: Erkennt den Bus-Reset (SE0 $\geq$ 2,5\,$\mu$s), antwortet auf IN-Token am Tastatur-Endpoint nach 4 Bitzeiten Turnaround mit einem 8-Byte-HID-Report (Taste \texttt{a} über den Board-Taster) oder mit NAK.
+	\item Die Ports entsprechen 1:1 den Constraints der \texttt{.ccf}-Datei (\texttt{usb\_rcv}, \texttt{usb\_vpo}, \texttt{usb\_vmo}, \texttt{usb\_vp}, \texttt{usb\_vm}, \texttt{usb\_oe}); \texttt{usb\_speed} ist fest auf 1 (Full-Speed) und \texttt{usb\_susp} auf 0 (Normalbetrieb) gelegt.
+\end{itemize}
+
+Der Sendeteil mit NRZI-Codierung, Bitstuffing und CRC16:
+
+\begin{verbatim}
+-- usb_tx.vhd: Sendeteil des USB-PHY-Testmoduls (Full-Speed, 12 Mbit/s)
+-- Ansteuerung des TUSB1106 gemaess Datenblatt Tab. 4: OE = '0' aktiviert
+-- den Treiber, VPO = D+, VMO = D-; VPO = VMO = '0' erzeugt SE0 (EOP)
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity usb_tx is
+    port (
+        clk      : in  std_logic;                    -- 48-MHz-Systemtakt
+        rst      : in  std_logic;
+        bit_en   : in  std_logic;                    -- Bittakt-Enable (12 MHz)
+        start    : in  std_logic;                    -- Uebertragung starten
+        pid      : in  std_logic_vector(7 downto 0); -- z. B. DATA1 = 0x4B
+        payload  : in  std_logic_vector(63 downto 0);
+        plen     : in  natural range 0 to 8;         -- Nutzlaenge in Byte
+        send_crc : in  std_logic;                    -- '1' = CRC16 anhaengen
+        done     : out std_logic;
+        phy_oe   : out std_logic;
+        phy_vpo  : out std_logic;                    -- VPO = D+
+        phy_vmo  : out std_logic                     -- VMO = D-
+    );
+end entity;
+
+architecture rtl of usb_tx is
+    type state_t is (IDLE, SYNC, PKT, SE0_A, SE0_B, GAP);
+    signal state : state_t := IDLE;
+    signal nbits : natural range 8 to 88;
+    signal idx   : natural range 0 to 87 := 0;
+    signal ones  : natural range 0 to 6 := 0;      -- Stuffing-Zaehler
+    signal stuff : std_logic := '0';               -- naechstes Bit: Stuff-Bit
+    signal nrzi  : std_logic := '1';               -- Buspegel (1 = J, 0 = K)
+    signal crc   : std_logic_vector(15 downto 0);
+
+    -- CRC16 der USB-Spezifikation: G(x) = x^16 + x^15 + x^2 + 1,
+    -- Initialwert FFFF, LSB zuerst, Pruefbits werden invertiert gesendet
+    function crc16_next(c : std_logic_vector(15 downto 0);
+                        d : std_logic) return std_logic_vector is
+        variable fb : std_logic;
+        variable n  : std_logic_vector(15 downto 0);
+    begin
+        fb    := c(0) xor d;
+        n(0)  := c(1) xor fb;
+        n(1)  := c(2);
+        n(2)  := c(3);
+        n(3)  := c(4);
+        n(4)  := c(5);
+        n(5)  := c(6);
+        n(6)  := c(7);
+        n(7)  := c(8);
+        n(8)  := c(9);
+        n(9)  := c(10);
+        n(10) := c(11);
+        n(11) := c(12);
+        n(12) := c(13);
+        n(13) := c(14) xor fb;
+        n(14) := c(15);
+        n(15) := fb;
+        return n;
+    end function;
+begin
+
+    done <= '1' when state = GAP else '0';
+
+    -- Treiberansteuerung: Idle = J (VPO = '1', VMO = '0'), SE0 im EOP
+    phy_oe  <= '0' when state /= IDLE else '1';
+    phy_vpo <= '0' when state = SE0_A or state = SE0_B else nrzi;
+    phy_vmo <= '0' when state = SE0_A or state = SE0_B else not nrzi;
+
+    process (clk)
+        variable bitv : std_logic;
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+                state <= IDLE;
+                nrzi  <= '1';
+                idx   <= 0;
+                ones  <= 0;
+                stuff <= '0';
+                crc   <= (others => '0');
+            elsif bit_en = '1' then
+                case state is
+
+                    when IDLE =>
+                        if start = '1' then
+                            nbits <= 8 + plen * 8 + 16 when send_crc = '1'
+                                     else 8 + plen * 8;
+                            idx   <= 0;
+                            ones  <= 0;
+                            stuff <= '0';
+                            crc   <= x"FFFF";
+                            state <= SYNC;
+                        end if;
+
+                    when SYNC =>                  -- SOP: 00000001 -> KJKJKJKK
+                        if idx < 7 then
+                            bitv := '0';
+                        else
+                            bitv := '1';
+                        end if;
+                        if bitv = '0' then
+                            nrzi <= not nrzi;
+                        end if;
+                        if idx = 7 then
+                            idx   <= 0;
+                            ones  <= 1;               -- Sync-Eins zaehlt mit (Spec 7.1.9)
+                            stuff <= '0';
+                            state <= PKT;
+                        else
+                            idx <= idx + 1;
+                        end if;
+
+                    when PKT =>                   -- PID, Nutzdaten, CRC16
+                        if stuff = '1' then       -- erzwungenes Stuff-Bit '0'
+                            bitv  := '0';
+                            stuff <= '0';
+                            ones  <= 0;
+                            if idx = nbits - 1 then   -- Stuff-Bit war letztes Bit
+                                state <= SE0_A;
+                            end if;
+                        else
+                            if idx < 8 then
+                                bitv := pid(idx);
+                            elsif idx < 8 + plen * 8 then
+                                bitv := payload(idx - 8);
+                                crc  <= crc16_next(crc, bitv);
+                            else
+                                bitv := not crc(idx - 8 - plen * 8);
+                            end if;
+                            if bitv = '1' then
+                                if ones = 5 then
+                                    stuff <= '1';  -- 6 Einsen -> Stuff-Bit
+                                    ones  <= 6;
+                                else
+                                    ones <= ones + 1;
+                                end if;
+                            else
+                                ones <= 0;
+                            end if;
+                            if idx = nbits - 1 then
+                                if not (bitv = '1' and ones = 5) then
+                                    state <= SE0_A;
+                                end if;           -- sonst folgt erst das Stuff-Bit
+                            else
+                                idx <= idx + 1;
+                            end if;
+                        end if;
+                        if bitv = '0' then
+                            nrzi <= not nrzi;
+                        end if;
+
+                    when SE0_A =>                 -- EOP: 2 Bitzeiten SE0
+                        state <= SE0_B;
+
+                    when SE0_B =>
+                        nrzi  <= '1';             -- Rueckkehr nach J (Idle)
+                        state <= GAP;
+
+                    when GAP =>                   -- 1 Bitzeit J, dann frei
+                        state <= IDLE;
+                end case;
+            end if;
+        end if;
+    end process;
+
+end architecture;
+\end{verbatim}
+
+Der Empfangsteil (Auszug) mit SYNC-Jagd, NRZI-Decodierung, Unstuffing und Token-Decodierung:
+
+\begin{verbatim}
+-- usb_rx.vhd (Auszug): RCV liefert den NRZI-Strom, VP/VM die Single-Ended-
+-- Pegel zur SE0-Erkennung (Datenblatt Tab. 5). Die Bitphase wird am SYNC-
+-- Muster eingenommen; token_in wird nur fuer gueltige IN-Token erzeugt.
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity usb_rx is
+    port (
+        clk        : in  std_logic;
+        rst        : in  std_logic;
+        bit_en     : in  std_logic;
+        phy_rcv    : in  std_logic;          -- RCV: NRZI-Bitstrom (Idle = J)
+        phy_vp     : in  std_logic;          -- VP: Single-ended D+
+        phy_vm     : in  std_logic;          -- VM: Single-ended D-
+        se0        : out std_logic;
+        token_in   : out std_logic;          -- gueltiger IN-Token empfangen
+        token_addr : out natural range 0 to 127;
+        token_endp : out natural range 0 to 15
+    );
+end entity;
+
+architecture rtl of usb_rx is
+    type state_t is (HUNT, PID, TOKEN);
+    signal state : state_t := HUNT;
+    signal prev  : std_logic := '1';
+    signal sreg  : std_logic_vector(15 downto 0) := (others => '0');
+    signal pid_l : std_logic_vector(7 downto 0);
+    signal cnt   : natural range 0 to 15 := 0;
+    signal ones  : natural range 0 to 6 := 0;
+begin
+
+    se0 <= '1' when phy_vp = '0' and phy_vm = '0' else '0';
+
+    process (clk)
+        variable dbit : std_logic;             -- decodiertes Datenbit
+        variable v    : std_logic_vector(15 downto 0);
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+                state <= HUNT;
+                prev  <= '1';
+                pid_l <= x"00";
+            elsif bit_en = '1' then
+                token_in <= '0';
+                -- NRZI-Decodierung: Pegelwechsel = '0', kein Wechsel = '1'
+                if phy_rcv /= prev then
+                    dbit := '0';
+                else
+                    dbit := '1';
+                end if;
+                prev := phy_rcv;
+
+                case state is
+
+                    when HUNT =>               -- SYNC-Datenbits 0x80, LSB zuerst
+                        v    := dbit & sreg(15 downto 1);
+                        sreg <= v;
+                        if v(15 downto 8) = x"80" then
+                            cnt   <= 0;
+                            ones  <= 1;        -- Sync-Eins zaehlt mit (Spec 7.1.9)
+                            state <= PID;
+                        end if;
+
+                    when PID =>
+                        if ones = 6 then       -- Stuff-Bit verwerfen
+                            ones <= 0;
+                        else
+                            v    := dbit & sreg(15 downto 1);
+                            sreg <= v;
+                            ones <= ones + 1 when dbit = '1' else 0;
+                            if cnt = 7 then
+                                if v(11 downto 8) = not v(15 downto 12) then
+                                    pid_l <= v(15 downto 8);  -- PID-Byte merken
+                                    cnt   <= 0;   -- PID-Komplement ok
+                                    state <= TOKEN;
+                                else
+                                    state <= HUNT;
+                                end if;
+                            else
+                                cnt <= cnt + 1;
+                            end if;
+                        end if;
+
+                    when TOKEN =>
+                        if ones = 6 then
+                            ones <= 0;
+                        else
+                            v    := dbit & sreg(15 downto 1);
+                            sreg <= v;
+                            ones <= ones + 1 when dbit = '1' else 0;
+                            if cnt = 15 then     -- 7 Adresse + 4 EP + 5 CRC5
+                                if pid_l = x"69" then          -- IN-Token
+                                    token_addr <= to_integer(unsigned(v(6 downto 0)));
+                                    token_endp <= to_integer(unsigned(v(10 downto 7)));
+                                    token_in   <= '1';
+                                end if;        -- CRC5 im Testmodul ungeprueft
+                                cnt   <= 0;
+                                state <= HUNT;
+                            else
+                                cnt <= cnt + 1;
+                            end if;
+                        end if;
+                end case;
+            end if;
+        end if;
+    end process;
+
+end architecture;
+\end{verbatim}
+
+Die Transaktionslogik des Testmoduls (Auszug): Nach einem IN-Token an die eigene Adresse antwortet das Modul nach Ablauf der Turnaround-Zeit mit einem 8-Byte-HID-Tastatur-Report oder mit NAK:
+
+\begin{verbatim}
+-- usb_dev.vhd (Auszug): Taster gedrueckt -> DATA1 mit HID-Report
+-- (0x04 = Taste 'a'), sonst NAK; Bus-Reset setzt die Adresse zurueck.
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity usb_dev is
+    port (
+        clk        : in  std_logic;
+        rst        : in  std_logic;
+        bit_en     : in  std_logic;
+        se0        : in  std_logic;            -- vom usb_rx
+        tx_done    : in  std_logic;            -- von usb_tx
+        token_in   : in  std_logic;
+        token_addr : in  natural range 0 to 127;
+        token_endp : in  natural range 0 to 15;
+        btn        : in  std_logic;            -- Taster (2FF-synchronisiert)
+        start      : out std_logic;
+        pid        : out std_logic_vector(7 downto 0);
+        payload    : out std_logic_vector(63 downto 0);
+        plen       : out natural range 0 to 8;
+        send_crc   : out std_logic
+    );
+end entity;
+
+architecture rtl of usb_dev is
+    -- HID-Report: Modifier, reserviert, 6 Keycodes (0x04 = Taste 'a')
+    constant KEY_A : std_logic_vector(63 downto 0) := x"0000000000040000";
+    signal dev_addr : natural range 0 to 127 := 0;
+    signal pend     : std_logic := '0';
+    signal gap      : natural range 0 to 4 := 4;
+    signal se0_cnt  : natural range 0 to 31 := 0;
+begin
+
+    process (clk)
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+                dev_addr <= 0;
+                pend     <= '0';
+                gap      <= 4;
+                se0_cnt  <= 0;
+                start    <= '0';
+            elsif bit_en = '1' then
+                start <= '0';
+                -- Bus-Reset: SE0 laenger als 2,5 us = 30 Bitzeiten
+                if se0 = '1' then
+                    if se0_cnt = 30 then
+                        dev_addr <= 0;
+                        pend     <= '0';
+                    else
+                        se0_cnt <= se0_cnt + 1;
+                    end if;
+                else
+                    se0_cnt <= 0;
+                end if;
+
+                -- IN-Token am Tastatur-Endpoint (EP1): Turnaround abwarten
+                if token_in = '1' and token_addr = dev_addr
+                   and token_endp = 1 then
+                    gap <= 0;
+                elsif gap /= 4 then
+                    if gap = 3 then
+                        start <= '1';           -- Antwortpaket senden
+                        gap   <= 4;
+                    else
+                        gap <= gap + 1;
+                    end if;
+                end if;
+
+                -- Tastendruck vormerken, nach gesendeter Antwort freigeben
+                if btn = '1' then
+                    pend <= '1';
+                elsif tx_done = '1' then
+                    pend <= '0';
+                end if;
+            end if;
+        end if;
+    end process;
+
+    -- ausstehender Tastendruck: DATA1 + Report (mit CRC16), sonst NAK
+    pid      <= x"4B" when pend = '1' else x"5A";
+    payload  <= KEY_A when pend = '1' else x"0000000000000000";
+    plen     <= 8 when pend = '1' else 0;
+    send_crc <= pend;
+
+end architecture;
+\end{verbatim}
+
+Die drei Blöcke werden im Top-Level instanziiert und an die Constraints der \texttt{.ccf}-Datei angebunden; der Bittakt-Enable ergibt sich aus einem Teiler 48\,MHz / 4, \texttt{usb\_speed} ist fest auf 1 (Full-Speed) und \texttt{usb\_susp} auf 0 (Normalbetrieb) gelegt. Die vollständigen, synthetisierbaren Quelltexte samt Top-Level und Constraints liegen im Repository unter \texttt{software/usb\_phy\_test/}. Für den reinen Sendetest ohne Host wird statt des Responders ein periodischer Paketgenerator an \texttt{tx\_start} gelegt; die Verifikation von Pegeln, Stuffing- und EOP-Timing erfolgt dann über Oszilloskop bzw. Logic-Analyzer an D+/D--. \texttt{usb\_susp} bleibt dabei auf 0, da Suspend erst mit der vollständigen Enumerationslogik sinnvoll nutzbar ist.
+
+\textbf{Ausblick: Vom Testmodul zum USB-Device}
+
+Als nächster Schritt (nächstes Semester) soll aus dem Testmodul ein vollwertiges USB-Device werden. Es fehlt die Enumerationslogik für die Kontrollübertragungen am Default-Endpoint 0:
+\begin{enumerate}
+	\item Erkennung des Bus-Resets (SE0 $\geq$ 2,5\,$\mu$s) und Zurücksetzen der Device-Adresse auf 0.
+	\item Empfang der SETUP-Transaktionen mit 8-Byte-Request und Antworten mit ACK; Decodierung von \texttt{SET\_ADDRESS}, \texttt{GET\_DESCRIPTOR} und \texttt{SET\_CONFIGURATION}.
+	\item Bereitstellung von Device-, Config-, Interface- und Endpoint-Deskriptoren als ROM-Konstanten im FPGA.
+	\item Verwaltung des DATA-Toggles in den Daten- und Statusphasen der Kontrollübertragungen.
+\end{enumerate}
+Damit steht die Wahl des Minimalbeispiels, mit dem die Kommunikation über den Transceiver nachgewiesen werden kann:
+\begin{itemize}
+	\item \textbf{Virtual COM Port (CDC-ACM):} Das empfohlene Minimalbeispiel: Das Device enumeriert als virtuelle serielle Schnittstelle, und ein Echo-Demo auf dem FPGA spiegelt empfangene BULK-Daten zurück. Damit sind Enumeration und bidirektionale BULK-Transfers vollständig bewiesen, bei vergleichsweise geringem Aufwand.
+	\item \textbf{HID-Tastatur:} Der TX-Pfad samt 8-Byte-HID-Report existiert im Testmodul bereits; es fehlen nur die Enumerations-FSM und der HID-Report-Deskriptor. Das Gerät täte dann am PC so, als wäre es eine Tastatur.
+	\item \textbf{USB-Massenspeicher (MSC):} Die aufwendigste Variante, da zusätzlich das Bulk-Only-Transport-Protokoll (BOT) und ein SCSI-Befehlssatz (INQUIRY, READ CAPACITY, READ10/WRITE10) umzusetzen sind. Sinnvoll als Folgeprojekt, sobald CDC-ACM steht.
+\end{itemize}
+Als Referenz für die Umsetzung bietet sich die offene Verilog-Implementierung \texttt{usb\_cdc}\footnote{\url{https://github.com/ulixxe/usb_cdc}} an; die Verifikation erfolgt über \texttt{usbmon}/Wireshark auf Host-Seite sowie Logic-Analyzer an D+/D--. Voraussetzung für alle Schritte ist ein stabiler Takt für das FPGA (siehe Abschnitt zur fehlenden Clock), da sowohl die 12-Mbit/s-Bitrate als auch die Erkennung von Reset, Suspend und Resume eine genaue Zeitbasis benötigen.
 
 \textbf{Zusammenarbeit mit Fynn}
 \begin{itemize}
