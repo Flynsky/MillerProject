@@ -365,7 +365,7 @@ Elektrisch spezifiziert das Datenblatt eine Treiberimpedanz von 34 bis 44\,$\Ome
 
 \textbf{USB-Testmodul in VHDL}
 
-Um den TUSB1106 direkt beim Bring-up ansteuern und prüfen zu können, wurde ein Testmodul in VHDL entworfen, das die Funktion der SIE in minimierter Form nachbildet. Es greift damit die Stufe 3 des Bringup-Plans auf und erweitert sie um die Protokollebene, und es erlaubt drei Verifikationsstufen: (1) ein reiner Sendetest mit periodischen Testpaketen, verifizierbar über Oszilloskop und Logic-Analyzer an D+/D--, (2) ein Token-Responder, der auf adressierte IN-Polls mit NAK beziehungsweise mit einem HID-Report antwortet und sich über einen USB-Analyzer beobachten lässt, und (3) nach Ergänzung der Enumerations-Logik die vollwertige Erkennung als USB-Device (siehe Ausblick). Das Modul ist als synthetisierbares VHDL-93 gehalten, lässt sich mit GHDL simulieren und über die GHDL-Yosys-Anbindung auch in die Cologne-Chip-Toolchain überführen.
+Um den TUSB1106 direkt beim Bring-up ansteuern und prüfen zu können, wurde ein Testmodul in VHDL entworfen, das die Funktion der SIE in minimierter Form nachbildet. Es greift damit die Stufe 3 des Bringup-Plans auf und erweitert sie um die Protokollebene, und es erlaubt drei Verifikationsstufen: (1) ein reiner Sendetest mit periodischen Testpaketen, verifizierbar über Oszilloskop und Logic-Analyzer an D+/D--, (2) ein Token-Responder, der auf adressierte IN-Polls mit NAK beziehungsweise mit einem HID-Report antwortet und sich über einen USB-Analyzer beobachten lässt, und (3) nach Ergänzung der Enumerations-Logik die vollwertige Erkennung als USB-Device (siehe Ausblick). Das Modul ist als synthetisierbares VHDL-93 gehalten, lässt sich mit GHDL simulieren und über die GHDL-Yosys-Anbindung auch in die Cologne-Chip-Toolchain überführen. Simulation und Synthese sind zum aktuellen Stand noch nicht durchgeführt.
 
 \begin{itemize}
 	\item \textbf{Bittakt:} Aus dem 48-MHz-Systemtakt erzeugt ein Teiler alle vier Zyklen ein Bittakt-Enable (48\,MHz / 4 = 12\,Mbit/s); die Bitphase wird beim Empfang am SYNC-Muster eingenommen.
@@ -767,7 +767,20 @@ Damit steht die Wahl des Minimalbeispiels, mit dem die Kommunikation über den T
 	\item \textbf{HID-Tastatur:} Der TX-Pfad samt 8-Byte-HID-Report existiert im Testmodul bereits; es fehlen nur die Enumerations-FSM und der HID-Report-Deskriptor. Das Gerät täte dann am PC so, als wäre es eine Tastatur.
 	\item \textbf{USB-Massenspeicher (MSC):} Die aufwendigste Variante, da zusätzlich das Bulk-Only-Transport-Protokoll (BOT) und ein SCSI-Befehlssatz (INQUIRY, READ CAPACITY, READ10/WRITE10) umzusetzen sind. Sinnvoll als Folgeprojekt, sobald CDC-ACM steht.
 \end{itemize}
+Mit Blick auf die Smart-Card-Anwendung ist langfristig die USB-Geräteklasse CCID das Ziel, über die ein Host mit Chipkartenlesern kommuniziert; CDC-ACM und HID dienen dabei als Verifikationsschritte auf dem Weg dorthin.
 Als Referenz für die Umsetzung bietet sich die offene Verilog-Implementierung \texttt{usb\_cdc}\footnote{\url{https://github.com/ulixxe/usb_cdc}} an; die Verifikation erfolgt über \texttt{usbmon}/Wireshark auf Host-Seite sowie Logic-Analyzer an D+/D--. Voraussetzung für alle Schritte ist ein stabiler Takt für das FPGA (siehe Abschnitt zur fehlenden Clock), da sowohl die 12-Mbit/s-Bitrate als auch die Erkennung von Reset, Suspend und Resume eine genaue Zeitbasis benötigen.
+
+\textbf{Status und offene Punkte}
+
+Zum Stand der Umsetzung: Schaltbild und Layout des USB-PHY sind umgesetzt und eingecheckt, eine Kommunikation über den TUSB1106 wurde jedoch noch nicht getestet. Die folgenden Punkte sind offen und müssen vor bzw. während der Inbetriebnahme geklärt werden:
+\begin{itemize}
+	\item R33 (1,5-k$\Omega$-Pull-up an D--) prüfen: Für Full-Speed darf nur D+ (R34) den Pull-up nach Vpu führen; ein Pull-up auf D-- erzeugt im Idle-Zustand einen unzulässigen Buszustand (SE1, beide Leitungen auf High) und verhindert die Geräteenkennung.
+	\item SOFTCON (SD\_FTCO\_N) ist als neuntes Signal geroutet, fehlt aber noch in den Constraints; es muss als FPGA-Pin angebunden oder fest auf High gelegt werden, sonst zieht der 1,5-k$\Omega$-Pull-up D+ nicht hoch.
+	\item Pinzuordnung von VPO (Pin 13), VMO (Pin 14) und RCV (Pin 4) im Symbol gegen das Datenblatt prüfen.
+	\item Anbindung von Vreg(3.3) an die 3,3-V-Schiene im Regler-Bypass-Modus prüfen; laut Datenblatt müssen VCC(5.0) und Vreg(3.3) verbunden sein.
+	\item Die differentielle Impedanz von 90~$\Omega$ auf dem D+/D---Paar ist layoutseitig ausgelegt, aber messtechnisch nicht verifiziert.
+	\item Das VHDL-Testmodul ist quelltextseitig fertig, aber noch nicht simuliert, synthetisiert oder auf der Hardware getestet.
+\end{itemize}
 
 \textbf{Zusammenarbeit mit Fynn}
 \begin{itemize}
