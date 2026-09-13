@@ -1,0 +1,371 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{svg}
+\usepackage{float}
+\title{Software} 
+\author{Xaver} 
+\date{\today} 
+\begin{document} 
+\maketitle
+\tableofcontents 
+\newpage
+\section{Ibex RISC-V Core und SV-Module}
+
+Der Ibex RISC-V Core ist ein Open-Source-32-Bit-RISC-V-Prozessor, der in SystemVerilog entwickelt wurde. Er eignet sich insbesondere für Embedded-Systeme und kann auf verschiedenen FPGA-Plattformen eingesetzt werden. Im folgenden Bild ist eine vereinfachte Darstellung der Architektur des Ibex zu sehen. Auf die einzelnen Komponenten und deren Zusammenspiel wird im Folgenden genauer eingegangen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/blockdiagram.pdf}
+    \caption{Ibex Core Gesamtbild}
+    \label{fig:ibex_architektur}
+\end{figure}
+\subsection{Instruction Memory und Data Memory}
+
+Für das GateMate wurde ein Dual-Port-RAM mit einer Speichergröße von 4,KiB verwendet. Der RAM besitzt zwei voneinander unabhängige Ports. Port A wird für Zugriffe auf den Data Memory verwendet, während Port B für das Lesen von Instruktionen aus dem Instruction Memory zuständig ist.
+
+Dies ist auch im SystemVerilog-Code der Instanz \texttt{ram\_2p} zu erkennen. Beim Port B ist \texttt{b\_we\_i} konstant auf \texttt{0} gesetzt. Dadurch kann über diesen Port ausschließlich gelesen und nicht geschrieben werden. Ebenso ist \texttt{b\_wdata\_i} konstant auf \texttt{0} gesetzt, da für einen reinen Lesezugriff keine Schreibdaten benötigt werden.
+
+Ein wichtiger Unterschied besteht außerdem in der Anbindung an den Bus. Der Data Memory ist über Port A an den Bus angebunden. Dadurch können Schreib- und Lesezugriffe des Ibex über den Data-Port an den Bus weitergeleitet und anschließend an den RAM übertragen werden. Der Instruction Memory ist dagegen nicht an den Bus angebunden. Der Ibex greift über seinen separaten Instruction-Port direkt auf Port B des Dual-Port-RAMs zu. Dadurch sind Instruction Fetches und Datenzugriffe voneinander getrennt.
+\subsection{Top Modul Demosystem}
+\begin{figure}[H]
+    \centering
+    \includesvg[width=0.8\textwidth]{images/ibex_top.svg}
+    \caption{Vereinfachte Architektur des Top-Moduls}
+    \label{fig:ibex_architektur}
+\end{figure}
+Schaut man sich das Top-Level des Demo-Systems an, das auf dem GateMate-FPGA eingesetzt wurde, lassen sich mehrere wichtige Komponenten erkennen, die im System instanziiert sind:
+
+\begin{itemize}
+\item \texttt{ram\_2p}
+\item \texttt{ibex\_top}
+\item \texttt{bus}
+\item \texttt{gpio}
+\item \texttt{uart}
+\item \texttt{timer}
+\end{itemize}
+
+Einige Komponenten des ursprünglichen Demo-Systems wurden entfernt, um das System zu vereinfachen und an die begrenzten Ressourcen des GateMate-FPGAs anzupassen.
+
+Eine zentrale Komponente des Systems ist der Bus. Dieser unterscheidet zwischen sogenannten \textit{Hosts} und \textit{Devices}. Ein Host ist dabei ein Modul, das Speicherzugriffe anfordert, während ein Device auf diese Zugriffe reagiert. In der aktuellen Konfiguration ist der Data-Port des Ibex der einzige Host. Als Devices sind unter anderem der RAM, das GPIO-, UART- und Timer-Modul angebunden. Aus diesem Grund besitzt die Bus-Schnittstelle sowohl \texttt{host\_*}- als auch \texttt{device\_*}-Signale.
+
+Betrachten wir dazu einen konkreten Datenzugriff. Angenommen, im C-Code ist eine globale Variable definiert:
+
+\begin{verbatim}
+int a = 0x0F0F0F0F;
+
+int main(void) {
+return a;
+}
+\end{verbatim}
+
+Für die Betrachtung des prinzipiellen Ablaufs werden Compileroptimierungen, der Startup-Code und weitere Vorgänge vor dem Aufruf von \texttt{main()} zunächst ignoriert.
+
+Nehmen wir an, dass die globale Variable \texttt{a} entsprechend dem verwendeten Linkerskript an der Adresse \texttt{0x001004e0} liegt. Wenn die CPU in \texttt{main()} auf \texttt{a} zugreift, muss der Ibex den Wert aus dieser Speicheradresse lesen. Dazu erzeugt der Ibex über seinen Data-Port eine Anfrage mit der entsprechenden Adresse. Da es sich um einen Lesezugriff handelt, wird das Write-Signal deaktiviert.
+
+Diese Anfrage wird im Top-Level über die \texttt{host\_*}-Signale an den Bus weitergeleitet. Dazu gehören unter anderem:
+
+\begin{verbatim}
+host_req
+host_addr
+host_we
+host_be
+host_wdata
+\end{verbatim}
+
+Der Bus überprüft anhand der Adresse, welchem Device der Zugriff zugeordnet werden muss. Dazu werden für jedes Device eine Basisadresse und eine Adressmaske definiert. Die Adresse \texttt{0x001004e0} liegt beispielsweise im Adressbereich des RAMs. Der Bus leitet die Anfrage deshalb über die entsprechenden \texttt{device\_*}-Signale an das RAM weiter.
+
+Für das RAM sind dies unter anderem:
+
+\begin{verbatim}
+device_req[Ram]
+device_addr[Ram]
+device_we[Ram]
+device_be[Ram]
+device_wdata[Ram]
+\end{verbatim}
+
+Das RAM liefert den angeforderten Wert anschließend über \texttt{device\_rdata[Ram]} an den Bus zurück. Der Bus leitet diesen Wert über \texttt{host\_rdata[CoreD]} zurück an den Data-Port des Ibex. Die CPU erhält damit den Wert \texttt{0x0F0F0F0F} und kann ihn beispielsweise als Rückgabewert von \texttt{main()} verwenden.
+
+Wichtig ist hierbei, dass \texttt{device\_rdata} kein Speicher und auch kein zweidimensionaler Speicherbereich ist. In SystemVerilog handelt es sich um ein Array von Signalen, wobei jedes Array-Element den Datenwert eines bestimmten Devices repräsentiert. Bei fünf Devices existieren beispielsweise \texttt{device\_rdata[0]} bis \texttt{device\_rdata[4]}. Diese Signale werden in der realen Hardware nicht als Software-Datenstruktur umgesetzt, sondern entsprechen Verbindungen zwischen den verschiedenen Schaltungskomponenten.
+
+Der prinzipielle Datenfluss bei einem Lesezugriff auf die Variable \texttt{a} ist somit:
+\newpage
+\begin{verbatim}
+Ibex Data-Port
+|
+| host_*
+v
+BUS
+|
+| device_* für Ram
+v
+ram_2p Port A
+|
+| device_rdata[Ram]
+v
+BUS
+|
+| host_rdata[CoreD]
+v
+Ibex Data-Port
+\end{verbatim}
+
+Der Instruction Memory stellt dabei einen Sonderfall dar: Instruction Fetches des Ibex laufen nicht über den Bus, sondern über den zweiten Port des Dual-Port-RAMs direkt zum RAM. Der Bus ist somit für die Datenzugriffe des Ibex zuständig, während der Instruction Fetch einen separaten Pfad verwendet.
+\subsection{Register File}
+
+Das Register File des Ibex Prozessors enthält je nach Konfiguration entweder 32 oder 16 Register. 
+Wird der Parameter \texttt{RV32E} deaktiviert, stehen die Register \texttt{x0} bis \texttt{x31} zur Verfügung. 
+Da das Register \texttt{x0} bei der RISC-V Architektur jedoch konstant den Wert 0 liefert und nicht beschrieben werden darf, müssen tatsächlich nur 31 Register gespeichert werden. 
+Bei aktivierter \texttt{RV32E}-Erweiterung reduziert sich das Register File auf die Register \texttt{x0} bis \texttt{x15}, wodurch nur 15 Register gespeichert werden müssen.
+
+Die Register werden im SystemVerilog als zweidimensionales Array dargestellt:
+
+\begin{verbatim}
+logic [DataWidth-1:0] mem[NUM_WORDS];
+\end{verbatim}
+
+Dabei entspricht jedes Element des Arrays einem 32-Bit breiten Register.
+
+Für die Implementierung auf dem GateMate FPGA wird die Datei 
+\texttt{ibex\_register\_file\_fpga.sv} verwendet. Diese Implementierung ist so geschrieben, dass Synthesetools das Register File möglichst effizient auf die vorhandenen FPGA-Ressourcen abbilden können. Je nach FPGA-Architektur und Synthesetool kann das Register File beispielsweise durch Block RAMs oder durch Logikzellen (LUTs und Flip-Flops) implementiert werden.
+
+Eine weitere Variante ist das \texttt{ibex\_register\_file\_ff.sv}. 
+Hier wird jedes einzelne Bit der Register durch ein Flip-Flop gespeichert. 
+Bei 32 Registern mit jeweils 32 Bit würde dies theoretisch 1024 einzelne Flip-Flops benötigen (das Register x0 wird hierbei nicht als normales Register gespeichert).
+
+Die dritte Variante ist das 
+\texttt{ibex\_register\_file\_latch.sv}. 
+Diese Implementierung basiert auf Latches und verwendet zusätzlich Clock-Gating, um den Energieverbrauch zu reduzieren. 
+Dabei wird nicht jedes Register bei jedem Takt aktiviert, sondern nur das Register, in welches aktuell geschrieben werden soll. 
+Hierfür wird zunächst anhand der Schreibadresse ein One-Hot-Signal erzeugt, welches anschließend die jeweilige Clock-Gating-Zelle aktiviert.
+
+Dies ist im SystemVerilog-Code zu erkennen:
+
+\begin{verbatim}
+for (genvar x = 1; x < NUM_WORDS; x++) begin : gen_cg_word_iter
+  prim_clock_gating cg_i (
+      .clk_i     ( clk_int           ),
+      .en_i      ( waddr_onehot_a[x] ),
+      .test_en_i ( test_en_i         ),
+      .clk_o     ( mem_clocks[x]     )
+  );
+end
+\end{verbatim}
+
+Wird beispielsweise in das Register \texttt{x5} geschrieben, wird nur die Clock für dieses Register aktiviert. 
+Das entsprechende Latch kann anschließend den neuen Wert übernehmen:
+
+\begin{verbatim}
+for (genvar i = 1; i < NUM_WORDS; i++) begin : g_rf_latches
+  always_latch begin
+    if (mem_clocks[i]) begin
+      mem[i] = wdata_a_q;
+    end
+  end
+end
+\end{verbatim}
+
+Diese Latch-basierte Variante ist hauptsächlich für ASIC-Implementierungen vorgesehen, da dort spezielle Clock-Gating-Zellen verfügbar sind. Für FPGAs wie den GateMate ist diese Implementierung ungeeignet und kann zu Syntheseproblemen führen. Deshalb wird für die FPGA-Implementierung die Variante \texttt{ibex\_register\_file\_fpga.sv} verwendet.
+\subsection{Instruction Decode und Execute Stage}
+
+Die \textbf{Instruction Decode and Execute Stage} übernimmt die vom Instruction-Fetch bereitgestellten Maschinenbefehle. Wurde zuvor eine komprimierte RISC-V-Instruktion (RVC) geladen, wird diese zunächst in ihre unkomprimierte Darstellung umgewandelt. Anschließend werden die Instruktionen innerhalb eines Taktzyklus dekodiert und ausgeführt. Dabei erfolgen auch das Lesen und Schreiben des Register Files.
+
+Die zentrale Komponente dieser Stufe ist die \texttt{ibex\_id\_stage.sv}. Sie steuert den gesamten Dekodier- und Ausführungsprozess. Multiplexer wählen dabei die Operanden für die ALU sowie die Quelle der Daten aus, die in das Register File zurückgeschrieben werden. Für mehrzyklische Instruktionen besitzt die ID-Stage eine kleine Zustandsmaschine, welche die Pipeline während der Ausführung anhält.
+
+Der \textbf{Controller} (\texttt{ibex\_controller.sv}) enthält die Hauptzustandsmaschine des Prozessors. Zu seinen Aufgaben gehören das Starten des Prozessors nach einem Reset, das Aktualisieren des Programmzählers bei Sprüngen und Verzweigungen, die Behandlung von Exceptions und Interrupts einschließlich der Aktualisierung der CSR-Register, die Steuerung des Schlafmodus (WFI) sowie die Unterstützung der Debug-Funktionalität.
+
+Der \textbf{Decoder} (\texttt{ibex\_decoder.sv}) dekodiert die Maschinenbefehle und erzeugt die entsprechenden Steuersignale für die übrigen Komponenten der CPU. Anhand des Opcodes und weiterer Befehlsfelder wird bestimmt, welche Operation ausgeführt werden soll und welche Funktionsblöcke, wie beispielsweise die ALU oder das Register File, angesteuert werden.
+\subsection{Toolchain}
+\subsubsection{FPGA Toolchain}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.4\textwidth,trim=5cm 3cm 2cm 1cm,clip]{images/toolchain_final.pdf}
+    \caption{Toolchain Ablauf}
+    \label{fig:ibex_architektur}
+\end{figure}
+
+
+Um den Ibex-Prozessor auf dem GateMate FPGA ausführen zu können, musste zunächst eine vollständige Entwicklungsumgebung eingerichtet werden. Hierzu wurde die Open-Source-Toolchain der \textit{OSS CAD Suite} installiert. Diese enthält unter anderem die Werkzeuge \texttt{Yosys} zur Synthese sowie \texttt{nextpnr-himbaechel} für das Place-and-Route des GateMate FPGAs.
+
+Anschließend wurde das Ibex-Repository geklont und das vorhandene Demo-System analysiert. Da das ursprüngliche Projekt auf ein anderes FPGA-Board ausgelegt war, mussten verschiedene Anpassungen vorgenommen werden, um eine lauffähige GateMate-Version zu erhalten. Hierzu gehörten insbesondere die Anpassung der Taktfrequenz, der Speichergröße sowie das Entfernen nicht benötigter Peripherie, um die Routing-Auslastung des FPGAs zu reduzieren.
+
+Für die Erzeugung der FPGA-Konfiguration wurde ein eigenes \texttt{Makefile} erstellt. Dieses automatisiert den gesamten Build-Prozess und führt die einzelnen Werkzeuge der Toolchain nacheinander aus. Der Ablauf umfasst die Synthese des SystemVerilog-Codes mit \texttt{Yosys}, das Place-and-Route mit \texttt{nextpnr-himbaechel} sowie die Erzeugung des GateMate-Bitstreams.
+
+Zur Programmierung des GateMate FPGA wurde anschließend \texttt{openFPGALoader} zusammen mit einem DirtyJTAG-Adapter verwendet. Dadurch konnte der erzeugte Bitstream direkt über die JTAG-Schnittstelle auf das FPGA übertragen werden.
+
+Neben der FPGA-Toolchain wurde ebenfalls eine RISC-V-Compiler-Toolchain eingerichtet. Diese dient zur Übersetzung von C-Programmen in RISC-V-Maschinencode. Anschließend werden die erzeugten ELF- und Binärdateien in den Initialisierungsspeicher des Demo-Systems eingebunden, sodass der Prozessor das Programm nach dem Konfigurieren des FPGA direkt ausführen kann.
+
+Nach erfolgreicher Einrichtung der Entwicklungsumgebung konnte der komplette Entwicklungsablauf automatisiert werden. Dieser umfasst das Kompilieren der Software, die Synthese der Hardware, das Place-and-Route, die Bitstream-Erzeugung sowie das Programmieren des GateMate FPGA.
+\subsection{C Code Generierung}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.3\textwidth,trim=7cm 4cm 2cm 1cm,clip]{images/normal_compile.pdf}
+    \caption{Häufigster Flash Vorgang}
+    \label{fig:ibex_architektur}
+\end{figure}
+
+Bei klassischen Mikrocontrollern wird die Firmware üblicherweise zunächst mit einem Compiler aus dem C-Quellcode in Maschinencode übersetzt. Anschließend erzeugt der Linker eine ausführbare Datei, welche die Speicheradressen der einzelnen Programmteile festlegt. Aus dieser Datei wird häufig eine Binär- oder HEX-Datei erzeugt, welche anschließend in den Flash-Speicher des Mikrocontrollers programmiert wird.
+
+Der Flash-Vorgang erfolgt abhängig von der verwendeten Mikrocontroller-Plattform über verschiedene Schnittstellen. Häufig verwendete Verfahren sind beispielsweise:
+
+\begin{itemize}
+    \item \textbf{SWD (Serial Wire Debug):} Wird hauptsächlich bei ARM Cortex-M Mikrocontrollern verwendet und ermöglicht das Programmieren und Debuggen über wenige Pins.
+    \item \textbf{JTAG:} Eine weit verbreitete Debug- und Programmierschnittstelle, die insbesondere bei komplexeren Mikrocontrollern und Prozessoren eingesetzt wird.
+    \item \textbf{Bootloader-basierte Programmierung:} Viele Mikrocontroller besitzen einen integrierten Bootloader, über den die Firmware beispielsweise über UART, USB oder CAN übertragen werden kann.
+    \item \textbf{Herstellerspezifische Programmer:} Beispiele hierfür sind ST-Link für STM32-Mikrocontroller oder ähnliche Programmieradapter anderer Hersteller.
+\end{itemize}
+
+Der typische Ablauf besteht somit aus:
+\begin{center}
+C-Quellcode $\rightarrow$ Compiler $\rightarrow$ ELF-Datei $\rightarrow$ BIN/HEX-Datei $\rightarrow$ Programmer $\rightarrow$ Flash-Speicher der MCU
+\end{center}
+
+Im Gegensatz zu einem klassischen Mikrocontroller besitzt der verwendete Ibex-Prozessor auf dem GateMate FPGA keinen internen Flash-Speicher für die Firmware. Daher wird die Software nicht nachträglich über eine Programmierschnittstelle in einen Speicher geschrieben. Stattdessen wird das Programm bereits während der FPGA-Erstellung in den Instruction Memory integriert.
+
+Hierzu wird der erzeugte RISC-V-Maschinencode als Initialinhalt des RAMs eingebunden. Der Instruction Memory wird somit bereits im SystemVerilog-Code mit den entsprechenden Instruktionen initialisiert. Während der Synthese wird dieser Speicherinhalt zusammen mit der Hardwarebeschreibung verarbeitet und anschließend im FPGA-Bitstream gespeichert.
+
+Der Ablauf unterscheidet sich somit von einer klassischen MCU-Programmierung:
+
+\begin{center}
+C-Quellcode $\rightarrow$ RISC-V Compiler $\rightarrow$ Speicherinitialisierung $\rightarrow$ SystemVerilog Synthese $\rightarrow$ FPGA Bitstream $\rightarrow$ Instruction Memory
+\end{center}
+
+Nach der Konfiguration des GateMate FPGAs steht der Programmcode dem Ibex-Core direkt im Instruction Memory zur Verfügung und kann ohne separaten Flash-Vorgang ausgeführt werden.
+\section{Ablauf, Probleme und Erfolge}
+\subsection{Ablauf}
+
+Um den Ibex auf dem Olimex GateMate A1 zu portieren, wurde zunächst mit einfachen
+Blinky-Programmen begonnen. Das Ziel dieser ersten Schritte bestand darin, sich mit
+dem FPGA-Board sowie der benötigten Toolchain vertraut zu machen und den
+grundlegenden Entwicklungs- und Programmierablauf zu überprüfen.
+
+Die Installation der benötigten Toolchain kann unkompliziert über die
+OSS CAD Suite erfolgen. Diese stellt unter anderem die für die Synthese sowie
+für die anschließende Implementierung benötigten Open-Source-Werkzeuge bereit.
+Die aktuelle Version ist unter
+\verb|https://github.com/YosysHQ/oss-cad-suite-build/releases|
+verfügbar. Für die Verwendung der Toolchain wird ein Linux-Betriebssystem
+empfohlen, da die verwendeten Werkzeuge dort direkt und ohne zusätzliche
+Kompatibilitätsschichten eingesetzt werden können.
+
+Nach den ersten erfolgreichen Implementierungen wurde ein \texttt{Makefile}
+eingeführt, um die einzelnen Schritte des FPGA-Entwicklungsprozesses zu
+automatisieren. Das finale Makefile sieht wie folgt aus:
+
+\begin{verbatim}
+TOP = top_gatemate
+
+# You can deactivate the seed, it is not necessary
+PREFIX := rtl/
+DESIGN_SOURCES := $(addprefix $(PREFIX),$(shell cat build/compile_files.txt))
+
+IMPLEMENT_FLAGS = -l Logs/routing.log --verbose --device=CCGM1A1 \
+                  --seed 1 --vopt allow-unconstrained \
+                  --json Synth/$(TOP)_synth_final.json
+
+GATE_MATE_PIN_CONSTRAINTS = constraints/pin_constraints.ccf
+GATE_MATE_TIMING_CONSTRAINTS = constraints/timing_constraints.sdc
+
+soc:
+	# Synthesize with Yosys. The slang plugin is required
+	# for modern SystemVerilog syntax.
+	yosys -m slang -p "read_slang --std latest \
+	--ignore-initial $(DESIGN_SOURCES) --top $(TOP) \
+	-D SYNTHESIS; synth_gatemate -top $(TOP) -luttree \
+	-nomx8; write_verilog Synth/$(TOP)_synth.v; \
+	write_json Synth/$(TOP)_synth_final.json" > Logs/synth.log
+
+	# Implement (place and route) with nextpnr.
+	nextpnr-himbaechel $(IMPLEMENT_FLAGS) \
+	-o ccf=$(GATE_MATE_PIN_CONSTRAINTS) \
+	-o out=Impl/impl.txt \
+	--sdc $(GATE_MATE_TIMING_CONSTRAINTS) \
+	--router router2
+
+	# Create bitfile with gmpack.
+	gmpack Impl/impl.txt Impl/impl.bit
+
+clean:
+	rm -f *.log *.png Synth/*.v Synth/*.json \
+	Impl/*.bit Impl/*.txt Logs/*.log
+\end{verbatim}
+
+Das Makefile automatisiert damit die vollständige Erstellung des FPGA-Bitstreams.
+Der Prozess lässt sich grundsätzlich in drei Schritte unterteilen: Synthese,
+Place-and-Route sowie die Erzeugung des finalen Bitfiles.
+
+Im ersten Schritt wird mit \texttt{Yosys} die Synthese des Designs durchgeführt.
+Hierbei werden die angegebenen SystemVerilog-Quelldateien eingelesen und in eine
+für das GateMate-FPGA geeignete Netzliste überführt. Für die Verarbeitung
+moderner SystemVerilog-Syntax wird das \texttt{slang}-Plugin verwendet.
+Zusätzlich wird mit \texttt{synth\_gatemate} eine für die GateMate-Architektur
+angepasste Synthese durchgeführt. Als Ergebnis werden unter anderem eine
+JSON-Datei sowie eine synthetisierte Verilog-Datei erzeugt. Die JSON-Datei
+dient anschließend als Eingabe für den Place-and-Route-Schritt.
+
+Im zweiten Schritt übernimmt \texttt{nextpnr-himbaechel} die Implementierung
+des Designs. Dabei werden die logischen Ressourcen des Designs auf die
+physikalischen Ressourcen des GateMate-FPGAs abgebildet (Placement) und
+anschließend die notwendigen Verbindungen zwischen diesen Ressourcen
+hergestellt (Routing).
+
+Zusätzlich werden zwei Constraint-Dateien übergeben. Die
+\texttt{CCF}-Datei (\textit{Calypto Constraint Format}) definiert insbesondere
+die Zuordnung der Design-Signale zu den physischen I/O-Pins des FPGAs.
+Dadurch wird beispielsweise festgelegt, an welchem Pin des FPGA ein LED-Signal
+oder ein Taktsignal angeschlossen ist. Die \texttt{SDC}-Datei
+(\textit{Synopsys Design Constraints}) enthält hingegen Timing-Anforderungen
+des Designs, beispielsweise Vorgaben für verwendete Taktsignale.
+
+Nach erfolgreichem Place-and-Route wird im letzten Schritt mit
+\texttt{gmpack} aus der erzeugten Implementierungsdatei das für den
+GateMate-FPGA benötigte Bitfile erzeugt:
+
+\begin{verbatim}
+gmpack Impl/impl.txt Impl/impl.bit
+\end{verbatim}
+
+Das erzeugte Bitfile kann anschließend auf das FPGA übertragen werden.
+Hierfür wird \texttt{DirtyJTAG} verwendet. Das Olimex GateMate A1-Board
+verfügt über einen integrierten Raspberry Pi, auf dem die für DirtyJTAG
+benötigte Software ausgeführt werden kann. Dadurch kann das FPGA direkt
+über die vorhandene Hardware-Schnittstelle programmiert werden.
+
+Der gesamte Ablauf lässt sich somit wie folgt zusammenfassen:
+
+\begin{enumerate}
+    \item Einlesen und Synthese des SystemVerilog-Designs mit Yosys.
+    \item Erzeugung der GateMate-Netzliste.
+    \item Placement und Routing mit nextpnr-himbaechel.
+    \item Anwendung der Pin- und Timing-Constraints.
+    \item Erzeugung des Bitfiles mit gmpack.
+    \item Übertragung des Bitfiles auf das GateMate-FPGA mittels DirtyJTAG.
+\end{enumerate}
+\subsection{Probleme}
+
+Eines der größten Probleme bei der Implementierung des Systems auf dem GateMate FPGA stellte die fehlende direkte Unterstützung von Clock Gating dar. Beim Clock Gating wird das Taktsignal abhängig von einem Enable-Signal aktiviert oder deaktiviert. Dadurch können beispielsweise ganze Teile eines Systems gezielt angehalten werden, wenn sie nicht benötigt werden.
+
+In der verwendeten Implementierung wird das Taktsignal zunächst mit einer Logik verknüpft. Aus Sicht des Synthese- und Place-and-Route-Tools handelt es sich bei dem daraus resultierenden Signal jedoch nicht mehr um ein reguläres Taktsignal, sondern um ein gewöhnliches Logiksignal. Dadurch wird das Signal nicht mehr über die dedizierte Clock-Verteilung des FPGAs (Clock Tree) geführt. Dies kann insbesondere bei größeren Schaltungen zu Problemen hinsichtlich der Taktverteilung und der Laufzeitunterschiede des Taktsignals (Clock Skew) führen.
+
+Grundsätzlich lässt sich dieses Problem durch die Verwendung spezieller FPGA-spezifischer Primitives lösen, die eine geeignete Taktgatterung und deren Einbindung in die Clock-Struktur des FPGAs ermöglichen. Eine solche Lösung wurde im Rahmen dieses Projekts jedoch nicht umgesetzt. Stattdessen wurde die Clock-Gating-Funktionalität für die verwendete Implementierung entsprechend angepasst.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=1.8\textwidth,trim=5cm 0cm 3cm 1cm,clip]{images/gated_clock2.pdf}
+    \caption{Prinzip eines gated Clock-Signals}
+    \label{fig}
+\end{figure}
+
+\subsection{Erfolge}
+
+Zu den wesentlichen Erfolgen des Projekts zählt die erfolgreiche Inbetriebnahme des Ibex-Prozessors auf dem Olimex-Board mit dem darauf verwendeten GateMate FPGA. Hierfür wurde zunächst die bestehende Ibex-Implementierung analysiert und an die vorhandene Hardware sowie die Anforderungen des Projekts angepasst. Dabei wurden unter anderem nicht benötigte Komponenten des ursprünglichen Systems entfernt und die Speicher- und Peripheriekonfiguration entsprechend angepasst.
+
+Ein weiterer wichtiger Erfolg war die erfolgreiche Implementierung und Anbindung einer UART-Schnittstelle. Dadurch war es möglich, Daten direkt vom auf dem FPGA ausgeführten Ibex-Prozessor an ein Terminal auf dem PC zu übertragen und die Funktion des Prozessors sowie der implementierten Peripherie praktisch zu überprüfen. Im Verlauf der Entwicklung wurde die UART-Schnittstelle schrittweise erweitert und an die Anforderungen des Systems angepasst.
+
+Zusätzlich wurde ein eigenes Baudratenregister implementiert. Dadurch kann die Baudrate der UART-Schnittstelle über ein Register konfiguriert werden, anstatt diese ausschließlich zur Compile-Zeit fest vorzugeben. Dies stellt eine Erweiterung der ursprünglichen Peripheriefunktionalität dar und ermöglicht eine flexiblere Verwendung der UART-Schnittstelle.
+
+Im Rahmen der Implementierung wurden außerdem verschiedene Anpassungen an der Hardwarebeschreibung und der Software vorgenommen, um das Zusammenspiel zwischen Prozessor, Speicher und Peripherie sicherzustellen. Hierzu gehörten unter anderem die Anpassung der Adressbereiche, die Integration der zusätzlichen Register sowie die Erstellung und Anpassung der benötigten Software für die Kommunikation mit den Peripheriekomponenten.
+
+Insgesamt konnte damit eine funktionsfähige Grundlage geschaffen werden, auf der der Ibex-Prozessor eigenständig auf dem GateMate FPGA ausgeführt wird und über die implementierte UART-Schnittstelle mit einem externen System kommunizieren kann.
+\end{document}
