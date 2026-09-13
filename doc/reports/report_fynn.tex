@@ -863,6 +863,30 @@ Da das Löten der Hardware-Platinen noch aussteht, lag der Fokus auf der theoret
 	\item \textbf{Stufe 3 – USB-PHY Test:} Aktivierung des TUSB1106. Es wird überprüft, ob der Host-PC die 1,5\,k$\Omega$ Full-Speed-Terminierung am D+-Pin korrekt erkennt. Mittels Oszilloskop werden die Signalpegel an den differentiellen Datenleitungen gemessen.
 	\item \textbf{Stufe 4 – ISO/IEC-7816 Interface Test:} Validierung des TXB0108-Levelshifters. Über Test-Pattern im FPGA wird geprüft, ob die Umschaltung der Power-Domains für die Smart Card (5\,V, 3\,V, 1,8\,V) lastfrei und sauber funktioniert, bevor echte Karten gesteckt werden.
 \end{enumerate}
+\section{Prototypenfertigung und manuelle Bestückung | Timo}
+
+Nach der Lieferung der unbestückten Platinen (Bare Boards) durch den Hersteller haben Fynn und ich in gemeinsamer Arbeit die manuelle Bestückung des ersten Prototyps übernommen. Für den Lötprozess haben wir uns für ein Hotplate-Reflow-Verfahren entschieden. 
+
+Im ersten Schritt wurde die SMD-Lötpaste mithilfe einer lasergeschnittenen Edelstahlschablone (Stencil) gleichmäßig auf die Pads der Platine aufgerakelt. Im Anschluss folgte der anspruchsvollste Teil: Die teilweise winzigen SMD-Komponenten (bis hinab zur Bauform 0402) sowie die hochpoligen ICs mussten in stundenlanger Feinarbeit per Hand mit einer Präzisionspinzette unter einer Vergrößerungslampe exakt auf den Pads platziert werden (siehe Abbildung~\ref{fig:bestueckung}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{assets/smd_bestueckung.jpg}
+	\caption{Manuelle Platzierung der SMD-Komponenten mittels Pinzette}
+	\label{fig:bestueckung}
+\end{figure}
+
+Der eigentliche Lötprozess erfolgte auf einer kompakten SMD-Heizplatte (Hotplate), die das PCB erhitzte, bis die Lotpaste aufschmolz und die Bauteile durch die Oberflächenspannung in Position zog. Da dieses manuelle Reflow-Verfahren weniger präzise steuerbar ist als ein industrieller Reflow-Ofen, kam es vereinzelt zu kleinen Fehlern wie Lötbrücken (Shorts) an eng benachbarten IC-Pins. Diese Fehlerstellen wurden nach einer gründlichen optischen Inspektion in einem manuellen Rework-Prozess mit einer feinen Lötspitze und Flussmittel behoben, bis alle Verbindungen fehlerfrei waren. 
+
+Trotz der manuellen Hürden konnten wir den Bestückungsprozess erfolgreich abschließen. Das fertig gelötete Board (siehe Abbildung~\ref{fig:pcb_fertig}) bildete schließlich die physische Grundlage für die darauffolgenden Bringup-Tests.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{assets/pcb_fertig.jpeg}
+	\caption{Fertig bestückter und verlöteter Prototyp des GateMate Boards}
+	\label{fig:pcb_fertig}
+\end{figure}
+
 \section{Software | Xaver}
 
 \section{Nutzung von KI}
