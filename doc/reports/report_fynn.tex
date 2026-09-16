@@ -325,13 +325,13 @@ Der TUSB1106\footnote{Texas Instruments, \textit{Advanced Universal Serial Bus T
 	\centering
 	\begin{tabular}{|l|l|p{8.2cm}|}
 		\hline
-		\textbf{Signal} & \textbf{Richtung} & \textbf{Funktion (laut Datenblatt)}  \\ \hline
-		OE      & FPGA $\rightarrow$ PHY & Treiber-Freigabe, aktiv low: 0 = Senden auf D+/D--, 1 = Empfang (Bus freigegeben) \\ \hline
-		SPEED   & FPGA $\rightarrow$ PHY & Slew-Rate-Wahl gemäß Geschwindigkeit: 1 = Full-Speed (12\,Mbit/s), 0 = Low-Speed (1,5\,Mbit/s) \\ \hline
-		VPO/VMO & FPGA $\rightarrow$ PHY & Differenzielle Treiberdaten für D+ und D--; beide Low erzeugt SE0 \\ \hline
-		RCV     & PHY $\rightarrow$ FPGA & Empfangener NRZI-Bitstrom; Pegel bleibt stabil während SE0, Low bei Suspend \\ \hline
-		VP/VM   & PHY $\rightarrow$ FPGA & Single-Ended-Empfänger an D+ und D--: SE0-Erkennung, Fehler- und VBUS-Sensing \\ \hline
-		SUSPND  & FPGA $\rightarrow$ PHY & 1 = Low-Power-Zustand (RCV = Low), 0 = Normalbetrieb \\ \hline
+		\textbf{Signal} & \textbf{Richtung}      & \textbf{Funktion (laut Datenblatt)}                                                            \\ \hline
+		OE              & FPGA $\rightarrow$ PHY & Treiber-Freigabe, aktiv low: 0 = Senden auf D+/D--, 1 = Empfang (Bus freigegeben)              \\ \hline
+		SPEED           & FPGA $\rightarrow$ PHY & Slew-Rate-Wahl gemäß Geschwindigkeit: 1 = Full-Speed (12\,Mbit/s), 0 = Low-Speed (1,5\,Mbit/s) \\ \hline
+		VPO/VMO         & FPGA $\rightarrow$ PHY & Differenzielle Treiberdaten für D+ und D--; beide Low erzeugt SE0                              \\ \hline
+		RCV             & PHY $\rightarrow$ FPGA & Empfangener NRZI-Bitstrom; Pegel bleibt stabil während SE0, Low bei Suspend                    \\ \hline
+		VP/VM           & PHY $\rightarrow$ FPGA & Single-Ended-Empfänger an D+ und D--: SE0-Erkennung, Fehler- und VBUS-Sensing                  \\ \hline
+		SUSPND          & FPGA $\rightarrow$ PHY & 1 = Low-Power-Zustand (RCV = Low), 0 = Normalbetrieb                                           \\ \hline
 	\end{tabular}
 	\caption{Digitale Schnittstelle des TUSB1106 an das FPGA}
 	\label{tab:tusb_signals}
@@ -343,11 +343,11 @@ Während Senden (OE = 0) schaltet der PHY die an VPO und VMO anliegenden Pegel d
 	\centering
 	\begin{tabular}{|l|l|l|}
 		\hline
-		\textbf{VPO} & \textbf{VMO} & \textbf{Buszustand (Full-Speed)}  \\ \hline
-		0 & 0 & SE0 (Paketende)                  \\ \hline
-		0 & 1 & K (differenzielle 0)             \\ \hline
-		1 & 0 & J (differenzielle 1 / Idle)      \\ \hline
-		1 & 1 & unzulässiger Zustand             \\ \hline
+		\textbf{VPO} & \textbf{VMO} & \textbf{Buszustand (Full-Speed)} \\ \hline
+		0            & 0            & SE0 (Paketende)                  \\ \hline
+		0            & 1            & K (differenzielle 0)             \\ \hline
+		1            & 0            & J (differenzielle 1 / Idle)      \\ \hline
+		1            & 1            & unzulässiger Zustand             \\ \hline
 	\end{tabular}
 	\caption{Sendefunktion des TUSB1106 (Datenblatt, Tab.~4)}
 	\label{tab:tusb_drive}
@@ -851,7 +851,7 @@ Pin_out "usb_speed" Loc = "IO_WA_B3";  # Routed via VGA_Blue_3
 
 \section{Prototypenfertigung und manuelle Bestückung | Timo}
 
-Nach der Lieferung der unbestückten Platinen (Bare Boards) durch den Hersteller haben Fynn und ich in gemeinsamer Arbeit die manuelle Bestückung des ersten Prototyps übernommen. Für den Lötprozess haben wir uns für ein Hotplate-Reflow-Verfahren entschieden. 
+Nach der Lieferung der unbestückten Platinen (Bare Boards) durch den Hersteller haben Fynn und ich in gemeinsamer Arbeit die manuelle Bestückung des ersten Prototyps übernommen. Für den Lötprozess haben wir uns für ein Hotplate-Reflow-Verfahren entschieden.
 
 Im ersten Schritt wurde die SMD-Lötpaste mithilfe einer lasergeschnittenen Edelstahlschablone (Stencil) gleichmäßig auf die Pads der Platine aufgerakelt. Im Anschluss folgte der anspruchsvollste Teil: Die teilweise winzigen SMD-Komponenten (bis hinab zur Bauform 0402) sowie die hochpoligen ICs mussten in stundenlanger Feinarbeit per Hand mit einer Präzisionspinzette unter einer Vergrößerungslampe exakt auf den Pads platziert werden (siehe Abbildung~\ref{fig:bestueckung}).
 
@@ -862,7 +862,7 @@ Im ersten Schritt wurde die SMD-Lötpaste mithilfe einer lasergeschnittenen Edel
 	\label{fig:bestueckung}
 \end{figure}
 
-Der eigentliche Lötprozess erfolgte auf einer kompakten SMD-Heizplatte (Hotplate), die das PCB erhitzte, bis die Lotpaste aufschmolz und die Bauteile durch die Oberflächenspannung in Position zog. Da dieses manuelle Reflow-Verfahren weniger präzise steuerbar ist als ein industrieller Reflow-Ofen, kam es vereinzelt zu kleinen Fehlern wie Lötbrücken (Shorts) an eng benachbarten IC-Pins. Diese Fehlerstellen wurden nach einer gründlichen optischen Inspektion in einem manuellen Rework-Prozess mit einer feinen Lötspitze und Flussmittel behoben, bis alle Verbindungen fehlerfrei waren. 
+Der eigentliche Lötprozess erfolgte auf einer kompakten SMD-Heizplatte (Hotplate), die das PCB erhitzte, bis die Lotpaste aufschmolz und die Bauteile durch die Oberflächenspannung in Position zog. Da dieses manuelle Reflow-Verfahren weniger präzise steuerbar ist als ein industrieller Reflow-Ofen, kam es vereinzelt zu kleinen Fehlern wie Lötbrücken (Shorts) an eng benachbarten IC-Pins. Diese Fehlerstellen wurden nach einer gründlichen optischen Inspektion in einem manuellen Rework-Prozess mit einer feinen Lötspitze und Flussmittel behoben, bis alle Verbindungen fehlerfrei waren.
 
 Trotz der manuellen Hürden konnten wir den Bestückungsprozess erfolgreich abschließen. Das fertig gelötete Board (siehe Abbildung~\ref{fig:pcb_fertig}) bildete schließlich die physische Grundlage für die darauffolgenden Bringup-Tests.
 
@@ -913,12 +913,12 @@ Ein wichtiger Unterschied besteht außerdem in der Anbindung an den Bus. Der Dat
 Schaut man sich das Top-Level des Demo-Systems an, das auf dem GateMate-FPGA eingesetzt wurde, lassen sich mehrere wichtige Komponenten erkennen, die im System instanziiert sind:
 
 \begin{itemize}
-\item \texttt{ram\_2p}
-\item \texttt{ibex\_top}
-\item \texttt{bus}
-\item \texttt{gpio}
-\item \texttt{uart}
-\item \texttt{timer}
+	\item \texttt{ram\_2p}
+	\item \texttt{ibex\_top}
+	\item \texttt{bus}
+	\item \texttt{gpio}
+	\item \texttt{uart}
+	\item \texttt{timer}
 \end{itemize}
 
 Einige Komponenten des ursprünglichen Demo-Systems wurden entfernt, um das System zu vereinfachen und an die begrenzten Ressourcen des GateMate-FPGAs anzupassen.
@@ -990,9 +990,9 @@ Ibex Data-Port
 Der Instruction Memory stellt dabei einen Sonderfall dar: Instruction Fetches des Ibex laufen nicht über den Bus, sondern über den zweiten Port des Dual-Port-RAMs direkt zum RAM. Der Bus ist somit für die Datenzugriffe des Ibex zuständig, während der Instruction Fetch einen separaten Pfad verwendet.
 
 \subsection{Register File}
-Das Register File des Ibex Prozessors enthält je nach Konfiguration entweder 32 oder 16 Register. 
-Wird der Parameter \texttt{RV32E} deaktiviert, stehen die Register \texttt{x0} bis \texttt{x31} zur Verfügung. 
-Da das Register \texttt{x0} bei der RISC-V Architektur jedoch konstant den Wert 0 liefert und nicht beschrieben werden darf, müssen tatsächlich nur 31 Register gespeichert werden. 
+Das Register File des Ibex Prozessors enthält je nach Konfiguration entweder 32 oder 16 Register.
+Wird der Parameter \texttt{RV32E} deaktiviert, stehen die Register \texttt{x0} bis \texttt{x31} zur Verfügung.
+Da das Register \texttt{x0} bei der RISC-V Architektur jedoch konstant den Wert 0 liefert und nicht beschrieben werden darf, müssen tatsächlich nur 31 Register gespeichert werden.
 Bei aktivierter \texttt{RV32E}-Erweiterung reduziert sich das Register File auf die Register \texttt{x0} bis \texttt{x15}, wodurch nur 15 Register gespeichert werden müssen.
 
 Die Register werden im SystemVerilog als zweidimensionales Array dargestellt:
@@ -1003,16 +1003,16 @@ logic [DataWidth-1:0] mem[NUM_WORDS];
 
 Dabei entspricht jedes Element des Arrays einem 32-Bit breiten Register.
 
-Für die Implementierung auf dem GateMate FPGA wird die Datei 
+Für die Implementierung auf dem GateMate FPGA wird die Datei
 \texttt{ibex\_register\_file\_fpga.sv} verwendet. Diese Implementierung ist so geschrieben, dass Synthesetools das Register File möglichst effizient auf die vorhandenen FPGA-Ressourcen abbilden können. Je nach FPGA-Architektur und Synthesetool kann das Register File beispielsweise durch Block RAMs oder durch Logikzellen (LUTs und Flip-Flops) implementiert werden.
 
-Eine weitere Variante ist das \texttt{ibex\_register\_file\_ff.sv}. 
-Hier wird jedes einzelne Bit der Register durch ein Flip-Flop gespeichert. 
+Eine weitere Variante ist das \texttt{ibex\_register\_file\_ff.sv}.
+Hier wird jedes einzelne Bit der Register durch ein Flip-Flop gespeichert.
 Bei 32 Registern mit jeweils 32 Bit würde dies theoretisch 1024 einzelne Flip-Flops benötigen (das Register x0 wird hierbei nicht als normales Register gespeichert).
 
-Die dritte Variante ist das \texttt{ibex\_register\_file\_latch.sv}. 
-Diese Implementierung basiert auf Latches und verwendet zusätzlich Clock-Gating, um den Energieverbrauch zu reduzieren. 
-Dabei wird nicht jedes Register bei jedem Takt aktiviert, sondern nur das Register, in welches aktuell geschrieben werden soll. 
+Die dritte Variante ist das \texttt{ibex\_register\_file\_latch.sv}.
+Diese Implementierung basiert auf Latches und verwendet zusätzlich Clock-Gating, um den Energieverbrauch zu reduzieren.
+Dabei wird nicht jedes Register bei jedem Takt aktiviert, sondern nur das Register, in welches aktuell geschrieben werden soll.
 Hierfür wird zunächst anhand der Schreibadresse ein One-Hot-Signal erzeugt, welches anschließend die jeweilige Clock-Gating-Zelle aktiviert.
 
 Dies ist im SystemVerilog-Code zu erkennen:
@@ -1028,7 +1028,7 @@ for (genvar x = 1; x < NUM_WORDS; x++) begin : gen_cg_word_iter
 end
 \end{verbatim}
 
-Wird beispielsweise in das Register \texttt{x5} geschrieben, wird nur die Clock für dieses Register aktiviert. 
+Wird beispielsweise in das Register \texttt{x5} geschrieben, wird nur die Clock für dieses Register aktiviert.
 Das entsprechende Latch kann anschließend den neuen Wert übernehmen:
 
 \begin{verbatim}
@@ -1055,10 +1055,10 @@ Der \textbf{Decoder} (\texttt{ibex\_decoder.sv}) dekodiert die Maschinenbefehle 
 \subsection{Toolchain | Xaver}
 \subsubsection{FPGA Toolchain}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth,trim=5cm 3cm 2cm 1cm,clip]{ibex_bilder/toolchain_final.pdf}
-    \caption{Toolchain Ablauf}
-    \label{fig:toolchain_final}
+	\centering
+	\includegraphics[width=1.0\textwidth,trim=5cm 3cm 2cm 1cm,clip]{ibex_bilder/toolchain_final.pdf}
+	\caption{Toolchain Ablauf}
+	\label{fig:toolchain_final}
 \end{figure}
 
 
@@ -1076,10 +1076,10 @@ Nach erfolgreicher Einrichtung der Entwicklungsumgebung konnte der komplette Ent
 
 \subsection{C Code Generierung}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth,trim=7cm 4cm 2cm 1cm,clip]{ibex_bilder/normal_compile.pdf}
-    \caption{Häufigster Flash Vorgang}
-    \label{fig:normal_compile}
+	\centering
+	\includegraphics[width=1.0\textwidth,trim=7cm 4cm 2cm 1cm,clip]{ibex_bilder/normal_compile.pdf}
+	\caption{Häufigster Flash Vorgang}
+	\label{fig:normal_compile}
 \end{figure}
 
 Bei klassischen Mikrocontrollern wird die Firmware üblicherweise zunächst mit einem Compiler aus dem C-Quellcode in Maschinencode übersetzt. Anschließend erzeugt der Linker eine ausführbare Datei, welche die Speicheradressen der einzelnen Programmteile festlegt. Aus dieser Datei wird häufig eine Binär- oder HEX-Datei erzeugt, welche anschließend in den Flash-Speicher des Mikrocontrollers programmiert wird.
@@ -1087,15 +1087,15 @@ Bei klassischen Mikrocontrollern wird die Firmware üblicherweise zunächst mit 
 Der Flash-Vorgang erfolgt abhängig von der verwendeten Mikrocontroller-Plattform über verschiedene Schnittstellen. Häufig verwendete Verfahren sind beispielsweise:
 
 \begin{itemize}
-    \item \textbf{SWD (Serial Wire Debug):} Wird hauptsächlich bei ARM Cortex-M Mikrocontrollern verwendet und ermöglicht das Programmieren und Debuggen über wenige Pins.
-    \item \textbf{JTAG:} Eine weit verbreitete Debug- und Programmierschnittstelle, die insbesondere bei komplexeren Mikrocontrollern und Prozessoren eingesetzt wird.
-    \item \textbf{Bootloader-basierte Programmierung:} Viele Mikrocontroller besitzen einen integrierten Bootloader, über den die Firmware beispielsweise über UART, USB oder CAN übertragen werden kann.
-    \item \textbf{Herstellerspezifische Programmer:} Beispiele hierfür sind ST-Link für STM32-Mikrocontroller oder ähnliche Programmieradapter anderer Hersteller.
+	\item \textbf{SWD (Serial Wire Debug):} Wird hauptsächlich bei ARM Cortex-M Mikrocontrollern verwendet und ermöglicht das Programmieren und Debuggen über wenige Pins.
+	\item \textbf{JTAG:} Eine weit verbreitete Debug- und Programmierschnittstelle, die insbesondere bei komplexeren Mikrocontrollern und Prozessoren eingesetzt wird.
+	\item \textbf{Bootloader-basierte Programmierung:} Viele Mikrocontroller besitzen einen integrierten Bootloader, über den die Firmware beispielsweise über UART, USB oder CAN übertragen werden kann.
+	\item \textbf{Herstellerspezifische Programmer:} Beispiele hierfür sind ST-Link für STM32-Mikrocontroller oder ähnliche Programmieradapter anderer Hersteller.
 \end{itemize}
 
 Der typische Ablauf besteht somit aus:
 \begin{center}
-C-Quellcode $\rightarrow$ Compiler $\rightarrow$ ELF-Datei $\rightarrow$ BIN/HEX-Datei $\rightarrow$ Programmer $\rightarrow$ Flash-Speicher der MCU
+	C-Quellcode $\rightarrow$ Compiler $\rightarrow$ ELF-Datei $\rightarrow$ BIN/HEX-Datei $\rightarrow$ Programmer $\rightarrow$ Flash-Speicher der MCU
 \end{center}
 
 Im Gegensatz zu einem klassischen Mikrocontroller besitzt der verwendete Ibex-Prozessor auf dem GateMate FPGA keinen internen Flash-Speicher für die Firmware. Daher wird die Software nicht nachträglich über eine Programmierschnittstelle in einen Speicher geschrieben. Stattdessen wird das Programm bereits während der FPGA-Erstellung in den Instruction Memory integriert.
@@ -1105,7 +1105,7 @@ Hierzu wird der erzeugte RISC-V-Maschinencode als Initialinhalt des RAMs eingebu
 Der Ablauf unterscheidet sich somit von einer klassischen MCU-Programmierung:
 
 \begin{center}
-C-Quellcode $\rightarrow$ RISC-V Compiler $\rightarrow$ Speicherinitialisierung $\rightarrow$ SystemVerilog Synthese $\rightarrow$ FPGA Bitstream $\rightarrow$ Instruction Memory
+	C-Quellcode $\rightarrow$ RISC-V Compiler $\rightarrow$ Speicherinitialisierung $\rightarrow$ SystemVerilog Synthese $\rightarrow$ FPGA Bitstream $\rightarrow$ Instruction Memory
 \end{center}
 
 Nach der Konfiguration des GateMate FPGAs steht der Programmcode dem Ibex-Core direkt im Instruction Memory zur Verfügung und kann ohne separaten Flash-Vorgang ausgeführt werden.
@@ -1176,12 +1176,12 @@ Das erzeugte Bitfile kann anschließend auf das FPGA übertragen werden. Hierfü
 Der gesamte Ablauf lässt sich somit wie folgt zusammenfassen:
 \newpage
 \begin{enumerate}
-    \item Einlesen und Synthese des SystemVerilog-Designs mit Yosys.
-    \item Erzeugung der GateMate-Netzliste.
-    \item Placement und Routing mit nextpnr-himbaechel.
-    \item Anwendung der Pin- und Timing-Constraints.
-    \item Erzeugung des Bitfiles mit gmpack.
-    \item Übertragung des Bitfiles auf das GateMate-FPGA mittels DirtyJTAG.
+	\item Einlesen und Synthese des SystemVerilog-Designs mit Yosys.
+	\item Erzeugung der GateMate-Netzliste.
+	\item Placement und Routing mit nextpnr-himbaechel.
+	\item Anwendung der Pin- und Timing-Constraints.
+	\item Erzeugung des Bitfiles mit gmpack.
+	\item Übertragung des Bitfiles auf das GateMate-FPGA mittels DirtyJTAG.
 \end{enumerate}
 
 \subsection{Probleme}
@@ -1193,10 +1193,10 @@ In der verwendeten Implementierung wird das Taktsignal zunächst mit einer Logik
 Grundsätzlich lässt sich dieses Problem durch die Verwendung spezieller FPGA-spezifischer Primitives lösen, die eine geeignete Taktgatterung und deren Einbindung in die Clock-Struktur des FPGAs ermöglichen. Eine solche Lösung wurde im Rahmen dieses Projekts jedoch nicht umgesetzt. Stattdessen wurde die Clock-Gating-Funktionalität für die verwendete Implementierung entsprechend angepasst.
 
 \begin{figure}[H]
-\centering
-    \includegraphics[width=0.7\textwidth]{ibex_bilder/gated_clock2.png}
-    \caption{Prinzip eines gated Clock-Signals}
-    \label{fig:gated_clock}
+	\centering
+	\includegraphics[width=0.7\textwidth]{ibex_bilder/gated_clock2.png}
+	\caption{Prinzip eines gated Clock-Signals}
+	\label{fig:gated_clock}
 \end{figure}
 
 \subsection{Erfolge}
@@ -1216,6 +1216,9 @@ Im Rahmen des Projekts wurden KI-Tools unterstützend eingesetzt, insbesondere z
 
 \section{Verwendete Bilder}
 Jedliche in dieser Arbeit verwendete Grafik wurde von den Autoren erstellt und ist unter keinem Copyright.
+
+\section{Quellcode}
+Alle Hardware und Software Dokumente sind unter \href{https://github.com/Flynsky/MillerProject}{https://github.com/Flynsky/MillerProject} abrufbar.
 
 \section{Schematic}
 \includepdf[pages=-, angle=90]{../../hardware/MillerV1/MillerV1.pdf}
