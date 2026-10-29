@@ -265,7 +265,7 @@ Eine direkte Verbindung der VBUS-Pins beider USB-C-Ports hätte die jeweiligen 5
 	\item Das USB-2.0-Differential-Pair ist für eine differentielle Impedanz von 90~$\Omega$ ausgelegt. Ergänzt wurden 33-$\Omega$-Serienterminierungen und ein 1,5-k$\Omega$-Pull-up zur Full-Speed-Erkennung.
 	\item Der integrierte 5-V-zu-3,3-V-Regler des TUSB1106 wird über \texttt{VREG(3.3)} genutzt.
 	\item Über den Jumper JP1 kann die I/O-Versorgung (VCC(I/O)) des TUSB1106 zwischen 1,8~V für den GateMate und alternativ 2,5~V gewählt werden. Das VBUS-Sensing erfolgt über VP und VM.
-	\item Alle acht digitalen Signale des TUSB1106 (VM, VP, VPO, VMO, RCV, SUSPND, SPEED und OE) wurden gezielt über den Peri-BUS auf GateMate-FPGA-Pins wie \texttt{VGA\_Blue\_2} und \texttt{VGA\_Red\_2} geroutet.
+	\item Alle neun digitalen Signale des TUSB1106 (SOFTCON, VM, VP, VPO, VMO, RCV, SUSPND, SPEED und $\sim$OE) wurden gezielt über den Peri-BUS an Bank WB des GateMate-FPGA angebunden.
 \end{itemize}
 
 \begin{figure}[H]
@@ -833,20 +833,21 @@ Die finale BOM wurde für die Bestückung von drei Prototypen-Platinen kalkulier
 
 \section{Festlegung der Pinbelegung und Constraints | Timo}
 
-Um den externen USB-2.0-PHY (TUSB1106) an den GateMate-FPGA anzubinden, musste eine geeignete Pinbelegung (Pin Assignment) definiert werden. Da das Routing auf der Platine durch den Formfaktor stark eingeschränkt war, wurden die digitalen Signale (VM, VP, VPO, VMO, RCV, OE) auf die Pins des Peri-BUS geroutet, die ursprünglich für die \texttt{VGA\_Red} und \texttt{VGA\_Blue} Signale des Olimex-Boards vorgesehen waren.
+Um den externen USB-2.0-PHY (TUSB1106) an den GateMate-FPGA anzubinden, musste eine geeignete Pinbelegung (Pin Assignment) definiert werden. Da das Routing auf der Platine durch den Formfaktor stark eingeschränkt war, wurden die digitalen Signale (SOFTCON, $\sim$OE, RCV, VP, VM, SUSPND, SPEED, VPO, VMO) auf die Pins der Bank WB geroutet, die ursprünglich für die \texttt{VGA}-Signale des Olimex-Boards vorgesehen waren.
 
 Dies ermöglichte ein signalintegres, kreuzungsfreies Routing. Für die Synthese und das anschließende Place-\&-Route (P\&R) mit der Cologne Chip Toolchain habe ich die entsprechenden Constraints in der \texttt{.ccf}-Datei (Cologne Chip Constraint File) wie folgt definiert:
 
 \begin{verbatim}
-# USB PHY TUSB1106 Pin Constraints (via Olimex VGA/Peri-BUS)
-Pin_in  "usb_rcv"   Loc = "IO_WA_A0";  # Routed via VGA_Red_0
-Pin_out "usb_vpo"   Loc = "IO_WA_A1";  # Routed via VGA_Red_1
-Pin_out "usb_vmo"   Loc = "IO_WA_A2";  # Routed via VGA_Red_2
-Pin_in  "usb_vp"    Loc = "IO_WA_B0";  # Routed via VGA_Blue_0
-Pin_in  "usb_vm"    Loc = "IO_WA_B1";  # Routed via VGA_Blue_1
-Pin_out "usb_oe"    Loc = "IO_WA_B2";  # Routed via VGA_Blue_2
-Pin_in  "usb_susp"  Loc = "IO_WA_A3";  # Routed via VGA_Red_3
-Pin_out "usb_speed" Loc = "IO_WA_B3";  # Routed via VGA_Blue_3
+# USB PHY TUSB1106 Pin Constraints (Bank WB)
+Pin_out "usb_softcon" Loc = "IO_WB_A5";  # SOFTCON (Pin 2)  - ehem. VGA_Green_1
+Pin_out "usb_oe_n"    Loc = "IO_WB_B4";  # ~OE     (Pin 3)  - ehem. VGA_Green_2
+Pin_in  "usb_rcv"     Loc = "IO_WB_A4";  # RCV     (Pin 4)  - ehem. VGA_Green_3
+Pin_in  "usb_vp"      Loc = "IO_WB_A6";  # VP      (Pin 5)  - ehem. VGA_Blue_3
+Pin_in  "usb_vm"      Loc = "IO_WB_B6";  # VM      (Pin 6)  - ehem. VGA_Blue_2
+Pin_out "usb_susp"    Loc = "IO_WB_A7";  # SUSPND  (Pin 7)  - ehem. VGA_Blue_1
+Pin_out "usb_speed"   Loc = "IO_WB_A2";  # SPEED   (Pin 10) - ehem. VGA_Red_3
+Pin_out "usb_vpo"     Loc = "IO_WB_B2";  # VPO     (Pin 13) - ehem. VGA_Red_2
+Pin_out "usb_vmo"     Loc = "IO_WB_A3";  # VMO     (Pin 14) - ehem. VGA_Red_1
 \end{verbatim}
 
 \section{Prototypenfertigung und manuelle Bestückung | Timo}

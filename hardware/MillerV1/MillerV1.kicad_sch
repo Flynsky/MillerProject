@@ -56689,7 +56689,7 @@
 		)
 		(uuid "003de562-6e00-4101-9f49-49f2cc645314")
 	)
-	(label "VGA_Blue_3"
+	(label "USB_VP"
 		(at 777.24 46.99 0)
 		(effects
 			(font
@@ -56783,7 +56783,7 @@
 		)
 		(uuid "0833301a-a94f-467f-b1dc-0a234f04fd49")
 	)
-	(label "VGA_Red_2"
+	(label "USB_VPO"
 		(at 739.14 44.45 0)
 		(effects
 			(font
@@ -56875,7 +56875,7 @@
 		)
 		(uuid "0d3fd762-354b-4eb9-a46b-13a6326d1bfa")
 	)
-	(label "PS2_CLK"
+	(label "NC_PS2_CLK"
 		(at 777.24 67.31 0)
 		(effects
 			(font
@@ -56923,7 +56923,7 @@
 		)
 		(uuid "0e77634a-4115-47f3-b7e6-ebeac2c8e20a")
 	)
-	(label "VGA_Red_2"
+	(label "USB_VPO"
 		(at 777.24 29.21 0)
 		(effects
 			(font
@@ -57041,7 +57041,7 @@
 		)
 		(uuid "126a1525-3b37-4552-916f-829f8415818b")
 	)
-	(label "VGA_Blue_0"
+	(label "NC_VGA_Blue_0"
 		(at 777.24 54.61 0)
 		(effects
 			(font
@@ -57087,7 +57087,7 @@
 		)
 		(uuid "14fb30e4-8c3e-48e7-9687-0e5fa37f52d9")
 	)
-	(label "VGA_Green_2"
+	(label "USB_OE_N"
 		(at 739.14 63.5 0)
 		(effects
 			(font
@@ -57121,7 +57121,7 @@
 		)
 		(uuid "1627b7a8-ad3c-4020-a3b7-a9bc5745f2ca")
 	)
-	(label "PS2_DATA"
+	(label "NC_PS2_DATA"
 		(at 777.24 63.5 0)
 		(effects
 			(font
@@ -57182,7 +57182,7 @@
 		)
 		(uuid "1a1a085b-fbf9-40b2-8bfd-4f13126b48a8")
 	)
-	(label "VM"
+	(label "USB_SOFTCON"
 		(at 739.14 57.15 0)
 		(effects
 			(font
@@ -57497,7 +57497,7 @@
 		)
 		(uuid "2ad3bb8a-3343-46fa-8767-4d66bdeef9c0")
 	)
-	(label "VGA_Red_2"
+	(label "USB_VPO"
 		(at 226.06 73.66 0)
 		(effects
 			(font
@@ -57545,7 +57545,7 @@
 		)
 		(uuid "2d822383-c0f0-4e68-8db8-0a6895ac7b88")
 	)
-	(label "VGA_VSync"
+	(label "NC_WB_B1"
 		(at 226.06 68.58 0)
 		(effects
 			(font
@@ -57651,7 +57651,7 @@
 		)
 		(uuid "35df41cb-8be4-407d-a9c0-e4e98a919e08")
 	)
-	(label "VMO"
+	(label "NC_WB_B3"
 		(at 226.06 78.74 0)
 		(effects
 			(font
@@ -57835,7 +57835,7 @@
 		)
 		(uuid "3dc3e944-bfc5-4404-8174-6e74fe53a8ed")
 	)
-	(label "VPO"
+	(label "USB_VMO"
 		(at 739.14 46.99 0)
 		(effects
 			(font
@@ -57943,7 +57943,7 @@
 		)
 		(uuid "46d8d887-1ee4-4596-af7a-1f1da54d12fd")
 	)
-	(label "VGA_Red_3"
+	(label "USB_SPEED"
 		(at 739.14 59.69 0)
 		(effects
 			(font
@@ -58023,7 +58023,7 @@
 		)
 		(uuid "4a11179e-b82e-4d21-9ba2-268ec39b779d")
 	)
-	(label "VGA_Blue_3"
+	(label "USB_VP"
 		(at 739.14 41.91 0)
 		(effects
 			(font
@@ -58047,7 +58047,7 @@
 		)
 		(uuid "4b427643-2857-488e-a0c7-d67453def053")
 	)
-	(label "VGA_Blue_3"
+	(label "USB_VP"
 		(at 226.06 93.98 0)
 		(effects
 			(font
@@ -58059,7 +58059,7 @@
 		)
 		(uuid "4c7e93a3-36f2-4226-b966-471764f32705")
 	)
-	(label "VGA_VSync"
+	(label "NC_VGA_VSync"
 		(at 777.24 59.69 0)
 		(effects
 			(font
@@ -58131,7 +58131,7 @@
 		)
 		(uuid "4f924948-ba79-4c37-84c3-f7ac3303f9e2")
 	)
-	(label "VGA_Green_3"
+	(label "USB_RCV"
 		(at 777.24 36.83 0)
 		(effects
 			(font
@@ -58435,7 +58435,7 @@
 		)
 		(uuid "5e9fd193-6ce4-40d0-84f4-c9f44bc2779e")
 	)
-	(label "VPO"
+	(label "USB_VMO"
 		(at 226.06 76.2 0)
 		(effects
 			(font
@@ -58447,7 +58447,7 @@
 		)
 		(uuid "5ec73cb0-4664-4541-b12d-23013920742e")
 	)
-	(label "VGA_Red_1"
+	(label "NC_VGA_Red_1"
 		(at 777.24 31.75 0)
 		(effects
 			(font
@@ -58481,7 +58481,7 @@
 		)
 		(uuid "5fba1233-0cc0-499f-8185-9082420b2914")
 	)
-	(label "RCV"
+	(label "NC_WB_B0"
 		(at 226.06 63.5 0)
 		(effects
 			(font
@@ -58635,7 +58635,7 @@
 		)
 		(uuid "69e75cb2-90da-44d2-92d6-3e8627c2ea54")
 	)
-	(label "VM"
+	(label "USB_SOFTCON"
 		(at 777.24 81.28 0)
 		(effects
 			(font
@@ -58671,7 +58671,7 @@
 		)
 		(uuid "6a752aaf-5054-4fac-a265-805409da891c")
 	)
-	(label "SUSPEND"
+	(label "NC_SUSPEND"
 		(at 777.24 71.12 0)
 		(effects
 			(font
@@ -58932,7 +58932,7 @@
 		)
 		(uuid "76cff3a1-94c0-4e6e-b3f3-6cec0836645f")
 	)
-	(label "VP"
+	(label "NC_VP"
 		(at 777.24 83.82 0)
 		(effects
 			(font
@@ -59271,7 +59271,7 @@
 		)
 		(uuid "8e837ec3-973f-45cb-a259-af3af10b263c")
 	)
-	(label "VGA_Blue_1"
+	(label "USB_SUSP"
 		(at 777.24 52.07 0)
 		(effects
 			(font
@@ -59295,7 +59295,7 @@
 		)
 		(uuid "8efb1378-4866-43b8-9586-340b0419904d")
 	)
-	(label "SUSPEND"
+	(label "NC_WB_A0"
 		(at 226.06 60.96 0)
 		(effects
 			(font
@@ -59343,7 +59343,7 @@
 		)
 		(uuid "90576018-0e4b-447f-a8ab-e1e083170130")
 	)
-	(label "VGA_Blue_2"
+	(label "USB_VM"
 		(at 739.14 39.37 0)
 		(effects
 			(font
@@ -59379,7 +59379,7 @@
 		)
 		(uuid "928e9acd-c79c-4b55-b6ca-de984e7cf17b")
 	)
-	(label "VGA_Green_3"
+	(label "USB_RCV"
 		(at 226.06 83.82 0)
 		(effects
 			(font
@@ -59567,7 +59567,7 @@
 		)
 		(uuid "9c322b66-b3d1-4002-b9cc-76f3c3389ee4")
 	)
-	(label "VGA_Red_0"
+	(label "NC_VGA_Red_0"
 		(at 777.24 34.29 0)
 		(effects
 			(font
@@ -60062,7 +60062,7 @@
 		)
 		(uuid "ad72f965-9dea-49a2-9af0-06a30390b0b2")
 	)
-	(label "VGA_Blue_2"
+	(label "USB_VM"
 		(at 777.24 49.53 0)
 		(effects
 			(font
@@ -60074,7 +60074,7 @@
 		)
 		(uuid "af2cee6a-d99d-482d-bac0-fc613afcfb07")
 	)
-	(label "VGA_Green_0"
+	(label "NC_VGA_Green_0"
 		(at 777.24 44.45 0)
 		(effects
 			(font
@@ -60122,7 +60122,7 @@
 		)
 		(uuid "b0e4f693-b029-445b-aac2-28e8c787f390")
 	)
-	(label "VGA_Blue_1"
+	(label "USB_SUSP"
 		(at 739.14 53.34 0)
 		(effects
 			(font
@@ -60146,7 +60146,7 @@
 		)
 		(uuid "b177a06a-76a4-43d4-8f39-1ea88e9c2517")
 	)
-	(label "VGA_Red_3"
+	(label "USB_SPEED"
 		(at 777.24 26.67 0)
 		(effects
 			(font
@@ -60181,7 +60181,7 @@
 		)
 		(uuid "b3b2866c-22f8-4554-8903-e450df86dbdf")
 	)
-	(label "VPO"
+	(label "USB_VMO"
 		(at 777.24 74.93 0)
 		(effects
 			(font
@@ -60358,7 +60358,7 @@
 		)
 		(uuid "c2392ccd-b74a-4b9e-b253-bfdb2bce10ed")
 	)
-	(label "VGA_Green_3"
+	(label "USB_RCV"
 		(at 739.14 49.53 0)
 		(effects
 			(font
@@ -60512,7 +60512,7 @@
 		)
 		(uuid "c6f075d5-5897-4b30-9b3b-1a58726d8414")
 	)
-	(label "VGA_Blue_1"
+	(label "USB_SUSP"
 		(at 226.06 99.06 0)
 		(effects
 			(font
@@ -60607,7 +60607,7 @@
 		)
 		(uuid "cb1bc4ce-0d24-432c-92c5-c1aa626dee86")
 	)
-	(label "VGA_Green_1"
+	(label "NC_VGA_Green_1"
 		(at 777.24 41.91 0)
 		(effects
 			(font
@@ -60619,7 +60619,7 @@
 		)
 		(uuid "cb7a1aad-4188-4107-8af9-647b9f747cec")
 	)
-	(label "VGA_Green_2"
+	(label "USB_OE_N"
 		(at 226.06 86.36 0)
 		(effects
 			(font
@@ -60643,7 +60643,7 @@
 		)
 		(uuid "cbde5511-76c2-4fbb-9eed-fb9af70cfa7a")
 	)
-	(label "VP"
+	(label "NC_WB_B5"
 		(at 226.06 91.44 0)
 		(effects
 			(font
@@ -60655,7 +60655,7 @@
 		)
 		(uuid "cbec48cb-526c-43ef-b08e-210b6b80b2b8")
 	)
-	(label "VGA_Blue_0"
+	(label "NC_WB_B7"
 		(at 226.06 101.6 0)
 		(effects
 			(font
@@ -60857,7 +60857,7 @@
 		)
 		(uuid "d671b1a3-21ed-47e9-84eb-9b504970b756")
 	)
-	(label "VGA_HSync"
+	(label "NC_WB_A1"
 		(at 226.06 66.04 0)
 		(effects
 			(font
@@ -60879,7 +60879,7 @@
 		)
 		(uuid "d686e739-d813-4c69-a77b-53619726f38f")
 	)
-	(label "VM"
+	(label "USB_SOFTCON"
 		(at 226.06 88.9 0)
 		(effects
 			(font
@@ -60988,7 +60988,7 @@
 		)
 		(uuid "da108c94-6fce-404c-83d5-b49a5055471b")
 	)
-	(label "VGA_Red_3"
+	(label "USB_SPEED"
 		(at 226.06 71.12 0)
 		(effects
 			(font
@@ -61037,7 +61037,7 @@
 		)
 		(uuid "dc037f7b-c4da-4b89-bb77-f7174de44687")
 	)
-	(label "VGA_HSync"
+	(label "NC_VGA_HSync"
 		(at 777.24 57.15 0)
 		(effects
 			(font
@@ -61270,7 +61270,7 @@
 		)
 		(uuid "e878eba8-d809-4b09-af22-292c365bdeb6")
 	)
-	(label "VMO"
+	(label "NC_VMO"
 		(at 777.24 77.47 0)
 		(effects
 			(font
@@ -61364,7 +61364,7 @@
 		)
 		(uuid "f0b9861e-1e41-4564-82fc-d2fbf49b3fe5")
 	)
-	(label "VGA_Green_2"
+	(label "USB_OE_N"
 		(at 777.24 39.37 0)
 		(effects
 			(font
@@ -61466,7 +61466,7 @@
 		)
 		(uuid "f534753c-4c04-4102-b583-04258013a5bc")
 	)
-	(label "VGA_Blue_2"
+	(label "USB_VM"
 		(at 226.06 96.52 0)
 		(effects
 			(font
