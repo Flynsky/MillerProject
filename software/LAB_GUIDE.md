@@ -21,7 +21,7 @@ Für das Team stehen zwei bequeme Wege bereit – beide nutzen dasselbe Team-Pas
 ---
 
 ### Option B: Direkter SSH-Zugang (Terminal / VS Code Remote-SSH)
-- **Host:** `10.50.50.1` (oder eure externe Domain/IP, falls Port 22022 im Router weitergeleitet ist)
+- **Host:** `https://miller-fpga.timoto.de`
 - **Port:** `22022`
 - **Benutzer:** `miller`
 - **Passwort:** `MillerFPGA2026!`
@@ -29,7 +29,7 @@ Für das Team stehen zwei bequeme Wege bereit – beide nutzen dasselbe Team-Pas
 
 #### Direktverbindung im Terminal:
 ```bash
-ssh -p 22022 miller@10.50.50.1
+ssh -p 22022 miller@https://miller-fpga.timoto.de
 ```
 *(Bei Abfrage einfach das Passwort `MillerFPGA2026!` eingeben).*
 
@@ -37,7 +37,7 @@ ssh -p 22022 miller@10.50.50.1
 In eurer lokalen `~/.ssh/config` Datei hinzufügen:
 ```ssh-config
 Host miller-fpga
-    HostName 10.50.50.1
+    HostName https://miller-fpga.timoto.de
     Port 22022
     User miller
 ```
@@ -79,13 +79,9 @@ read-uart
 ```
 oder
 ```bash
-tio /dev/ttyACM0 -b 115200
+minicom -b 115200 /dev/ttyACM0
 ```
-oder
-```bash
-picocom -b 115200 /dev/ttyACM0
-```
-*(Beenden mit `Ctrl+C` bei read-uart, `Ctrl+t q` bei tio bzw. `Ctrl+a Ctrl+x` bei picocom).*
+*(Beenden mit `Ctrl+C` bei read-uart).*
 
 ---
 
@@ -107,11 +103,3 @@ make flash
 
 # 4. Serielle Ausgabe ansehen:
 read-uart
-```
-Nach dem Flashen gibt der Ibex-Prozessor über UART mit 115200 Baud aus:
-```text
-STARTE IBEX DU KEK
-ES WIRD ERNST
-ICH HASSE IBEX
-...
-```

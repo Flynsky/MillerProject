@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgpiod2t64 \
     openfpgaloader \
     tio \
-    picocom \
+    minicom \
     tmux \
     nano \
     ca-certificates \
