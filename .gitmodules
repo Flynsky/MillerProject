@@ -1,0 +1,3 @@
+[submodule "software/RIGSoC"]
+	path = software/RIGSoC
+	url = https://github.com/xhandl67/RIGSoC
