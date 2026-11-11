@@ -1,0 +1,16 @@
+.TUSB1106PWR :1 ;Texas Instruments TUSB1106PWR, USB Transceiver, USB 2.0 at 12Mbit/s, 3.3 V, 5 V, 16-Pin TSSOP
+SOP65P640X120-16N
+*STM IC
+*NGS
+*PLB 1="VPU(3.3)" 2="SO FTCO N" 3="'OE'" 4="RCV" 5="VP" 6="VM" 7="SUSPND" 8="GND" 9="V C C ( I /O )" 10="SPEED" 11="D-" 12="D+" 13="VPO" 14="VMO" 15="VREG(3.3)" 16="VCC (5.0)"
+*MXP 16
+*DFN TUSB1106PWR
+~!Mouser Part Number (595-TUSB1106PWR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TUSB1106PWR?qs=7kv20MEVUlg2%2FxFfZrfm%2FA%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TUSB1106PWR)
+~!Link Datasheet (http://www.ti.com/lit/gpn/tusb1106)
+~!Height (1.2mm)
+~!3D_Model (TUSB1106PWR)
+TUSB1106PWR
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 10.1!U 9.1!U 

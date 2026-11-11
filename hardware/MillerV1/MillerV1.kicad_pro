@@ -633,7 +633,7 @@
       "+2V5": "rgb(203, 11, 255)",
       "GND": "rgb(0, 255, 16)"
     },
-    "netclass_assignments": null,
+    "netclass_assignments": {},
     "netclass_patterns": [
       {
         "netclass": "Power",
