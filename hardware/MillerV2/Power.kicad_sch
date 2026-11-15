@@ -326,6 +326,3570 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "GND_1"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_1_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_10"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_10_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_10_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_11"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_11_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_11_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_12"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_12_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_12_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_14"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_14_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_14_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_15"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_15_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_15_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_16"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_16_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_16_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_17"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_17_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_17_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_18"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_18_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_18_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_19"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_19_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_19_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_2"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_2_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_2_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_20"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_20_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_20_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_21"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_21_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_21_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_23"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_23_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_23_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_24"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_24_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_24_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_25"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_25_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_25_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_26"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_26_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_26_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_27"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_27_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_27_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_28"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_28_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_28_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_29"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_29_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_29_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_3"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_3_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_3_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_30"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_30_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_30_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_31"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_31_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_31_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_33"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_33_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_33_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_34"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_34_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_34_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_36"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_36_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_36_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_37"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_37_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_37_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_38"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_38_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_38_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_39"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_39_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_39_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_4"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_4_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_4_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_40"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_40_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_40_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_5"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_5_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_5_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_6"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_6_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_6_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_7"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_7_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_7_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_8"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_8_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_8_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GND_9"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_9_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_9_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "OLIMEX_IC:CCGM1A1(FBGA-324)"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -7722,7 +11286,7 @@
 	)
 	(rectangle
 		(start 15.24 22.86)
-		(end 73.66 114.3)
+		(end 73.66 71.12)
 		(stroke
 			(width 0.254)
 			(type solid)
@@ -7843,6 +11407,20 @@
 			(justify left bottom)
 		)
 		(uuid "44a7b965-537d-4a94-887a-3f927a937d8e")
+	)
+	(text "fg:~1KHz\n"
+		(exclude_from_sim no)
+		(at 161.29 27.686 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+				(thickness 0.254)
+				(bold yes)
+				(color 255 153 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "47d79652-d272-4542-9699-bff5ff85700b")
 	)
 	(text "Component side\nEast edge"
 		(exclude_from_sim no)
@@ -7989,30 +11567,11 @@
 		)
 		(uuid "e423310a-9aef-4a4a-848b-466d6d44d9a3")
 	)
-	(text "Change Resistor\nto Change IO Voltage"
-		(exclude_from_sim no)
-		(at 48.006 94.996 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-				(color 0 0 0 1)
-			)
-			(justify right bottom)
-		)
-		(uuid "f7dc4739-275d-46d5-97df-b1504d7cb6f2")
-	)
 	(junction
 		(at 116.84 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "013c2af4-a43e-439a-b8e1-5efcde3de1da")
-	)
-	(junction
-		(at 64.77 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "01ce0c52-e6f8-4025-bd45-adfcc240faaa")
 	)
 	(junction
 		(at 222.25 102.87)
@@ -8115,12 +11674,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1d7c76dd-b0ee-4372-8dec-75f3bcf46582")
-	)
-	(junction
-		(at 54.61 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1d7d34c3-a4e1-4fef-a35d-500dee4cad2e")
 	)
 	(junction
 		(at 173.99 120.65)
@@ -8279,12 +11832,6 @@
 		(uuid "3e60724f-f26d-4b99-bb1a-bc61450ac92d")
 	)
 	(junction
-		(at 60.96 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "43818d82-1c86-4bc8-a814-bef60a9c8296")
-	)
-	(junction
 		(at 60.96 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8417,12 +11964,6 @@
 		(uuid "687e524c-655f-42dd-9623-128494dd2442")
 	)
 	(junction
-		(at 24.13 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "692929e7-4cd9-468f-b297-7e4d8968e0aa")
-	)
-	(junction
 		(at 173.99 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8453,12 +11994,6 @@
 		(uuid "73fc982f-d8b9-4016-a202-a24a2f4e61ac")
 	)
 	(junction
-		(at 54.61 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "742f15f0-4890-47c2-8321-846810237178")
-	)
-	(junction
 		(at 204.47 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8481,12 +12016,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7a1f2286-61df-444f-8ff3-680f9e164e5c")
-	)
-	(junction
-		(at 27.94 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7be6079c-2d51-4823-89d2-b1c8be955825")
 	)
 	(junction
 		(at 204.47 85.09)
@@ -8777,12 +12306,6 @@
 		(uuid "d012746c-70c0-443e-a8da-289bae3b41c0")
 	)
 	(junction
-		(at 64.77 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d23ba8bd-7ee5-43af-be1e-4bb36369a459")
-	)
-	(junction
 		(at 162.56 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8932,10 +12455,6 @@
 		(color 0 0 0 0)
 		(uuid "fd374e87-caf7-4a80-a87e-510ff5d8fae3")
 	)
-	(no_connect
-		(at 44.45 81.28)
-		(uuid "b0de5238-fb08-4d73-bd7b-fca4ce5482fb")
-	)
 	(wire
 		(pts
 			(xy 116.84 59.69) (xy 120.65 59.69)
@@ -8985,16 +12504,6 @@
 			(type default)
 		)
 		(uuid "05123460-f3b6-4bea-9ae9-8da467f636a9")
-	)
-	(wire
-		(pts
-			(xy 60.96 82.55) (xy 60.96 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05bda6f7-2447-4aac-a342-c7bcbb222628")
 	)
 	(wire
 		(pts
@@ -9178,16 +12687,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 86.36) (xy 54.61 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1021945f-a6e8-479c-b0cb-1d0a5d285105")
-	)
-	(wire
-		(pts
 			(xy 173.99 118.11) (xy 176.53 118.11)
 		)
 		(stroke
@@ -9245,16 +12744,6 @@
 			(type default)
 		)
 		(uuid "163f1744-a09a-4b02-af9a-e45d65143488")
-	)
-	(wire
-		(pts
-			(xy 46.99 78.74) (xy 44.45 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "165f183a-64a0-4032-89e7-2151695ca95e")
 	)
 	(wire
 		(pts
@@ -9568,16 +13057,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 82.55) (xy 64.77 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2df49916-07f1-489f-aea5-934e55695759")
-	)
-	(wire
-		(pts
 			(xy 157.48 78.74) (xy 157.48 80.01)
 		)
 		(stroke
@@ -9638,16 +13117,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 78.74) (xy 46.99 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32defc65-6e09-433d-8f7a-c26b62478295")
-	)
-	(wire
-		(pts
 			(xy 173.99 72.39) (xy 173.99 77.47)
 		)
 		(stroke
@@ -9698,7 +13167,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 54.61) (xy 168.91 54.61)
+			(xy 152.4 54.61) (xy 168.91 54.61)
 		)
 		(stroke
 			(width 0)
@@ -9878,16 +13347,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 76.2) (xy 64.77 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "428c2a50-8812-4625-b675-cd8141194a10")
-	)
-	(wire
-		(pts
 			(xy 204.47 102.87) (xy 204.47 105.41)
 		)
 		(stroke
@@ -9915,16 +13374,6 @@
 			(type default)
 		)
 		(uuid "43744c2a-df12-41ca-940b-04767870ea79")
-	)
-	(wire
-		(pts
-			(xy 46.99 87.63) (xy 54.61 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44297b6f-ea8c-43dc-8ed7-2f3baed5cb30")
 	)
 	(wire
 		(pts
@@ -10188,16 +13637,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 76.2) (xy 54.61 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53af0916-f72a-4286-86b7-8bdb1e963d43")
-	)
-	(wire
-		(pts
 			(xy 201.93 107.95) (xy 204.47 107.95)
 		)
 		(stroke
@@ -10458,16 +13897,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 40.64) (xy 64.77 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "667c0072-a213-4bbc-a224-01dea6bfde36")
-	)
-	(wire
-		(pts
 			(xy 167.64 99.06) (xy 167.64 100.33)
 		)
 		(stroke
@@ -10628,16 +14057,6 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 86.36) (xy 36.83 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f314344-8fb0-4df6-a1e5-79408b7b2e55")
-	)
-	(wire
-		(pts
 			(xy 162.56 118.11) (xy 162.56 116.84)
 		)
 		(stroke
@@ -10748,16 +14167,6 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 76.2) (xy 27.94 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "765cd7d6-3a8c-4837-8cd9-7564e93977e9")
-	)
-	(wire
-		(pts
 			(xy 201.93 102.87) (xy 204.47 102.87)
 		)
 		(stroke
@@ -10775,16 +14184,6 @@
 			(type default)
 		)
 		(uuid "78404acf-5701-4fd2-b77a-54c4106f189b")
-	)
-	(wire
-		(pts
-			(xy 24.13 76.2) (xy 24.13 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7acc5a7f-ba8c-45d1-bf5c-a95410891ac8")
 	)
 	(wire
 		(pts
@@ -10818,16 +14217,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 88.9) (xy 54.61 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ce380aa-2033-49a3-ae2a-ef5bfe48002b")
-	)
-	(wire
-		(pts
 			(xy 45.72 50.8) (xy 46.99 50.8)
 		)
 		(stroke
@@ -10835,16 +14224,6 @@
 			(type default)
 		)
 		(uuid "7d52f020-c74c-4849-9992-fcf5e41700cb")
-	)
-	(wire
-		(pts
-			(xy 64.77 73.66) (xy 64.77 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d8cb747-3e7a-44e6-8a1c-9c248b5f7e4e")
 	)
 	(wire
 		(pts
@@ -10895,16 +14274,6 @@
 			(type default)
 		)
 		(uuid "7fc5e6fd-5117-4e6a-a8e1-f67ceec801dc")
-	)
-	(wire
-		(pts
-			(xy 52.07 76.2) (xy 64.77 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7fe73067-5a58-4968-8542-e804296794a4")
 	)
 	(wire
 		(pts
@@ -11108,7 +14477,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 39.37) (xy 146.05 39.37)
+			(xy 143.51 39.37) (xy 147.32 39.37)
 		)
 		(stroke
 			(width 0)
@@ -11358,16 +14727,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 34.29) (xy 64.77 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e4e1cc7-fffa-451f-a763-7baa92b5bbcb")
-	)
-	(wire
-		(pts
 			(xy 24.13 34.29) (xy 29.21 34.29)
 		)
 		(stroke
@@ -11418,7 +14777,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 39.37) (xy 171.45 39.37)
+			(xy 152.4 39.37) (xy 171.45 39.37)
 		)
 		(stroke
 			(width 0)
@@ -11455,16 +14814,6 @@
 			(type default)
 		)
 		(uuid "a6556fc1-c5e3-4dea-ba23-57becfff265b")
-	)
-	(wire
-		(pts
-			(xy 24.13 74.93) (xy 24.13 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a6b71b3c-6b2a-4ba0-be8b-a37281fd546d")
 	)
 	(wire
 		(pts
@@ -11628,23 +14977,13 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 54.61) (xy 146.05 54.61)
+			(xy 143.51 54.61) (xy 147.32 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "af890542-8773-4807-ae1a-67d24830336e")
-	)
-	(wire
-		(pts
-			(xy 54.61 93.98) (xy 54.61 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b002c813-d8cc-460c-8c2d-6ad80cd3da9e")
 	)
 	(wire
 		(pts
@@ -11835,16 +15174,6 @@
 			(type default)
 		)
 		(uuid "bd06fa49-ac1e-42ee-8861-76c2c0f29604")
-	)
-	(wire
-		(pts
-			(xy 27.94 78.74) (xy 27.94 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bd40a818-d5a7-4bf3-9450-509ad5da0a8a")
 	)
 	(wire
 		(pts
@@ -12058,26 +15387,6 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 82.55) (xy 24.13 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ccc3a117-da8e-41dd-b350-000e8787b65a")
-	)
-	(wire
-		(pts
-			(xy 29.21 78.74) (xy 27.94 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ccd70256-db0c-42c6-b53c-9fbab4da76d5")
-	)
-	(wire
-		(pts
 			(xy 115.57 92.71) (xy 119.38 92.71)
 		)
 		(stroke
@@ -12278,7 +15587,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 31.75) (xy 64.77 34.29)
+			(xy 60.96 31.75) (xy 60.96 34.29)
 		)
 		(stroke
 			(width 0)
@@ -12438,16 +15747,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 76.2) (xy 60.96 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e2b9e247-23b7-4787-b8bd-135e6397c919")
-	)
-	(wire
-		(pts
 			(xy 204.47 105.41) (xy 204.47 107.95)
 		)
 		(stroke
@@ -12528,16 +15827,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 76.2) (xy 46.99 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9c0af0d-c562-4d55-bb50-e17f1e961a82")
-	)
-	(wire
-		(pts
 			(xy 60.96 40.64) (xy 60.96 41.91)
 		)
 		(stroke
@@ -12588,7 +15877,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 34.29) (xy 64.77 34.29)
+			(xy 52.07 34.29) (xy 60.96 34.29)
 		)
 		(stroke
 			(width 0)
@@ -12795,16 +16084,6 @@
 			(type default)
 		)
 		(uuid "fcbb300b-6aa4-4955-b6dc-68258b853019")
-	)
-	(wire
-		(pts
-			(xy 27.94 76.2) (xy 29.21 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff0f1c2d-12fb-4884-9419-3a1835546217")
 	)
 	(wire
 		(pts
@@ -14217,7 +17496,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 118.11 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -14266,6 +17545,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_1")
 		(lib_id "OLIMEX_Power:GND")
 		(at 154.94 31.75 0)
 		(mirror y)
@@ -14288,8 +17568,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 154.94 35.56 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14417,80 +17698,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Power:GND")
-		(at 64.77 83.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "05d2eac8-6d6a-4726-8fa6-abe00756ebdb")
-		(property "Reference" "#PWR0154"
-			(at 64.77 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 64.77 87.376 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "65f3cc37-9403-44f3-b3f4-d1eedee8c5c2")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "#PWR0154")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
+		(lib_name "GND_2")
 		(lib_id "OLIMEX_Power:GND")
 		(at 167.64 113.03 0)
 		(unit 1)
@@ -14512,8 +17720,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 167.64 115.57 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14597,7 +17806,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 143.51 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -14665,7 +17874,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "4u7"
 			(at 123.698 35.052 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14676,7 +17885,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 121.92 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -14786,7 +17995,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 218.44 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -14864,7 +18073,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 157.48 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -14944,7 +18153,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0603_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 24.13 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -15024,6 +18233,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_3")
 		(lib_id "OLIMEX_Power:GND")
 		(at 65.024 54.61 0)
 		(unit 1)
@@ -15045,8 +18255,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 65.024 58.166 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15263,6 +18474,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_4")
 		(lib_id "OLIMEX_Power:GND")
 		(at 154.94 62.23 0)
 		(mirror y)
@@ -15285,8 +18497,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 154.94 66.04 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15338,6 +18551,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_5")
 		(lib_id "OLIMEX_Power:GND")
 		(at 222.25 147.32 0)
 		(unit 1)
@@ -15359,8 +18573,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 222.25 151.13 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15412,6 +18627,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_6")
 		(lib_id "OLIMEX_Power:GND")
 		(at 104.14 39.37 0)
 		(unit 1)
@@ -15433,8 +18649,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 104.14 42.926 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15486,6 +18703,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_7")
 		(lib_id "OLIMEX_Power:GND")
 		(at 24.13 41.91 0)
 		(unit 1)
@@ -15507,8 +18725,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 24.13 45.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15544,6 +18763,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 24.13 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -15554,82 +18784,6 @@
 			(project "MillerV2"
 				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
 					(reference "#PWR0123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_Power:VDD_CORE")
-		(at 64.77 73.66 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "221cc7d3-86a4-4dab-b5c5-6d04b6c2bfa4")
-		(property "Reference" "#PWR153"
-			(at 64.77 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "VDD_IO"
-			(at 64.77 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 73.66 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f16fa77d-d24c-4ba5-bcfc-36037a8be3fe")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "#PWR153")
 					(unit 1)
 				)
 			)
@@ -15656,17 +18810,17 @@
 				)
 			)
 		)
-		(property "Value" "1.0uH 4.2A"
-			(at 50.038 35.814 90)
+		(property "Value" "DFE252012F-1R0M"
+			(at 49.022 35.56 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1 1)
+					(size 0.6 0.6)
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:L_2016_MM"
+		(property "Footprint" "Inductor_SMD:L_1008_2520Metric"
 			(at 49.53 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -15758,7 +18912,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 54.61 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -15807,6 +18961,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_8")
 		(lib_id "OLIMEX_Power:GND")
 		(at 143.51 30.48 0)
 		(unit 1)
@@ -15828,8 +18983,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 143.51 34.29 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15913,7 +19069,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 92.71 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -15983,7 +19139,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2u"
+		(property "Value" "4u7"
 			(at 165.1 135.128 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15993,7 +19149,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 167.64 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -16040,80 +19196,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Power:GND")
-		(at 64.77 41.91 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2d29c397-3553-4c9b-9b74-6efc89067227")
-		(property "Reference" "#PWR0152"
-			(at 64.77 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 64.77 45.466 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 41.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a5eab989-8d8f-4123-a45f-fcf841e60656")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "#PWR0152")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 118.11 39.37 0)
 		(unit 1)
@@ -16146,7 +19228,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 118.11 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -16225,7 +19307,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 170.18 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -16266,96 +19348,6 @@
 			(project "MillerV2"
 				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
 					(reference "R40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:L_Small")
-		(at 148.59 54.61 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3287046f-41b3-45dd-85d5-1cb15d6f3e6d")
-		(property "Reference" "L2"
-			(at 148.844 52.578 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MI0805K601R-10"
-			(at 148.844 56.642 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7 0.7)
-				)
-			)
-		)
-		(property "Footprint" "OLIMEX_RLC-FP:L_0805_5MIL_DWS"
-			(at 148.59 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 148.59 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Inductor, small symbol"
-			(at 148.59 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value 2M" ""
-			(at 148.59 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "e6080283-01c3-4ede-b6ae-a07192acc344")
-		)
-		(pin "1"
-			(uuid "b3f85f22-9ae7-40ac-b12a-178aef66b65c")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "L2")
 					(unit 1)
 				)
 			)
@@ -16457,7 +19449,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2u2"
+		(property "Value" "4u7"
 			(at 87.884 107.442 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16468,7 +19460,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 91.1352 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -16509,6 +19501,87 @@
 			(project "MillerV2"
 				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
 					(reference "C79")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 149.86 39.37 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3f8835dc-a985-4927-84ab-45cfe63efbb9")
+		(property "Reference" "R81"
+			(at 148.336 37.338 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "33"
+			(at 148.59 41.91 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 149.86 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 149.86 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2a337406-8550-4fdf-b663-66a21dd1bfac")
+		)
+		(pin "1"
+			(uuid "500fed22-0b4c-4159-aaf8-19993ec801fe")
+		)
+		(instances
+			(project "MillerV2"
+				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
+					(reference "R81")
 					(unit 1)
 				)
 			)
@@ -16612,7 +19685,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2u"
+		(property "Value" "4u7"
 			(at 165.1 98.298 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16622,7 +19695,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 167.64 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -16700,7 +19773,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 143.51 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -16747,6 +19820,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_9")
 		(lib_id "OLIMEX_Power:GND")
 		(at 143.51 45.72 0)
 		(unit 1)
@@ -16768,8 +19842,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 143.51 49.53 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16842,7 +19917,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "4u7"
 			(at 122.428 66.802 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16853,7 +19928,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 120.65 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -16933,87 +20008,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 54.61 91.44 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4ec69f62-fd5d-49cf-b321-4fa2d2adf041")
-		(property "Reference" "R56"
-			(at 53.34 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 53.34 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 54.61 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 54.61 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "f1918689-a539-451d-b7f1-03c80f2e2dc2")
-		)
-		(pin "1"
-			(uuid "fe5fda17-e4aa-4144-abd4-6b4172f079b1")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "R56")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
+		(lib_name "GND_10")
 		(lib_id "OLIMEX_Power:GND")
 		(at 167.64 100.33 0)
 		(unit 1)
@@ -17035,8 +20030,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 167.64 102.87 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17089,6 +20085,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_11")
 		(lib_id "OLIMEX_Power:GND")
 		(at 120.65 68.58 0)
 		(unit 1)
@@ -17110,8 +20107,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 120.65 72.136 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17163,100 +20161,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Switching:TPS62A02ADRL")
-		(at 36.83 78.74 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "56970934-de24-4b39-aa73-1422e8cb99a9")
-		(property "Reference" "U15"
-			(at 36.83 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPS62A02ADRL"
-			(at 36.83 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-563"
-			(at 38.1 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/tps62a02a"
-			(at 30.48 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "High Efficiency Synchronous Buck Converter with forced PWM, Adjustable Output 0.6V-5.5V, 2A, Power Good, Enable, SOT-563"
-			(at 36.83 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "3026d60c-68a2-430c-bd33-b5ce181dcdc1")
-		)
-		(pin "3"
-			(uuid "2bb1717b-ebf5-46dd-919c-42b17cf9b7bc")
-		)
-		(pin "1"
-			(uuid "e19bac00-d3ca-4e77-8b3c-43220f9fea44")
-		)
-		(pin "6"
-			(uuid "74edf499-c012-462f-8cc2-e2d9f9c903fb")
-		)
-		(pin "4"
-			(uuid "86f29443-bbb3-4114-ba35-6ee15ea9bec4")
-		)
-		(pin "5"
-			(uuid "3e10c968-b2a0-4db4-936d-20bca0ded1df")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "U15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_RCL:C")
 		(at 147.32 76.2 0)
 		(mirror x)
@@ -17288,7 +20192,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 147.32 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -17335,82 +20239,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Power:+5V_USB")
-		(at 24.13 74.93 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5a3573e1-1a6f-42d4-96c8-7a7d21a7065e")
-		(property "Reference" "#PWR0124"
-			(at 24.13 78.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 24.13 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 24.13 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 24.13 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 24.13 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "52e91375-e45b-4abe-aecc-853ee219d704")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "#PWR0124")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
+		(lib_name "GND_12")
 		(lib_id "OLIMEX_Power:GND")
 		(at 121.92 36.83 0)
 		(unit 1)
@@ -17432,8 +20261,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 121.92 40.386 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17485,80 +20315,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Power:GND")
-		(at 60.96 83.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5cc89fd6-5192-465d-9f59-7b36aad2615b")
-		(property "Reference" "#PWR0150"
-			(at 60.96 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 60.96 87.376 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6f011941-1124-44ad-ae74-5ccfa79b7c4d")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "#PWR0150")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
+		(lib_name "GND_14")
 		(lib_id "OLIMEX_Power:GND")
 		(at 143.51 60.96 0)
 		(unit 1)
@@ -17580,8 +20337,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 143.51 64.77 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17743,7 +20501,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2u2"
+		(property "Value" "4u7"
 			(at 90.424 42.672 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17754,7 +20512,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 93.6752 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -17833,7 +20591,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 63.754 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -17976,6 +20734,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_15")
 		(lib_id "OLIMEX_Power:GND")
 		(at 167.64 137.16 0)
 		(unit 1)
@@ -17997,8 +20756,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 167.64 139.7 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18051,6 +20811,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_16")
 		(lib_id "OLIMEX_Power:GND")
 		(at 82.55 101.6 0)
 		(unit 1)
@@ -18072,8 +20833,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 82.55 105.41 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18147,7 +20909,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47u"
+		(property "Value" "4u7"
 			(at 158.496 29.972 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18158,7 +20920,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 154.94 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -18239,7 +21001,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_Power:VDD_CORE")
-		(at 64.77 31.75 0)
+		(at 60.96 31.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18249,7 +21011,7 @@
 		(dnp no)
 		(uuid "6e8d85d1-f8fb-4876-a2d6-b313350f9df8")
 		(property "Reference" "#PWR151"
-			(at 64.77 34.29 0)
+			(at 60.96 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18260,7 +21022,7 @@
 			)
 		)
 		(property "Value" "VDD_CORE"
-			(at 64.77 27.94 0)
+			(at 60.96 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18270,7 +21032,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 64.77 31.75 0)
+			(at 60.96 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18281,7 +21043,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 31.75 0)
+			(at 60.96 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18292,7 +21054,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 64.77 31.75 0)
+			(at 60.96 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18314,6 +21076,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_17")
 		(lib_id "OLIMEX_Power:GND")
 		(at 54.61 53.34 0)
 		(unit 1)
@@ -18335,8 +21098,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 54.61 56.896 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18409,7 +21173,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2u"
+		(property "Value" "4u7"
 			(at 165.1 110.998 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18419,7 +21183,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 167.64 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -18466,6 +21230,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_18")
 		(lib_id "OLIMEX_Power:GND")
 		(at 92.71 44.45 0)
 		(unit 1)
@@ -18487,8 +21252,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 92.71 48.26 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18540,6 +21306,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_20")
 		(lib_id "OLIMEX_Power:GND")
 		(at 162.56 100.33 0)
 		(unit 1)
@@ -18561,8 +21328,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 162.56 102.87 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18615,6 +21383,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_21")
 		(lib_id "OLIMEX_Power:GND")
 		(at 204.47 151.13 0)
 		(unit 1)
@@ -18636,8 +21405,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 204.47 154.94 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18689,80 +21459,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Power:GND")
-		(at 54.61 95.25 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7602d9c6-0e3a-4ead-8f78-ece059ff9e4e")
-		(property "Reference" "#PWR0142"
-			(at 54.61 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 54.61 98.806 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 54.61 95.25 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 95.25 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 54.61 95.25 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c046dbed-06ba-49c4-92fa-9a3fb3138c2b")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "#PWR0142")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_RCL:C")
 		(at 82.55 97.79 0)
 		(mirror y)
@@ -18785,7 +21481,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "4u7"
 			(at 80.772 99.822 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18796,7 +21492,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0603_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 82.55 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -18876,6 +21572,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_19")
 		(lib_id "OLIMEX_Power:GND")
 		(at 36.83 45.72 0)
 		(unit 1)
@@ -18897,8 +21594,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 36.83 49.53 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18982,7 +21680,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 115.57 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -19128,7 +21826,7 @@
 				)
 			)
 		)
-		(property "Value" "1V8"
+		(property "Value" "+1V8"
 			(at 121.92 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19257,119 +21955,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_RCL:C")
-		(at 24.13 80.01 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8036bdba-9c43-4e17-9809-4c59659780c7")
-		(property "Reference" "C66"
-			(at 23.114 78.232 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22u"
-			(at 22.86 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0603_5MIL_DWS"
-			(at 24.13 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 24.13 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 24.13 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Fieldname 1" "Value 1"
-			(at 24.13 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Fieldname2" "Value2"
-			(at 24.13 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Fieldname3" "Value3"
-			(at 24.13 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "df0d65d1-b01d-4691-8e9c-191f4efead6d")
-		)
-		(pin "2"
-			(uuid "6640330c-b46c-4acc-af48-0ad508e48321")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "C66")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
+		(lib_name "GND_23")
 		(lib_id "OLIMEX_Power:GND")
 		(at 118.11 43.18 0)
 		(unit 1)
@@ -19391,8 +21977,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 118.11 46.736 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19444,6 +22031,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_24")
 		(lib_id "OLIMEX_Power:GND")
 		(at 116.84 74.93 0)
 		(unit 1)
@@ -19465,8 +22053,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 116.84 78.486 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19607,6 +22196,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_25")
 		(lib_id "OLIMEX_Power:GND")
 		(at 162.56 137.16 0)
 		(unit 1)
@@ -19628,8 +22218,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 162.56 139.7 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19682,6 +22273,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_26")
 		(lib_id "OLIMEX_Power:GND")
 		(at 85.09 36.83 0)
 		(unit 1)
@@ -19703,8 +22295,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 85.09 40.64 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19756,6 +22349,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_27")
 		(lib_id "OLIMEX_Power:GND")
 		(at 167.64 124.46 0)
 		(unit 1)
@@ -19777,8 +22371,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 167.64 127 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19831,6 +22426,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_28")
 		(lib_id "OLIMEX_Power:GND")
 		(at 90.17 109.22 0)
 		(unit 1)
@@ -19852,8 +22448,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 90.17 113.03 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19936,7 +22533,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 143.51 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -19983,6 +22580,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_29")
 		(lib_id "OLIMEX_Power:GND")
 		(at 162.56 124.46 0)
 		(unit 1)
@@ -20004,8 +22602,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 162.56 127 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20088,7 +22687,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_IC-FP:FBGA-324_P0.8mm_Pad0.4mm_Ball0.45mm_Dim15.00x15.00x1.20mm"
+		(property "Footprint" "New_Libary:BGA-324_15x15mm_Layout18x18_P0.8mm_improvedUrsprung"
 			(at 196.85 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -20128,6 +22727,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 196.85 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -21145,7 +23755,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 91.44 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -21205,7 +23815,7 @@
 		(dnp no)
 		(uuid "9713613f-db25-42e9-92aa-5f60ee340acc")
 		(property "Reference" "R39"
-			(at 148.336 22.352 90)
+			(at 148.336 22.098 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21215,8 +23825,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1"
-			(at 149.098 25.908 90)
+		(property "Value" "33"
+			(at 148.59 26.67 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21226,7 +23836,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 149.86 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -21297,7 +23907,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "4u7"
 			(at 83.312 35.052 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21308,7 +23918,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0603_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 85.09 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -21388,6 +23998,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_30")
 		(lib_id "OLIMEX_Power:GND")
 		(at 149.86 81.28 0)
 		(unit 1)
@@ -21409,8 +24020,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 149.86 83.82 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21463,8 +24075,8 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_RCL:C")
-		(at 60.96 38.1 0)
+		(lib_id "Device:R_Small")
+		(at 149.86 54.61 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21472,9 +24084,20 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a50d77fe-e75f-4562-b612-586728390324")
-		(property "Reference" "C71"
-			(at 59.944 35.56 0)
+		(uuid "a2a8419b-1852-497b-855b-631a04c13f54")
+		(property "Reference" "R82"
+			(at 148.336 52.578 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "33"
+			(at 148.59 57.15 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21484,8 +24107,79 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47u"
-			(at 57.404 40.132 0)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 149.86 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 149.86 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e7d3a0e1-7992-48d6-bdcb-3a39b17903e7")
+		)
+		(pin "1"
+			(uuid "df11dc74-2f8d-4928-a18c-380a24fa1e26")
+		)
+		(instances
+			(project "MillerV2"
+				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
+					(reference "R82")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "OLIMEX_RCL:C")
+		(at 60.96 38.1 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a50d77fe-e75f-4562-b612-586728390324")
+		(property "Reference" "C71"
+			(at 61.976 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "22u"
+			(at 64.516 40.132 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21495,7 +24189,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 60.96 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -21607,7 +24301,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 90.17 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -21678,7 +24372,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47u"
+		(property "Value" "4u7"
 			(at 158.496 45.212 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21689,7 +24383,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 154.94 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -21799,7 +24493,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 218.44 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -21867,7 +24561,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2u"
+		(property "Value" "4u7"
 			(at 160.02 77.978 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21877,7 +24571,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 162.56 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -21945,7 +24639,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2u2"
+		(property "Value" "4u7"
 			(at 89.154 74.422 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21956,7 +24650,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 92.4052 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -22035,7 +24729,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 116.84 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -22106,7 +24800,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47u"
+		(property "Value" "4u7"
 			(at 158.496 60.452 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22117,7 +24811,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 154.94 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -22197,6 +24891,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_31")
 		(lib_id "OLIMEX_Power:GND")
 		(at 154.94 46.99 0)
 		(mirror y)
@@ -22219,8 +24914,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 154.94 50.8 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22303,7 +24999,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 162.56 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -22350,177 +25046,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L_Small")
-		(at 148.59 39.37 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c1af23ff-61e5-4529-a9d1-072c26689de7")
-		(property "Reference" "L1"
-			(at 148.844 37.338 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MI0805K601R-10"
-			(at 149.352 41.402 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.7 0.7)
-				)
-			)
-		)
-		(property "Footprint" "OLIMEX_RLC-FP:L_0805_5MIL_DWS"
-			(at 148.59 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 148.59 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Inductor, small symbol"
-			(at 148.59 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value 2M" ""
-			(at 148.59 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "714ab930-8668-428e-a35c-9776437a0d20")
-		)
-		(pin "1"
-			(uuid "7fb7e796-7abe-4dd8-916a-ec71f53a9491")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 54.61 83.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c2d6b16c-e8f3-4500-a1f1-4a3613fe6d7b")
-		(property "Reference" "R55"
-			(at 53.34 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 53.34 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 54.61 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 54.61 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cf2b59d6-6129-4891-bda1-d7cd4da39078")
-		)
-		(pin "1"
-			(uuid "5cfe555d-4502-4e35-9559-3f1b429ecc92")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "R55")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 54.61 41.91 0)
 		(unit 1)
@@ -22553,7 +25078,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 54.61 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -22632,7 +25157,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 218.44 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -22673,80 +25198,6 @@
 			(project "MillerV2"
 				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
 					(reference "R44")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_Power:GND")
-		(at 24.13 83.82 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c667a800-1c8e-4e70-957f-45706e666570")
-		(property "Reference" "#PWR0125"
-			(at 24.13 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 24.13 87.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 24.13 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 24.13 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 24.13 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3210d63a-c54b-481c-8c12-0786c3cae486")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "#PWR0125")
 					(unit 1)
 				)
 			)
@@ -22860,7 +25311,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 152.4 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -22907,6 +25358,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_33")
 		(lib_id "OLIMEX_Power:GND")
 		(at 162.56 113.03 0)
 		(unit 1)
@@ -22928,8 +25380,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 162.56 115.57 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -22982,6 +25435,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_34")
 		(lib_id "OLIMEX_Power:GND")
 		(at 102.87 71.12 0)
 		(unit 1)
@@ -23003,8 +25457,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 102.87 74.676 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23056,80 +25511,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Power:GND")
-		(at 36.83 87.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d3a377f6-76dd-474c-8405-2e6e1dec6a84")
-		(property "Reference" "#PWR0129"
-			(at 36.83 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 36.83 91.44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 36.83 87.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 36.83 87.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 36.83 87.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cd1d00ae-b3f8-4a83-8bc9-d5c958afc5fc")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "#PWR0129")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Power:+2V5")
 		(at 119.38 91.44 0)
 		(unit 1)
@@ -23151,7 +25532,7 @@
 				)
 			)
 		)
-		(property "Value" "3V3"
+		(property "Value" "+3V3"
 			(at 119.38 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23235,7 +25616,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 142.24 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -23282,84 +25663,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_RCL:C")
-		(at 64.77 80.01 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d77566d8-1dc4-454d-923f-ad7bbe67e1a1")
-		(property "Reference" "C74"
-			(at 67.056 77.724 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10u"
-			(at 67.056 82.296 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
-			(at 64.77 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fe70b43f-97bb-4cb9-9d1f-541a059fede7")
-		)
-		(pin "2"
-			(uuid "c652bbc7-388c-42e6-8fef-3a78fefe8542")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "C74")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
+		(lib_name "GND_36")
 		(lib_id "OLIMEX_Power:GND")
 		(at 60.96 41.91 0)
 		(unit 1)
@@ -23381,8 +25685,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 60.96 45.466 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23465,7 +25770,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 162.56 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -23544,7 +25849,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 115.57 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -23593,6 +25898,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_37")
 		(lib_id "OLIMEX_Power:GND")
 		(at 119.38 101.6 0)
 		(unit 1)
@@ -23614,8 +25920,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 119.38 105.156 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23667,96 +25974,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L_Small")
-		(at 49.53 76.2 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dbe17285-7bab-4f91-a0a7-97a6e802608b")
-		(property "Reference" "L4"
-			(at 49.53 73.914 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1.0uH 4.2A"
-			(at 50.038 77.724 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "OLIMEX_RLC-FP:L_2016_MM"
-			(at 49.53 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Inductor, small symbol"
-			(at 49.53 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value 2M" ""
-			(at 49.53 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "e00ee735-2d68-404c-9991-49f1e7228d87")
-		)
-		(pin "1"
-			(uuid "cb6d1da0-c3e5-42bc-8299-f9a6b0810038")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "L4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
+		(lib_name "GND_38")
 		(lib_id "OLIMEX_Power:GND")
 		(at 115.57 107.95 0)
 		(unit 1)
@@ -23778,8 +25996,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 115.57 111.506 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23831,6 +26050,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_39")
 		(lib_id "OLIMEX_Power:GND")
 		(at 83.82 68.58 0)
 		(unit 1)
@@ -23852,8 +26072,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 83.82 72.39 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23938,7 +26159,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 66.294 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -23981,118 +26202,6 @@
 			(project "MillerV2"
 				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
 					(reference "R64")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_RCL:C")
-		(at 60.96 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ec117306-f147-4d04-bc0f-fef1892cfaef")
-		(property "Reference" "C72"
-			(at 59.944 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "47u"
-			(at 57.404 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
-			(at 60.96 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Fieldname 1" "Value 1"
-			(at 60.96 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Fieldname2" "Value2"
-			(at 60.96 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Fieldname3" "Value3"
-			(at 60.96 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fc3fdc71-056e-4f55-8c29-6b0ec8109473")
-		)
-		(pin "2"
-			(uuid "3a6f802b-dff4-457f-844d-89defd12b173")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "C72")
 					(unit 1)
 				)
 			)
@@ -24206,7 +26315,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 162.56 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -24284,7 +26393,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 162.56 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -24352,7 +26461,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2u"
+		(property "Value" "4u7"
 			(at 165.1 122.428 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24362,7 +26471,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 167.64 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -24403,84 +26512,6 @@
 			(project "MillerV2"
 				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
 					(reference "C60")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "OLIMEX_RCL:C")
-		(at 64.77 38.1 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f1df45fb-2a7d-48d9-84b8-631eea9f999c")
-		(property "Reference" "C73"
-			(at 67.056 35.814 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10u"
-			(at 67.056 40.386 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
-			(at 64.77 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 64.77 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4d1ba15c-cda4-41de-8650-131fb20faa29")
-		)
-		(pin "2"
-			(uuid "a3e19128-8603-4f4c-ab59-e7414377d9ae")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
-					(reference "C73")
 					(unit 1)
 				)
 			)
@@ -24585,7 +26616,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "4u7"
 			(at 82.042 66.802 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24596,7 +26627,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0603_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 83.82 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -24697,7 +26728,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "47u"
+		(property "Value" "22u"
 			(at 164.084 78.232 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24708,7 +26739,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 167.64 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -24788,6 +26819,7 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_40")
 		(lib_id "OLIMEX_Power:GND")
 		(at 101.6 104.14 0)
 		(unit 1)
@@ -24809,8 +26841,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 101.6 107.696 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24883,7 +26916,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "4u7"
 			(at 121.158 99.822 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24894,7 +26927,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0805_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 119.38 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -24995,8 +27028,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 91.44 80.01 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25078,7 +27112,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 218.44 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -25157,7 +27191,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 116.84 63.5 0)
 			(hide yes)
 			(show_name no)

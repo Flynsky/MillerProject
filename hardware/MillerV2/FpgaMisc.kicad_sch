@@ -555,178 +555,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OLIMEX_Buttons:T1107A(6x3,8x2,5MM)"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW"
-				(at -4.064 2.794 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "T1107A(6x3,8x2,5MM)"
-				(at 14.478 2.794 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -0.0254 0.9652 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at -0.0254 0.9652 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "T1107A(6x3,8x2,5MM)_0_1"
-				(circle
-					(center -2.0066 0)
-					(radius 0.4318)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 3.048) (xy 0.6096 3.048)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.0254 1.016) (xy -0.0254 2.9718)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.0254 0.9398) (xy -2.0066 0.9398)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.0254 0.9398) (xy 1.9812 0.9398)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.0574 0.0254)
-					(radius 0.4318)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "T1107A(6x3,8x2,5MM)_1_1"
-				(pin passive line
-					(at -7.62 0 0)
-					(length 5.08)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 5.08)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "OLIMEX_Devices:Oscillator-100MHZ_TXC-7W"
 			(pin_names
 				(offset 0)
@@ -8046,6 +7874,170 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(rectangle
 		(start 63.5 49.53)
@@ -8089,7 +8081,7 @@
 	)
 	(rectangle
 		(start 15.24 15.24)
-		(end 99.06 63.5)
+		(end 101.6 63.5)
 		(stroke
 			(width 0.254)
 			(type solid)
@@ -8101,7 +8093,7 @@
 		(uuid "cc28e162-12d9-409a-9e43-341818824f9d")
 	)
 	(rectangle
-		(start 101.6 15.24)
+		(start 104.14 15.24)
 		(end 144.78 63.5)
 		(stroke
 			(width 0.254)
@@ -8248,12 +8240,6 @@
 		(uuid "004efb7e-3aaa-47d5-85a8-9a3a6ddd1180")
 	)
 	(junction
-		(at 91.44 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0bb7c6b3-d178-4935-b08f-a9a003d62aff")
-	)
-	(junction
 		(at 134.62 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8312,6 +8298,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "51441e43-0ad8-4b45-8dfb-005921b69285")
+	)
+	(junction
+		(at 41.91 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "542608c1-232c-41ed-b540-c227a3386033")
 	)
 	(junction
 		(at 153.67 128.27)
@@ -8374,7 +8366,7 @@
 		(uuid "a379e6ec-feba-4bab-954d-4801348be229")
 	)
 	(junction
-		(at 107.95 40.64)
+		(at 110.49 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aed88cf0-72dc-4bde-a60f-57df337bc6eb")
@@ -8398,7 +8390,7 @@
 		(uuid "b201fff0-93a9-4dc4-935f-9f0e8bb0a6ed")
 	)
 	(junction
-		(at 83.82 45.72)
+		(at 82.55 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b2d9255b-c4a6-4271-a57f-7f48a431a38b")
@@ -8434,7 +8426,7 @@
 		(uuid "cd3a651c-e392-4934-8581-9051cedd81ad")
 	)
 	(junction
-		(at 107.95 30.48)
+		(at 110.49 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "da36bc13-4cd2-4bdf-9805-7fb88cc4e4fa")
@@ -8533,7 +8525,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 36.83) (xy 151.13 36.83)
+			(xy 149.86 36.83) (xy 152.4 36.83)
 		)
 		(stroke
 			(width 0)
@@ -8613,6 +8605,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 36.83) (xy 38.1 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a3f03df-e0bf-49e1-b76f-b14594e24835")
+	)
+	(wire
+		(pts
 			(xy 38.1 91.44) (xy 38.1 102.87)
 		)
 		(stroke
@@ -8620,6 +8622,16 @@
 			(type default)
 		)
 		(uuid "1a7b9b8a-010c-4b30-a695-a26ec9a37ec1")
+	)
+	(wire
+		(pts
+			(xy 41.91 45.72) (xy 44.45 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b2b6547-f0a2-41f0-ae15-a034d17989c7")
 	)
 	(wire
 		(pts
@@ -8633,13 +8645,23 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 30.48) (xy 133.35 27.94)
+			(xy 135.89 31.75) (xy 135.89 29.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1c2f1604-e71d-444b-aa2f-19fbc1a513a6")
+	)
+	(wire
+		(pts
+			(xy 182.88 43.18) (xy 184.15 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fd88efa-090c-4230-8a3a-f344ffc8e34d")
 	)
 	(wire
 		(pts
@@ -8663,6 +8685,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 36.83) (xy 171.45 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26ea782e-ff60-4603-8d08-4fcd04bb5300")
+	)
+	(wire
+		(pts
 			(xy 46.99 39.37) (xy 46.99 45.72)
 		)
 		(stroke
@@ -8683,7 +8715,7 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 38.1) (xy 20.32 45.72)
+			(xy 20.32 36.83) (xy 20.32 45.72)
 		)
 		(stroke
 			(width 0)
@@ -8703,7 +8735,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 30.48) (xy 133.35 30.48)
+			(xy 133.35 31.75) (xy 135.89 31.75)
 		)
 		(stroke
 			(width 0)
@@ -8730,6 +8762,16 @@
 			(type default)
 		)
 		(uuid "3005a343-09c8-46e3-b784-b86047595371")
+	)
+	(wire
+		(pts
+			(xy 41.91 43.18) (xy 41.91 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "325de6dd-f71b-47cb-bebe-747bb9ea05e8")
 	)
 	(wire
 		(pts
@@ -8763,7 +8805,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 148.59) (xy 77.47 148.59)
+			(xy 77.47 148.59) (xy 76.2 148.59)
 		)
 		(stroke
 			(width 0)
@@ -8773,7 +8815,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 35.56) (xy 132.08 35.56)
+			(xy 133.35 36.83) (xy 134.62 36.83)
 		)
 		(stroke
 			(width 0)
@@ -8903,7 +8945,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 50.8) (xy 81.28 50.8)
+			(xy 81.28 50.8) (xy 83.82 50.8)
 		)
 		(stroke
 			(width 0)
@@ -8913,7 +8955,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 40.64) (xy 107.95 40.64)
+			(xy 113.03 41.91) (xy 110.49 41.91)
 		)
 		(stroke
 			(width 0)
@@ -8953,7 +8995,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 45.72) (xy 81.28 45.72)
+			(xy 81.28 45.72) (xy 83.82 45.72)
 		)
 		(stroke
 			(width 0)
@@ -8973,7 +9015,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 39.37) (xy 38.1 38.1)
+			(xy 38.1 38.1) (xy 38.1 36.83)
 		)
 		(stroke
 			(width 0)
@@ -9013,7 +9055,17 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 36.83) (xy 180.34 36.83)
+			(xy 27.94 45.72) (xy 41.91 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "696e807f-1c70-4b4d-84a1-272e57541467")
+	)
+	(wire
+		(pts
+			(xy 176.53 36.83) (xy 184.15 36.83)
 		)
 		(stroke
 			(width 0)
@@ -9033,7 +9085,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 33.02) (xy 180.34 36.83)
+			(xy 184.15 43.18) (xy 184.15 36.83)
 		)
 		(stroke
 			(width 0)
@@ -9060,26 +9112,6 @@
 			(type default)
 		)
 		(uuid "6e251cd8-2595-4445-b3cc-8ff58ccfdc24")
-	)
-	(wire
-		(pts
-			(xy 96.52 45.72) (xy 83.82 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6fb5014e-7877-4966-b6b4-17f333864dd3")
-	)
-	(wire
-		(pts
-			(xy 166.37 36.83) (xy 171.45 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7143a1a8-ca9b-4612-9c6f-a9f59811c2a9")
 	)
 	(wire
 		(pts
@@ -9183,7 +9215,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 38.1) (xy 20.32 38.1)
+			(xy 20.32 36.83) (xy 24.13 36.83)
 		)
 		(stroke
 			(width 0)
@@ -9203,13 +9235,23 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 30.48) (xy 107.95 33.02)
+			(xy 110.49 31.75) (xy 110.49 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "808c7d0a-4dfb-4f6a-944c-1efac1b2cf06")
+	)
+	(wire
+		(pts
+			(xy 40.64 43.18) (xy 41.91 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80d7935f-cfb0-41cd-a06c-8d6c97fd2181")
 	)
 	(wire
 		(pts
@@ -9250,6 +9292,16 @@
 			(type default)
 		)
 		(uuid "86276451-e17c-4109-bf46-eccf0183ad0f")
+	)
+	(wire
+		(pts
+			(xy 83.82 55.88) (xy 90.17 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86b7570d-5d09-4ab2-98c5-506d7460efe0")
 	)
 	(wire
 		(pts
@@ -9343,13 +9395,33 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 38.1) (xy 107.95 40.64)
+			(xy 90.17 55.88) (xy 90.17 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "925b7552-3bed-4c0d-8f39-f7b81d6dcbd5")
+	)
+	(wire
+		(pts
+			(xy 110.49 39.37) (xy 110.49 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "93ba372f-0e38-4fae-a9e7-ea8f8807d76d")
+	)
+	(wire
+		(pts
+			(xy 142.24 50.8) (xy 142.24 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9575922e-58cd-407c-b1e7-7efad580b6c4")
 	)
 	(wire
 		(pts
@@ -9423,7 +9495,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 55.88) (xy 91.44 55.88)
+			(xy 87.63 59.69) (xy 90.17 59.69)
 		)
 		(stroke
 			(width 0)
@@ -9453,17 +9525,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 146.05) (xy 77.47 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2ccdcce-dc93-496b-aa22-ecd641390209")
-	)
-	(wire
-		(pts
-			(xy 137.16 35.56) (xy 138.43 35.56)
+			(xy 142.24 50.8) (xy 137.16 50.8)
 		)
 		(stroke
 			(width 0)
@@ -9683,7 +9745,17 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 30.48) (xy 110.49 30.48)
+			(xy 83.82 50.8) (xy 83.82 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc7d0f81-de35-4814-9c80-bdc9afbd3600")
+	)
+	(wire
+		(pts
+			(xy 110.49 31.75) (xy 113.03 31.75)
 		)
 		(stroke
 			(width 0)
@@ -9703,23 +9775,13 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 27.94) (xy 107.95 30.48)
+			(xy 110.49 29.21) (xy 110.49 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cef91d92-39c7-4e03-98ad-04a1b7027815")
-	)
-	(wire
-		(pts
-			(xy 27.94 45.72) (xy 44.45 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d8c2a65d-5d4f-4fea-979e-5bb0a4e021ed")
 	)
 	(wire
 		(pts
@@ -9753,7 +9815,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 40.64) (xy 107.95 43.18)
+			(xy 110.49 41.91) (xy 110.49 44.45)
 		)
 		(stroke
 			(width 0)
@@ -9763,17 +9825,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 50.8) (xy 91.44 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "deff35ac-8739-49f1-8a1d-ddceaefcc01f")
-	)
-	(wire
-		(pts
-			(xy 153.67 91.44) (xy 156.21 91.44)
+			(xy 156.21 91.44) (xy 153.67 91.44)
 		)
 		(stroke
 			(width 0)
@@ -9823,6 +9875,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 36.83) (xy 139.7 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7c2c1c4-f1bc-4f5f-9a9d-56bf96726786")
+	)
+	(wire
+		(pts
 			(xy 34.29 59.69) (xy 36.83 59.69)
 		)
 		(stroke
@@ -9853,7 +9915,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 45.72) (xy 83.82 55.88)
+			(xy 82.55 45.72) (xy 82.55 59.69)
 		)
 		(stroke
 			(width 0)
@@ -9923,26 +9985,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 50.8) (xy 91.44 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4e3a60d-52a5-4651-a028-5644a66dd87a")
-	)
-	(wire
-		(pts
-			(xy 83.82 55.88) (xy 85.09 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f52652f6-b089-4af2-8f44-c6377dbc0c9e")
-	)
-	(wire
-		(pts
 			(xy 132.08 107.95) (xy 135.89 107.95)
 		)
 		(stroke
@@ -9950,6 +9992,16 @@
 			(type default)
 		)
 		(uuid "f7618e7e-bbcf-4655-85b8-e8e145efd238")
+	)
+	(wire
+		(pts
+			(xy 77.47 146.05) (xy 76.2 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8ae7a88-9cbe-44c1-bca4-e1d6fdb883b1")
 	)
 	(wire
 		(pts
@@ -9962,7 +10014,7 @@
 		(uuid "f9625060-89b1-41b5-afc1-67fa0bd379b6")
 	)
 	(image
-		(at 46.482 126.746)
+		(at 28.702 126.746)
 		(scale 0.178151)
 		(uuid "4333b35c-c14d-40b4-b769-e46dd5c2638f")
 		(data "iVBORw0KGgoAAAANSUhEUgAABVIAAAG9CAIAAAB4fBptAAAAA3NCSVQICAjb4U/gAAAgAElEQVR4"
@@ -16706,17 +16758,6 @@
 		)
 		(uuid "0472695f-cd56-4404-8ba2-196827ed1810")
 	)
-	(label "FPGA_BUT"
-		(at 180.34 33.02 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify right bottom)
-		)
-		(uuid "0c662be2-9ffe-4897-ac19-09899794d465")
-	)
 	(label "FPGA_SPI_CLK"
 		(at 127 115.57 0)
 		(effects
@@ -16739,50 +16780,6 @@
 		)
 		(uuid "1bcdfffe-c0a9-4a12-9882-c1e3c6d4a94a")
 	)
-	(label "JTAG_TCK"
-		(at 135.89 102.87 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "240f1d56-1b39-4044-b5cb-21c7ea9d1210")
-	)
-	(label "SER_CLK_P"
-		(at 96.52 45.72 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify right bottom)
-		)
-		(uuid "2cb0ed5d-426b-4698-b627-a11c1edf1cc8")
-	)
-	(label "CLK0"
-		(at 138.43 35.56 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "42b2e191-eaaa-4cc8-a03f-3fdbfdd0f24d")
-	)
-	(label "JTAG_RST"
-		(at 34.29 59.69 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify right bottom)
-		)
-		(uuid "4b8dc40a-bb12-47e1-8b48-d6252acbb379")
-	)
 	(label "FPGA_SPI_D3"
 		(at 127 128.27 0)
 		(effects
@@ -16793,17 +16790,6 @@
 			(justify left bottom)
 		)
 		(uuid "55f51113-d3e4-4714-a869-7942e80fb2db")
-	)
-	(label "SER_TX_P"
-		(at 77.47 146.05 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "56822490-8e01-4a06-96e5-4190bd37a0bc")
 	)
 	(label "FPGA_SPI_D0"
 		(at 127 120.65 0)
@@ -16816,17 +16802,6 @@
 		)
 		(uuid "593fd46a-d617-4ab9-9ff8-8de4b33b81b2")
 	)
-	(label "{slash}CFG_FAILED"
-		(at 57.15 120.65 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify right bottom)
-		)
-		(uuid "5b0cbf11-aa3e-4265-b772-34f093a275a6")
-	)
 	(label "CFG_MD1"
 		(at 57.15 105.41 180)
 		(effects
@@ -16837,28 +16812,6 @@
 			(justify right bottom)
 		)
 		(uuid "5bdc009a-6082-4950-8c52-4b99fdf6758b")
-	)
-	(label "SER_CLK_N"
-		(at 96.52 50.8 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify right bottom)
-		)
-		(uuid "5cf40ae8-528c-4f5a-ad2c-1a3028138ba1")
-	)
-	(label "FPGA_SPI_FWD"
-		(at 127 133.35 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "72c5bb84-e419-4fe4-b954-212acd186973")
 	)
 	(label "FPGA_SPI_D2"
 		(at 127 125.73 0)
@@ -16871,16 +16824,6 @@
 		)
 		(uuid "79611740-4094-497e-9be9-033217c98544")
 	)
-	(label "CorePowerGood"
-		(at 41.91 29.21 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify right bottom)
-		)
-		(uuid "89a8a8c4-15ef-4ca8-b88b-d9f0361829a1")
-	)
 	(label "CFG_MD2"
 		(at 57.15 107.95 180)
 		(effects
@@ -16891,72 +16834,6 @@
 			(justify right bottom)
 		)
 		(uuid "8eb088c8-f91f-4d84-a610-6ed5eb4d59de")
-	)
-	(label "SER_RX_P"
-		(at 44.45 146.05 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify right bottom)
-		)
-		(uuid "a0e992db-0e6e-4c2e-997c-e2a03ffd1d40")
-	)
-	(label "JTAG_TMS"
-		(at 135.89 105.41 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "c9beed62-6059-4a1b-8b25-729b501e28c7")
-	)
-	(label "~{RST_FPGA}"
-		(at 30.48 45.72 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "cae0c20c-45d5-49f4-bb84-6945ef225e00")
-	)
-	(label "JTAG_TDI"
-		(at 135.89 107.95 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "dffd8495-8302-4528-8feb-a8023b166efa")
-	)
-	(label "SER_TX_N"
-		(at 77.47 148.59 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "e6621ec1-2505-4a2f-a9a9-fd109b09b864")
-	)
-	(label "SER_RX_N"
-		(at 44.45 148.59 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify right bottom)
-		)
-		(uuid "e9dd24b5-bc46-4577-a904-470488d57a29")
 	)
 	(label "FPGA_SPI_CSN"
 		(at 127 118.11 0)
@@ -16969,28 +16846,6 @@
 		)
 		(uuid "f0288666-bcda-44ca-8666-e6ef37da8648")
 	)
-	(label "JTAG_TDO"
-		(at 135.89 110.49 0)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify left bottom)
-		)
-		(uuid "faa9e40c-1d50-4a5e-9729-96e78638bac4")
-	)
-	(label "CFG_DONE"
-		(at 57.15 123.19 180)
-		(effects
-			(font
-				(size 1.524 1.524)
-				(thickness 0.1905)
-			)
-			(justify right bottom)
-		)
-		(uuid "fc957a35-6185-4853-846d-793111738f05")
-	)
 	(label "CFG_MD0"
 		(at 57.15 102.87 180)
 		(effects
@@ -17001,6 +16856,455 @@
 			(justify right bottom)
 		)
 		(uuid "fccda4ad-cf13-4302-a794-3e2a9eaed4ae")
+	)
+	(global_label "{slash}CFG_FAILED"
+		(shape input)
+		(at 57.15 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify right)
+		)
+		(uuid "056fc154-546d-458e-867c-b6e680dcd4af")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 39.7663 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "JTAG_RST"
+		(shape output)
+		(at 34.29 59.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify right)
+		)
+		(uuid "14e9af0d-2d95-4d40-a8d8-2bab0d6cf7c0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.0431 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "JTAG_TDO"
+		(shape input)
+		(at 135.89 110.49 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "1d2de20a-bc5d-454b-880d-f468cf72bd6b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 150.067 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "FPGA_BUT"
+		(shape output)
+		(at 182.88 43.18 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify right)
+		)
+		(uuid "2acd6703-b014-4030-951a-67e07a93b7bf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 168.9798 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "SER_TX_N"
+		(shape input)
+		(at 77.47 148.59 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "4ae32582-1479-4466-aebc-0af354c479e8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.1524 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "FPGA_SPI_FWD"
+		(shape input)
+		(at 127 133.35 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "5d2ac767-d5f3-4cfc-bd39-88bf6da7c885")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 146.0527 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "CorePowerGood"
+		(shape input)
+		(at 41.91 29.21 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify right)
+		)
+		(uuid "686de295-cfcb-4eb4-87b2-da21361022df")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 21.5507 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "JTAG_TDI"
+		(shape input)
+		(at 135.89 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "6dac41aa-3d70-44e0-9d38-8f1c6cdfa801")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.1961 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SER_CLK_P"
+		(shape input)
+		(at 83.82 45.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "72971537-9e1f-4bb0-a232-1a28c4605db9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 99.8839 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "JTAG_TMS"
+		(shape input)
+		(at 135.89 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "8f8dd2ac-690d-4f7d-95ff-8fd7f5f2bf96")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 150.1395 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SER_CLK_N"
+		(shape input)
+		(at 83.82 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "8fd77387-1d16-459a-bb52-9ce962055a74")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 99.9565 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SER_RX_N"
+		(shape input)
+		(at 44.45 148.59 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify right)
+		)
+		(uuid "9b11e058-1133-40d6-bd5c-78bbb1f4539a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 30.4047 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "CLK0"
+		(shape output)
+		(at 137.16 50.8 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify right)
+		)
+		(uuid "9dd0cfbe-c9f3-45fa-954e-28dd3a2fa4b7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 128.6301 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "~{RST_FPGA}"
+		(shape output)
+		(at 40.64 43.18 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify right)
+		)
+		(uuid "a2dba514-e434-4373-911f-860b252d27fc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 26.1001 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "SER_RX_P"
+		(shape input)
+		(at 44.45 146.05 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify right)
+		)
+		(uuid "a3a1a91d-653b-4745-9bb4-abc171094b27")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 30.4773 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "JTAG_TCK"
+		(shape input)
+		(at 135.89 102.87 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "c462774a-7ce6-490e-82bb-df5afaae7205")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.9944 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "CFG_DONE"
+		(shape input)
+		(at 57.15 123.19 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify right)
+		)
+		(uuid "f37a2495-bd26-468c-b5ec-c33835caa8d7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 42.7417 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "SER_TX_P"
+		(shape input)
+		(at 77.47 146.05 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.1905)
+			)
+			(justify left)
+		)
+		(uuid "f9380712-12fa-4a47-8c11-9584a54068cf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.0798 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(symbol
 		(lib_id "OLIMEX_Power:GND")
@@ -17025,8 +17329,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 105.41 97.79 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17109,7 +17414,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 167.64 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17187,7 +17492,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 60.96 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -17235,7 +17540,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_RCL:C")
-		(at 107.95 35.56 0)
+		(at 110.49 36.83 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -17246,7 +17551,7 @@
 		(dnp no)
 		(uuid "0ba08b6c-471b-4d99-bf1e-37c1416b66b6")
 		(property "Reference" "C2"
-			(at 105.664 33.782 0)
+			(at 108.204 35.052 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17256,7 +17561,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 105.41 37.338 0)
+			(at 107.95 38.608 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17265,8 +17570,8 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
-			(at 107.95 35.56 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 110.49 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17277,7 +17582,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 35.56 0)
+			(at 110.49 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17287,7 +17592,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 35.56 0)
+			(at 110.49 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17333,8 +17638,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 29.21 58.42 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17493,7 +17799,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 31.75 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -17564,8 +17870,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 60.96 40.64 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17617,6 +17924,81 @@
 		)
 	)
 	(symbol
+		(lib_id "OLIMEX_Power:GND")
+		(at 139.7 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1db50dfe-ec10-4742-9337-ca397a1c9651")
+		(property "Reference" "#PWR0181"
+			(at 139.7 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.7 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "21b22cec-ca7e-4809-8040-03c84588856d")
+		)
+		(instances
+			(project "MillerV2"
+				(path "/284a97db-b878-4d19-9282-298636eac808/1292f22d-8740-4ee1-8da0-6e9dcc3c6997"
+					(reference "#PWR0181")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 156.21 95.25 0)
 		(mirror y)
@@ -17650,7 +18032,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 156.21 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -17720,7 +18102,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 167.64 49.53 90)
 			(hide yes)
 			(show_name no)
@@ -17806,7 +18188,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 148.59 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -17885,7 +18267,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 44.45 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -17998,7 +18380,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 46.99 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -18111,7 +18493,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 36.83 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18193,84 +18575,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Buttons:T1107A(6x3,8x2,5MM)")
-		(at 158.75 36.83 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2ceb7859-3c2a-453e-a643-1f2d90417cdd")
-		(property "Reference" "FPGA_BUT1"
-			(at 156.464 32.258 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "YTS-A016-X"
-			(at 157.226 38.608 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "OLIMEX_Buttons-FP:YTS-A016-X"
-			(at 158.7754 35.8648 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 158.7754 35.8648 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 158.75 36.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d5268c24-3f78-4836-ad1b-4f5a305a8d65")
-		)
-		(pin "2"
-			(uuid "a08996da-6446-47c3-809d-93f77a0059f7")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/1292f22d-8740-4ee1-8da0-6e9dcc3c6997"
-					(reference "FPGA_BUT1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 167.64 31.75 0)
 		(mirror y)
@@ -18302,7 +18606,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 167.64 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -18405,8 +18709,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 25.4 115.57 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18442,6 +18747,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 25.4 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -18562,7 +18878,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_IC-FP:SO-8_208mil"
+		(property "Footprint" "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm"
 			(at 165.1 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -18668,7 +18984,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 105.41 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -18736,8 +19052,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 179.07 133.35 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18821,7 +19138,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 29.21 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -18902,7 +19219,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_Power:GND")
-		(at 107.95 43.18 0)
+		(at 110.49 44.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18912,7 +19229,7 @@
 		(dnp no)
 		(uuid "56c990f9-7c53-44da-b392-95de6ceb1802")
 		(property "Reference" "#PWR03"
-			(at 107.95 49.53 0)
+			(at 110.49 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18922,8 +19239,9 @@
 				)
 			)
 		)
-		(property "Value" ""
-			(at 107.95 46.99 0)
+		(property "Value" "GND"
+			(at 110.49 48.26 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18933,7 +19251,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 107.95 43.18 0)
+			(at 110.49 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18943,7 +19261,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 43.18 0)
+			(at 110.49 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18953,7 +19271,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 43.18 0)
+			(at 110.49 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18969,6 +19287,96 @@
 			(project "MillerV2"
 				(path "/284a97db-b878-4d19-9282-298636eac808/1292f22d-8740-4ee1-8da0-6e9dcc3c6997"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 29.21 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5852a238-d192-4d68-8681-c7d2d562e86a")
+		(property "Reference" "FPGA_RST1"
+			(at 28.956 32.258 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "434133025816"
+			(at 29.21 39.116 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_NO_Vertical_Wuerth_434133025816"
+			(at 29.21 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 29.21 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 29.21 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1cfb8d28-e112-44f6-a037-fc0b1d2d3797")
+		)
+		(pin "2"
+			(uuid "d096dd14-e18f-4285-9373-cbb0638a0035")
+		)
+		(instances
+			(project "MillerV2"
+				(path "/284a97db-b878-4d19-9282-298636eac808/1292f22d-8740-4ee1-8da0-6e9dcc3c6997"
+					(reference "FPGA_RST1")
 					(unit 1)
 				)
 			)
@@ -19050,7 +19458,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_Power:GND")
-		(at 38.1 39.37 0)
+		(at 38.1 38.1 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -19061,7 +19469,7 @@
 		(dnp no)
 		(uuid "5e105b5c-a9f8-473e-984b-d959d50ec485")
 		(property "Reference" "#PWR09"
-			(at 38.1 45.72 0)
+			(at 38.1 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19071,8 +19479,9 @@
 				)
 			)
 		)
-		(property "Value" ""
-			(at 38.1 44.45 90)
+		(property "Value" "GND"
+			(at 38.1 43.18 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19082,7 +19491,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 39.37 0)
+			(at 38.1 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19092,7 +19501,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 39.37 0)
+			(at 38.1 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19102,7 +19511,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 38.1 39.37 0)
+			(at 38.1 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19154,7 +19563,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 111.76 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -19201,83 +19610,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Buttons:T1107A(6x3,8x2,5MM)")
-		(at 30.48 38.1 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6092438f-029f-46ec-85d5-72dba3c73b46")
-		(property "Reference" "FPGA_RST1"
-			(at 30.48 33.02 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "YTS-A016-X"
-			(at 29.972 39.878 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "OLIMEX_Buttons-FP:YTS-A016-X"
-			(at 30.4546 37.1348 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.4546 37.1348 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a736a832-ec2c-4f41-9294-723012fc06a4")
-		)
-		(pin "2"
-			(uuid "1e1bdc5f-ed99-47ea-8ca9-1abf208ed6ff")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/1292f22d-8740-4ee1-8da0-6e9dcc3c6997"
-					(reference "FPGA_RST1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_Power:GND")
 		(at 180.34 123.19 0)
 		(unit 1)
@@ -19299,8 +19631,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 180.34 127 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19373,8 +19706,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 49.53 63.5 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19426,82 +19760,6 @@
 		)
 	)
 	(symbol
-		(lib_id "OLIMEX_Power:GND")
-		(at 139.7 92.71 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "792bedb1-e2fe-4c69-b148-672140f3a355")
-		(property "Reference" "#PWR060"
-			(at 139.7 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" ""
-			(at 139.7 95.25 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 139.7 92.71 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4b24dc02-b1fe-4185-929c-b24f888fc7c8")
-		)
-		(instances
-			(project "MillerV2"
-				(path "/284a97db-b878-4d19-9282-298636eac808/1292f22d-8740-4ee1-8da0-6e9dcc3c6997"
-					(reference "#PWR060")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "OLIMEX_IC:CCGM1A1(FBGA-324)")
 		(at 66.04 48.26 0)
 		(mirror y)
@@ -19533,7 +19791,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_IC-FP:FBGA-324_P0.8mm_Pad0.4mm_Ball0.45mm_Dim15.00x15.00x1.20mm"
+		(property "Footprint" "New_Libary:BGA-324_15x15mm_Layout18x18_P0.8mm_improvedUrsprung"
 			(at 66.04 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -19573,6 +19831,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 66.04 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -20633,7 +20902,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 87.63 55.88 90)
+		(at 85.09 59.69 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -20644,7 +20913,7 @@
 		(dnp yes)
 		(uuid "8eb619e0-bf08-47bb-b18a-7a39ea8e12a5")
 		(property "Reference" "R12"
-			(at 87.884 54.102 90)
+			(at 85.344 57.912 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20654,7 +20923,7 @@
 			)
 		)
 		(property "Value" "NA"
-			(at 87.63 58.166 90)
+			(at 85.09 61.976 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20663,8 +20932,8 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
-			(at 87.63 55.88 0)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 85.09 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20675,7 +20944,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 55.88 0)
+			(at 85.09 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20686,7 +20955,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 87.63 55.88 0)
+			(at 85.09 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20697,7 +20966,7 @@
 			)
 		)
 		(property "Fieldname 1" "Value 1"
-			(at 87.63 55.88 0)
+			(at 85.09 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20708,7 +20977,7 @@
 			)
 		)
 		(property "Fieldname2" "Value2"
-			(at 87.63 55.88 0)
+			(at 85.09 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20719,7 +20988,7 @@
 			)
 		)
 		(property "Fieldname3" "Value3"
-			(at 87.63 55.88 0)
+			(at 85.09 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20775,7 +21044,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_IC-FP:FBGA-324_P0.8mm_Pad0.4mm_Ball0.45mm_Dim15.00x15.00x1.20mm"
+		(property "Footprint" "New_Libary:BGA-324_15x15mm_Layout18x18_P0.8mm_improvedUrsprung"
 			(at 60.96 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -20815,6 +21084,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 60.96 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -21830,7 +22110,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 49.53 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -21942,7 +22222,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_IC-FP:FBGA-324_P0.8mm_Pad0.4mm_Ball0.45mm_Dim15.00x15.00x1.20mm"
+		(property "Footprint" "New_Libary:BGA-324_15x15mm_Layout18x18_P0.8mm_improvedUrsprung"
 			(at 91.44 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -21982,6 +22262,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 91.44 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -23054,7 +23345,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_Power:+2V5")
-		(at 107.95 27.94 0)
+		(at 110.49 29.21 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23064,7 +23355,7 @@
 		(dnp no)
 		(uuid "aa893373-a298-4569-abc0-c1ec294991e5")
 		(property "Reference" "#PWR02"
-			(at 107.95 31.75 0)
+			(at 110.49 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23075,7 +23366,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 107.95 24.13 0)
+			(at 110.49 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23085,7 +23376,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 107.95 27.94 0)
+			(at 110.49 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23095,7 +23386,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 27.94 0)
+			(at 110.49 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23105,7 +23396,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 27.94 0)
+			(at 110.49 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23128,7 +23419,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_Devices:Oscillator-100MHZ_TXC-7W")
-		(at 120.65 35.56 0)
+		(at 123.19 36.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23138,7 +23429,7 @@
 		(dnp no)
 		(uuid "ac74b684-b53b-4bca-aaf7-9c041ee65ab2")
 		(property "Reference" "CR1"
-			(at 120.65 25.4 0)
+			(at 123.19 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23147,8 +23438,8 @@
 				)
 			)
 		)
-		(property "Value" "Q10MHz"
-			(at 119.888 44.704 0)
+		(property "Value" "ECS-TXO-3225MV-100-TR"
+			(at 122.428 45.974 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23157,8 +23448,8 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_Crystal-FP:5032-4P_HCX-3S"
-			(at 121.412 31.75 0)
+		(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm_HandSoldering"
+			(at 122.682 48.768 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23168,8 +23459,9 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 120.65 35.56 0)
+		(property "Datasheet" "https://www.mouser.de/datasheet/3/294/1/ECS_TXO_3225MV.pdf"
+			(at 123.19 36.83 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23179,12 +23471,23 @@
 			)
 		)
 		(property "Description" ""
-			(at 120.65 35.56 0)
+			(at 123.19 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 123.19 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -23242,7 +23545,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 31.75 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -23322,7 +23625,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_Buttons-FP:DSHP04TS-S-1.27mm_Half_4_Slide"
+		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx04_Slide_KingTek_DSHP04TS_W7.62mm_P1.27mm"
 			(at 62.23 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -23351,6 +23654,17 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 64.77 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -23409,7 +23723,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 149.86 43.18 90)
 			(hide yes)
 			(show_name no)
@@ -23496,7 +23810,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 134.62 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -23567,7 +23881,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22"
+		(property "Value" "33"
 			(at 172.72 38.862 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23578,7 +23892,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 173.99 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -23690,7 +24004,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 25.4 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -23792,7 +24106,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2u"
+		(property "Value" "4u7"
 			(at 102.108 91.948 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23802,7 +24116,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 99.06 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -23881,7 +24195,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 127 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -23951,8 +24265,9 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "GND"
 			(at 83.82 160.02 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24038,7 +24353,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:C_0402_5MIL_DWS"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 181.3052 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -24182,6 +24497,96 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 157.48 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ddd1f176-13f8-4d9c-8908-0c01cb46835e")
+		(property "Reference" "FPGA_BUT1"
+			(at 156.21 32.258 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "434133025816"
+			(at 157.226 38.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_Push_1P1T_NO_Vertical_Wuerth_434133025816"
+			(at 157.48 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 157.48 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value 2M" ""
+			(at 157.48 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "baa50750-2d75-48c7-b5ce-2dcf9a46f484")
+		)
+		(pin "2"
+			(uuid "c4bb58de-3cc2-4260-a05e-b00f9a92d300")
+		)
+		(instances
+			(project "MillerV2"
+				(path "/284a97db-b878-4d19-9282-298636eac808/1292f22d-8740-4ee1-8da0-6e9dcc3c6997"
+					(reference "FPGA_BUT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "OLIMEX_Power:+2V5")
 		(at 180.34 113.03 0)
 		(unit 1)
@@ -24257,7 +24662,7 @@
 	)
 	(symbol
 		(lib_id "OLIMEX_Power:+2V5")
-		(at 133.35 27.94 0)
+		(at 135.89 29.21 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24267,7 +24672,7 @@
 		(dnp no)
 		(uuid "e584d4a1-0e1f-429b-8a5a-864c015fc38c")
 		(property "Reference" "#PWR017"
-			(at 133.35 31.75 0)
+			(at 135.89 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24278,7 +24683,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 133.35 24.13 0)
+			(at 135.89 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24288,7 +24693,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 27.94 0)
+			(at 135.89 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24298,7 +24703,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 27.94 0)
+			(at 135.89 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24308,7 +24713,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 133.35 27.94 0)
+			(at 135.89 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24362,7 +24767,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 153.67 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -24443,7 +24848,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 31.75 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -24598,7 +25003,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 31.75 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -24679,7 +25084,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 132.08 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -24729,7 +25134,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 134.62 35.56 270)
+		(at 137.16 36.83 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -24739,7 +25144,7 @@
 		(dnp no)
 		(uuid "fbd7e9d5-616c-4a76-afdf-5193189b6d24")
 		(property "Reference" "R5"
-			(at 133.35 33.528 90)
+			(at 135.89 34.798 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24750,7 +25155,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 132.588 37.846 90)
+			(at 135.128 39.116 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24760,8 +25165,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
-			(at 134.62 35.56 0)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 137.16 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24772,7 +25177,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 134.62 35.56 0)
+			(at 137.16 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24783,7 +25188,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 134.62 35.56 0)
+			(at 137.16 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24794,7 +25199,7 @@
 			)
 		)
 		(property "Fieldname 1" "Value 1"
-			(at 134.62 35.56 0)
+			(at 137.16 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24805,7 +25210,7 @@
 			)
 		)
 		(property "Fieldname2" "Value2"
-			(at 134.62 35.56 0)
+			(at 137.16 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24816,7 +25221,7 @@
 			)
 		)
 		(property "Fieldname3" "Value3"
-			(at 134.62 35.56 0)
+			(at 137.16 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24872,7 +25277,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OLIMEX_RLC-FP:R_0402_5MIL_DWS"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 80.01 156.21 0)
 			(hide yes)
 			(show_name no)
