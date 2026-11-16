@@ -11940,6 +11940,12 @@
 		(uuid "5f8a39d0-b272-4f11-97e3-ac614d339d61")
 	)
 	(junction
+		(at 168.91 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6032e0cc-4b82-4cda-b19e-68777d2ec0cd")
+	)
+	(junction
 		(at 27.94 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -12034,6 +12040,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "83822023-89e8-4593-bfdc-31d1d7138c54")
+	)
+	(junction
+		(at 161.29 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83ba0e0b-e88c-425f-87c8-dfe22b403699")
 	)
 	(junction
 		(at 143.51 39.37)
@@ -13167,7 +13179,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 54.61) (xy 168.91 54.61)
+			(xy 152.4 54.61) (xy 161.29 54.61)
 		)
 		(stroke
 			(width 0)
@@ -13274,6 +13286,16 @@
 			(type default)
 		)
 		(uuid "3ec56a09-38c4-4953-8145-f3477a28fa0e")
+	)
+	(wire
+		(pts
+			(xy 161.29 54.61) (xy 168.91 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fc17614-1371-473c-9289-5db93a4a0db8")
 	)
 	(wire
 		(pts
@@ -14507,6 +14529,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 53.34) (xy 168.91 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9236ff80-64c5-4e4b-acad-cb72a2354eab")
+	)
+	(wire
+		(pts
 			(xy 222.25 100.33) (xy 222.25 102.87)
 		)
 		(stroke
@@ -14654,6 +14686,16 @@
 			(type default)
 		)
 		(uuid "9843f937-714f-48b7-abce-dca43abf6c3c")
+	)
+	(wire
+		(pts
+			(xy 161.29 60.96) (xy 161.29 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9848b2c5-b832-4cf6-87df-da08db4b298b")
 	)
 	(wire
 		(pts
@@ -15384,6 +15426,16 @@
 			(type default)
 		)
 		(uuid "cc23f581-60c0-4288-8d3c-c8da0204ccdd")
+	)
+	(wire
+		(pts
+			(xy 161.29 54.61) (xy 161.29 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccb88700-cd98-4563-a118-54bb472a72de")
 	)
 	(wire
 		(pts
@@ -17442,7 +17494,7 @@
 		(uuid "a41f23b7-25f7-430f-ac55-73d7c30eefa7")
 	)
 	(label "VDD_SER"
-		(at 168.91 54.61 180)
+		(at 168.91 53.34 180)
 		(effects
 			(font
 				(size 1.524 1.524)
@@ -24968,6 +25020,83 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_4")
+		(lib_id "OLIMEX_Power:GND")
+		(at 161.29 62.23 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "be5c15f2-2797-4904-b449-2a972a9ead0a")
+		(property "Reference" "#PWR0110"
+			(at 161.29 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 161.29 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 161.29 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 161.29 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 161.29 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4ae231f0-4324-433e-a49f-79b5b4056c1e")
+		)
+		(instances
+			(project "MillerV2"
+				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
+					(reference "#PWR0110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "OLIMEX_RCL:C")
 		(at 162.56 96.52 0)
 		(mirror x)
@@ -25505,6 +25634,83 @@
 			(project "MillerV2"
 				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
 					(reference "#PWR0161")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "OLIMEX_RCL:C")
+		(at 161.29 58.42 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d0444e62-850d-49f3-a5e6-3e61d2b8082a")
+		(property "Reference" "C72"
+			(at 163.576 56.642 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 163.83 60.198 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 161.29 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 161.29 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 161.29 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "894c0faf-ffd8-4ae5-919b-139b0782dc1a")
+		)
+		(pin "2"
+			(uuid "8e57617d-8f23-4848-9e3c-e5942bbde278")
+		)
+		(instances
+			(project "MillerV2"
+				(path "/284a97db-b878-4d19-9282-298636eac808/8049b5e7-3b73-46ff-beae-d25df0419048"
+					(reference "C72")
 					(unit 1)
 				)
 			)

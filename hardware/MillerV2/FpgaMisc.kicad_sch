@@ -18796,7 +18796,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 168.148 23.114 0)
+			(at 166.878 23.876 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23366,7 +23366,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 110.49 25.4 0)
+			(at 109.728 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24683,7 +24683,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 135.89 25.4 0)
+			(at 135.636 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
