@@ -229,7 +229,10 @@
         0.2,
         0.3,
         0.4,
-        0.5
+        0.5,
+        1.0,
+        1.5,
+        2.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -518,7 +521,7 @@
       "pin_map_unmapped_pin": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "same_local_global_power": "warning",
@@ -636,6 +639,9 @@
       "+3V3": "rgb(255, 47, 235)",
       "+5V": "rgb(255, 0, 240)",
       "/DirtyJtag/+1V1": "rgb(94, 255, 15)",
+      "/Power/VDD_PLL": "rgb(0, 73, 255)",
+      "/Power/VDD_SER": "rgb(22, 17, 255)",
+      "/Power/VDD_SER_PLL": "rgb(1, 4, 255)",
       "GND": "rgb(18, 255, 146)",
       "VDD_CORE": "rgb(254, 255, 2)"
     },
@@ -1398,6 +1404,12 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -1469,7 +1481,7 @@
           "visible": false
         }
       ],
-      "hop_over_size_choice": 0,
+      "hop_over_size_choice": 2,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": true,
@@ -1520,7 +1532,7 @@
         "uuid": "284a97db-b878-4d19-9282-298636eac808"
       }
     ],
-    "used_designators": "#FLG1-9,#PWR1-207,#PWR215,#PWR240-263,+1V1-2,+2V1,+3V1,BANK_MISC1,C1-105,C132-145,CFG_DONE1,CFG_DONE_LED1,CFG_FAIL1,CFG_FAILED_LED1,CFG_SET1,CLK0_EN1,CR1,D1-3,FPGA_BUT1-2,FPGA_LED1,FPGA_RST1-3,IC1,J1-2,JP1-2,JTAG_LED1,JUMP_CAP1-2,L1-13,MH1-4,PWR_LED1,Q1-2,R1-91,RM1-5,RP\\-BOOT1-2,RP\\-RST1,SW1,TRST1,U1-16,USB\\-C1-3,VDD_CORE1,VDD_CORE_E1,VDD_CORE_SET1,Y1",
+    "used_designators": "#FLG1-9,#PWR1-207,#PWR215,#PWR240-263,+1V1-2,+2V1,+3V1,BANK_MISC1,C1-105,C132-145,CFG_DONE1,CFG_DONE_LED1,CFG_FAIL1,CFG_FAILED_LED1,CFG_SET1,CLK0_EN1,CR1,D1-3,FPGA_BUT1-2,FPGA_LED1,FPGA_RST1-3,IC1,J1-3,JP1-2,JTAG_LED1,JUMP_CAP1-2,L1-13,MH1-4,PWR_LED1,Q1-2,R1-91,RM1-5,RP\\-BOOT1-2,RP\\-RST1,SW1,TRST1,U1-16,USB\\-C1-3,VDD_CORE1,VDD_CORE_E1,VDD_CORE_SET1,Y1",
     "variants": []
   },
   "sheets": [
